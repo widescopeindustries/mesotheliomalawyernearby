@@ -1,25 +1,33 @@
 'use client'
 
-import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Phone, Mail, User, CheckCircle } from 'lucide-react'
+import { Phone, CheckCircle, Loader2 } from 'lucide-react'
 
 export function TCPAConsentForm() {
-  const [consent, setConsent] = useState({
-    phoneConsent: false,
-    emailConsent: false,
-    selectedAttorney: '',
-    disclaimer: false
-  })
+  const [state, handleSubmit] = useForm("xeeandap")
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (consent.phoneConsent && consent.disclaimer) {
-      // Process Pay Per Call lead
-      // TODO: Integrate with lead tracking system
-      // Redirect to thank you or call tracking
-    }
+  if (state.succeeded) {
+    return (
+      <Card className="w-full max-w-2xl mx-auto border-2 border-green-200 bg-green-50">
+        <CardContent className="p-8 text-center">
+          <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <CheckCircle className="h-8 w-8 text-green-600" />
+          </div>
+          <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
+          <p className="text-muted-foreground mb-4">
+            We&apos;ve received your information and will contact you within 24 hours.
+          </p>
+          <p className="text-sm text-muted-foreground mb-2">
+            Need immediate assistance? Call us now:
+          </p>
+          <a href="tel:682-999-0953" className="text-2xl font-bold text-primary hover:underline">
+            (682) 999-0953
+          </a>
+        </CardContent>
+      </Card>
+    )
   }
 
   return (
@@ -33,14 +41,46 @@ export function TCPAConsentForm() {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Name */}
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="firstName" className="block text-sm font-medium mb-2">
+                First Name *
+              </label>
+              <input
+                id="firstName"
+                type="text"
+                name="firstName"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+              />
+              <ValidationError prefix="First Name" field="firstName" errors={state.errors} className="text-red-600 text-sm mt-1" />
+            </div>
+            <div>
+              <label htmlFor="lastName" className="block text-sm font-medium mb-2">
+                Last Name *
+              </label>
+              <input
+                id="lastName"
+                type="text"
+                name="lastName"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+              />
+              <ValidationError prefix="Last Name" field="lastName" errors={state.errors} className="text-red-600 text-sm mt-1" />
+            </div>
+          </div>
+
           {/* Phone Number */}
           <div>
-            <label className="block text-sm font-medium mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium mb-2">
               Phone Number *
             </label>
             <div className="relative">
               <input
+                id="phone"
                 type="tel"
+                name="phone"
                 placeholder="(XXX) XXX-XXXX"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
                 required
@@ -49,6 +89,21 @@ export function TCPAConsentForm() {
                 <Phone className="h-5 w-5 text-gray-400" />
               </div>
             </div>
+            <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-600 text-sm mt-1" />
+          </div>
+
+          {/* Email */}
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium mb-2">
+              Email (Optional)
+            </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+            />
+            <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-600 text-sm mt-1" />
           </div>
 
           {/* FCC Consent Checkboxes */}
@@ -58,8 +113,8 @@ export function TCPAConsentForm() {
             <label className="flex items-start gap-3 cursor-pointer">
               <input
                 type="checkbox"
-                checked={consent.phoneConsent}
-                onChange={(e) => setConsent({ ...consent, phoneConsent: e.target.checked })}
+                name="phoneConsent"
+                value="I agree to be contacted by phone"
                 className="mt-1 h-4 w-4 text-primary focus:ring-primary"
                 required
               />
@@ -72,8 +127,8 @@ export function TCPAConsentForm() {
             <label className="flex items-start gap-3 cursor-pointer">
               <input
                 type="checkbox"
-                checked={consent.emailConsent}
-                onChange={(e) => setConsent({ ...consent, emailConsent: e.target.checked })}
+                name="emailConsent"
+                value="I agree to receive email updates"
                 className="mt-1 h-4 w-4 text-primary focus:ring-primary"
               />
               <span className="text-sm">
@@ -82,20 +137,20 @@ export function TCPAConsentForm() {
             </label>
           </div>
 
-          {/* Attorney Selection */}
+          {/* Preferred Contact Method */}
           <div>
-            <label className="block text-sm font-medium mb-2">
+            <label htmlFor="contactMethod" className="block text-sm font-medium mb-2">
               Preferred Contact Method
             </label>
             <select
-              value={consent.selectedAttorney}
-              onChange={(e) => setConsent({ ...consent, selectedAttorney: e.target.value })}
+              id="contactMethod"
+              name="contactMethod"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             >
               <option value="">Select your preference</option>
-              <option value="phone">Immediate Phone Call</option>
-              <option value="callback">Schedule Callback</option>
-              <option value="email">Email First</option>
+              <option value="Immediate Phone Call">Immediate Phone Call</option>
+              <option value="Schedule Callback">Schedule Callback</option>
+              <option value="Email First">Email First</option>
             </select>
           </div>
 
@@ -104,8 +159,8 @@ export function TCPAConsentForm() {
             <label className="flex items-start gap-3 cursor-pointer">
               <input
                 type="checkbox"
-                checked={consent.disclaimer}
-                onChange={(e) => setConsent({ ...consent, disclaimer: e.target.checked })}
+                name="disclaimer"
+                value="I understand this is a legal referral service"
                 className="mt-1 h-4 w-4 text-primary focus:ring-primary"
                 required
               />
@@ -116,15 +171,27 @@ export function TCPAConsentForm() {
             </label>
           </div>
 
+          {/* Hidden field for form identification */}
+          <input type="hidden" name="_subject" value="New Lead from Homepage" />
+
           {/* Submit Button */}
           <Button
             type="submit"
             size="lg"
             className="w-full text-lg py-4 h-auto"
-            disabled={!consent.phoneConsent || !consent.disclaimer}
+            disabled={state.submitting}
           >
-            <Phone className="h-5 w-5 mr-2" />
-            Get Free Legal Help Now
+            {state.submitting ? (
+              <>
+                <Loader2 className="h-5 w-5 mr-2 animate-spin" />
+                Submitting...
+              </>
+            ) : (
+              <>
+                <Phone className="h-5 w-5 mr-2" />
+                Get Free Legal Help Now
+              </>
+            )}
           </Button>
         </form>
 
@@ -140,7 +207,7 @@ export function TCPAConsentForm() {
 
         {/* Trust Signals */}
         <div className="mt-6 text-center text-xs text-muted-foreground">
-          <p>🔒 Encrypted & Secure</p>
+          <p>🔒 Encrypted &amp; Secure</p>
           <p>✅ No Spam Guarantee</p>
           <p>🛡️ Licensed Attorneys Only</p>
           <p>🇺🇸 Veteran-Owned Service</p>
