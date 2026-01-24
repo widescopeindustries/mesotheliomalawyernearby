@@ -21,10 +21,10 @@ export function Header() {
             <nav className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2">
+                    <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-80">
                         <Shield className="h-8 w-8 text-primary" />
                         <div className="flex flex-col">
-                            <span className="font-bold text-lg leading-tight text-foreground">Mesothelioma</span>
+                            <span className="font-serif font-bold text-lg leading-tight text-foreground">Mesothelioma</span>
                             <span className="text-xs text-muted-foreground leading-tight">Lawyer Nearby</span>
                         </div>
                     </Link>
@@ -44,7 +44,7 @@ export function Header() {
 
                     {/* CTA Button - Desktop */}
                     <div className="hidden md:flex items-center gap-4">
-                        <Button asChild size="sm" className="bg-green-600 hover:bg-green-700">
+                        <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-lg">
                             <a href="tel:682-999-0953" className="flex items-center gap-2">
                                 <Phone className="h-4 w-4" />
                                 (682) 999-0953
@@ -55,7 +55,7 @@ export function Header() {
                     {/* Mobile: Phone + Menu */}
                     <div className="flex md:hidden items-center gap-2">
                         {/* Always visible phone button on mobile */}
-                        <Button asChild size="sm" className="bg-green-600 hover:bg-green-700">
+                        <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-lg">
                             <a href="tel:682-999-0953" className="flex items-center gap-1 text-xs">
                                 <Phone className="h-4 w-4" />
                                 <span className="hidden sm:inline">Call Now</span>
@@ -64,8 +64,9 @@ export function Header() {
 
                         {/* Mobile menu button */}
                         <button
-                            className="p-2"
+                            className="p-2 transition-colors hover:bg-muted rounded-md"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
                         >
                             {mobileMenuOpen ? (
                                 <X className="h-6 w-6" />
@@ -90,7 +91,7 @@ export function Header() {
                                     {item.name}
                                 </Link>
                             ))}
-                            <Button asChild size="sm" className="bg-green-600 hover:bg-green-700 w-full mt-2">
+                            <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-lg w-full mt-2">
                                 <a href="tel:682-999-0953" className="flex items-center justify-center gap-2">
                                     <Phone className="h-4 w-4" />
                                     (682) 999-0953

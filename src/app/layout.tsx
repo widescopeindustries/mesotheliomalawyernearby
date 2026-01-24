@@ -1,10 +1,22 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Merriweather } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { StickyMobileCTA } from '@/components/StickyMobileCTA'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const merriweather = Merriweather({
+  weight: ['300', '400', '700', '900'],
+  subsets: ['latin'],
+  variable: '--font-serif',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Best Mesothelioma Lawyers Near Me | Veteran-Owned Legal Referral',
@@ -25,10 +37,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${merriweather.variable} font-sans`}>
         <Header />
         {children}
         <Footer />
+        <StickyMobileCTA />
       </body>
     </html>
   )
