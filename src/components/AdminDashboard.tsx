@@ -6,7 +6,7 @@ import { TARGET_KEYWORDS } from '@/data/keywords'
 import { BarChart3, TrendingUp, Users, Clock, AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
 
-export default function HomeComponent() {
+export function AdminDashboard() {
   const statsCards = [
     {
       title: "Monthly Searches",

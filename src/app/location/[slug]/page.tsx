@@ -80,7 +80,7 @@ export default function LocationPage({ params }: LocationPageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-green-100 text-green-800">
-              KD {keyword.keywordDifficulty} • CPC ${keyword.cpc}
+              KD {keyword.kd} • CPC ${keyword.cpc}
             </Badge>
             
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
