@@ -2,9 +2,10 @@ import { Metadata } from 'next'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { Phone, MapPin, Clock, Shield, AlertTriangle, CheckCircle, Scale, Building, HelpCircle } from 'lucide-react'
+import { Phone, MapPin, Clock, Shield, AlertTriangle, CheckCircle, Scale, Building, HelpCircle, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { TARGET_KEYWORDS, EXPOSURE_SITES, STATE_SOL, COMMON_FAQS } from '@/data/keywords'
+import { EXPOSURE_SITE_DETAILS } from '@/data/exposure-sites'
 
 interface LocationPageProps {
   params: {
@@ -210,26 +211,53 @@ export default function LocationPage({ params }: LocationPageProps) {
               </div>
               <p className="text-center text-muted-foreground mb-8 max-w-3xl mx-auto">
                 Many {keyword.state} residents were exposed to asbestos at these locations.
-                If you worked at any of these sites, you may be eligible for compensation.
+                Click on any site to learn about its history and how workers were affected.
               </p>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {exposureSites.map((site, index) => (
-                  <Card key={index} className="hover:shadow-md transition-shadow">
-                    <CardContent className="p-4">
-                      <div className="flex items-start gap-3">
-                        <div className="h-10 w-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                          <AlertTriangle className="h-5 w-5 text-red-600" />
+                {exposureSites.map((site, index) => {
+                  // Check if we have a detailed page for this site
+                  const detailedSite = EXPOSURE_SITE_DETAILS.find(
+                    s => s.name === site.name || s.city === site.city
+                  )
+
+                  const cardContent = (
+                    <Card className={`h-full ${detailedSite ? 'hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer group-hover:-translate-y-1' : 'hover:shadow-md transition-shadow'}`}>
+                      <CardContent className="p-4">
+                        <div className="flex items-start gap-3">
+                          <div className="h-10 w-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <AlertTriangle className="h-5 w-5 text-red-600" />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className={`font-semibold ${detailedSite ? 'group-hover:text-primary transition-colors' : ''}`}>
+                              {site.name}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">{site.city}, {keyword.state}</p>
+                            <Badge variant="outline" className="mt-1 text-xs">{site.type}</Badge>
+                          </div>
+                          {detailedSite && (
+                            <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+                          )}
                         </div>
-                        <div>
-                          <h3 className="font-semibold">{site.name}</h3>
-                          <p className="text-sm text-muted-foreground">{site.city}, {keyword.state}</p>
-                          <Badge variant="outline" className="mt-1 text-xs">{site.type}</Badge>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                        {detailedSite && (
+                          <p className="text-xs text-primary mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            View detailed history →
+                          </p>
+                        )}
+                      </CardContent>
+                    </Card>
+                  )
+
+                  if (detailedSite) {
+                    return (
+                      <Link key={index} href={`/exposure-sites/${detailedSite.id}`} className="group">
+                        {cardContent}
+                      </Link>
+                    )
+                  }
+
+                  return <div key={index}>{cardContent}</div>
+                })}
               </div>
 
               <p className="text-center text-sm text-muted-foreground mt-8">

@@ -1,4 +1,5 @@
 import { TARGET_KEYWORDS } from '@/data/keywords'
+import { EXPOSURE_SITE_DETAILS } from '@/data/exposure-sites'
 
 export default function sitemap() {
     const baseUrl = 'https://mesotheliomalawyernearby.vercel.app'
@@ -60,5 +61,13 @@ export default function sitemap() {
         priority: 0.7,
     }))
 
-    return [...routes, ...locationPages]
+    // Add all exposure site detail pages
+    const exposureSitePages = EXPOSURE_SITE_DETAILS.map((site) => ({
+        url: `${baseUrl}/exposure-sites/${site.id}`,
+        lastModified: currentDate,
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+    }))
+
+    return [...routes, ...locationPages, ...exposureSitePages]
 }
