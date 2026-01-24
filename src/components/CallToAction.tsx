@@ -16,29 +16,29 @@ export const CallToAction = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Get Immediate Legal Help Today
           </h2>
-          
+
           <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-            Don&apos;t wait. Time is critical in mesothelioma cases. Call now for a 
+            Don&apos;t wait. Time is critical in mesothelioma cases. Call now for a
             <span className="font-bold"> free, no-obligation consultation</span> with experienced attorneys who understand your situation.
           </p>
 
           {/* Primary Action */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="text-lg px-8 py-6 h-auto bg-background text-foreground hover:bg-background/90"
               asChild
             >
-              <a href="tel:800-123-4567">
+              <a href="tel:682-999-0953">
                 <Phone className="h-5 w-5 mr-2" />
-                (800) 123-4567
+                (682) 999-0953
                 <span className="ml-2 text-xs bg-green-600 text-white px-2 py-1 rounded">24/7 Available</span>
               </a>
             </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg" 
+
+            <Button
+              variant="outline"
+              size="lg"
               className="text-lg px-8 py-6 h-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
             >
               Start Online Chat
@@ -76,7 +76,7 @@ export const CallToAction = () => {
               ⚠️ Time-Sensitive Information
             </p>
             <p className="text-base opacity-90">
-              Every state has time limits for filing mesothelioma claims. Don&apos;t risk losing your right to compensation. 
+              Every state has time limits for filing mesothelioma claims. Don&apos;t risk losing your right to compensation.
               Call now to understand your legal options before it&apos;s too late.
             </p>
           </div>

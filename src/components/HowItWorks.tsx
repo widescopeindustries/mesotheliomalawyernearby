@@ -90,7 +90,7 @@ export const HowItWorks = () => {
               <div>
                 <h3 className="font-semibold text-lg text-red-900 mb-1">Need Immediate Help?</h3>
                 <p className="text-red-800">
-                  Time is critical in mesothelioma cases. Call us now at <strong>(800) 123-4567</strong> for immediate assistance. 
+                  Time is critical in mesothelioma cases. Call us now at <strong>(682) 999-0953</strong> for immediate assistance.
                   Our team is standing by 24/7 to help you understand your legal options.
                 </p>
               </div>

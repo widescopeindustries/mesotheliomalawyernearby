@@ -30,24 +30,24 @@ export default function VeteranResourcesPage() {
             <Badge className="mb-6 bg-yellow-400 text-black">
               Veteran-to-Veteran Support
             </Badge>
-            
+
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
               Veterans: Mesothelioma From Military Service?
             </h1>
-            
+
             <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
-              As veterans who served our country, we understand your sacrifice. 
-              One-third of all mesothelioma cases affect service members. 
+              As veterans who served our country, we understand your sacrifice.
+              One-third of all mesothelioma cases affect service members.
               <span className="font-bold">You&apos;re not alone in this fight.</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <Button size="lg" className="text-lg px-8 py-6 h-auto bg-white text-blue-900 hover:bg-blue-50">
                 <Phone className="h-5 w-5 mr-2" />
-                (800) 123-4567
+                (682) 999-0953
                 <span className="ml-2 text-xs bg-red-600 text-white px-2 py-1 rounded">24/7 Veteran Line</span>
               </Button>
-              
+
               <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-white text-white hover:bg-white hover:text-blue-900">
                 VA Benefits Check
               </Button>
@@ -74,21 +74,18 @@ export default function VeteranResourcesPage() {
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className={`h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0 ${
-                        ship.risk === 'High' ? 'bg-red-100' : 'bg-yellow-100'
-                      }`}>
-                        <Ship className={`h-6 w-6 ${
-                          ship.risk === 'High' ? 'text-red-600' : 'text-yellow-600'
-                        }`} />
+                      <div className={`h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0 ${ship.risk === 'High' ? 'bg-red-100' : 'bg-yellow-100'
+                        }`}>
+                        <Ship className={`h-6 w-6 ${ship.risk === 'High' ? 'text-red-600' : 'text-yellow-600'
+                          }`} />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-bold text-lg mb-1">{ship.name}</h3>
                         <Badge variant="outline" className="text-xs mb-2">
                           {ship.class}
                         </Badge>
-                        <Badge className={`text-xs ${
-                          ship.risk === 'High' ? 'bg-red-600' : 'bg-yellow-600'
-                        } text-white`}>
+                        <Badge className={`text-xs ${ship.risk === 'High' ? 'bg-red-600' : 'bg-yellow-600'
+                          } text-white`}>
                           {ship.risk} Risk
                         </Badge>
                         <p className="text-sm text-muted-foreground mt-2">
@@ -246,28 +243,28 @@ export default function VeteranResourcesPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               You Served Our Country. Now Let Us Serve You.
             </h2>
-            
+
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              As fellow veterans, we understand the unique challenges you face. 
+              As fellow veterans, we understand the unique challenges you face.
               <span className="font-bold">Call now for confidential, no-obligation assistance.</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="text-lg px-8 py-6 h-auto bg-background text-foreground hover:bg-background/90"
                 asChild
               >
-                <a href="tel:(800) 123-4567">
+                <a href="tel:682-999-0953">
                   <Phone className="h-5 w-5 mr-2" />
-                  (800) 123-4567
+                  (682) 999-0953
                   <span className="ml-2 text-xs bg-green-600 text-white px-2 py-1 rounded">Veteran Line</span>
                 </a>
               </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg" 
+
+              <Button
+                variant="outline"
+                size="lg"
                 className="text-lg px-8 py-6 h-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               >
                 Start VA Benefits Claim

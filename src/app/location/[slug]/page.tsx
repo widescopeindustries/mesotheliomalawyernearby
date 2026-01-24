@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 // Generate metadata for each location page
 export async function generateMetadata({ params }: LocationPageProps): Promise<Metadata> {
   const keyword = TARGET_KEYWORDS.find(k => k.slug === params.slug)
-  
+
   if (!keyword) {
     return {
       title: 'Location Not Found',
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
     description: `Connect with experienced mesothelioma attorneys in ${keyword.city}, ${keyword.state}. As a veteran-owned service, we understand the urgency of asbestos exposure cases. Free consultation.`,
     keywords: [
       `${keyword.city.toLowerCase()} mesothelioma lawyer`,
-      `${keyword.state.toLowerCase()} mesothelioma attorney`, 
+      `${keyword.state.toLowerCase()} mesothelioma attorney`,
       'asbestos lawsuit',
       'veteran mesothelioma help',
       'mesothelioma compensation'
@@ -54,24 +54,15 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
 
 export default function LocationPage({ params }: LocationPageProps) {
   const keyword = TARGET_KEYWORDS.find(k => k.slug === params.slug)
-  
+
   if (!keyword) {
     return <div>Location not found</div>
   }
 
   const exposureSites = EXPOSURE_SITES[keyword.state as keyof typeof EXPOSURE_SITES] || []
-  const phoneNumbers = {
-    'new-mexico/albuquerque': '(505) 555-0123',
-    'missouri/st-louis': '(314) 555-0123', 
-    'california/los-angeles': '(213) 555-0123',
-    'new-jersey/newark': '(973) 555-0123',
-    'montana/billings': '(406) 555-0123',
-    'kentucky/louisville': '(502) 555-0123',
-    'illinois/chicago': '(312) 555-0123',
-    'michigan/detroit': '(313) 555-0123'
-  }
 
-  const localPhone = phoneNumbers[keyword.slug as keyof typeof phoneNumbers] || '(800) 123-4567'
+  // Main tracking phone number
+  const localPhone = '(682) 999-0953'
 
   return (
     <div className="min-h-screen">
@@ -79,16 +70,17 @@ export default function LocationPage({ params }: LocationPageProps) {
       <section className="bg-gradient-to-br from-primary/10 to-primary/5 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-green-100 text-green-800">
-              KD {keyword.kd} • CPC ${keyword.cpc}
+            <Badge className="mb-4 bg-primary/20 text-primary">
+              <Shield className="h-4 w-4 mr-1 inline" />
+              Veteran-Owned Service
             </Badge>
-            
+
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
               {keyword.city}, {keyword.state} Mesothelioma Lawyer
             </h1>
-            
+
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Veterans helping {keyword.city} residents get experienced legal help for mesothelioma. 
+              Veterans helping {keyword.city} residents get experienced legal help for mesothelioma.
               <span className="font-semibold text-primary">Free consultation, no upfront costs.</span>
             </p>
 
@@ -98,25 +90,25 @@ export default function LocationPage({ params }: LocationPageProps) {
                 {localPhone}
                 <span className="ml-2 text-xs bg-yellow-400 text-black px-2 py-1 rounded">24/7</span>
               </Button>
-              
+
               <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto">
                 Check Eligibility Free
               </Button>
             </div>
 
-            {/* Quick Stats */}
+            {/* Trust Signals */}
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">{keyword.volume}</div>
-                <div className="text-sm text-muted-foreground">Monthly Searches</div>
+                <div className="text-3xl font-bold text-primary">24/7</div>
+                <div className="text-sm text-muted-foreground">Available Support</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">{keyword.kd}</div>
-                <div className="text-sm text-muted-foreground">Keyword Difficulty</div>
+                <div className="text-3xl font-bold text-green-600">100%</div>
+                <div className="text-sm text-muted-foreground">Free Consultation</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">${keyword.cpc}</div>
-                <div className="text-sm text-muted-foreground">Cost Per Click</div>
+                <div className="text-3xl font-bold text-primary">$0</div>
+                <div className="text-sm text-muted-foreground">Upfront Costs</div>
               </div>
             </div>
           </div>
@@ -132,7 +124,7 @@ export default function LocationPage({ params }: LocationPageProps) {
                 Known Asbestos Exposure Sites in {keyword.state}
               </h2>
               <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-                If you or a loved one worked at these {keyword.state} facilities, you may have been exposed to asbestos. 
+                If you or a loved one worked at these {keyword.state} facilities, you may have been exposed to asbestos.
                 Time is critical for mesothelioma cases.
               </p>
 
@@ -162,7 +154,7 @@ export default function LocationPage({ params }: LocationPageProps) {
                   ⚠️ Time-Sensitive: Your Rights At Risk
                 </h3>
                 <p className="text-red-800">
-                  {keyword.state} has strict time limits for filing mesothelioma claims. 
+                  {keyword.state} has strict time limits for filing mesothelioma claims.
                   Don&apos;t wait - call now to protect your right to compensation.
                 </p>
               </div>
@@ -185,7 +177,7 @@ export default function LocationPage({ params }: LocationPageProps) {
                     Veteran-to-Veteran Support
                   </h2>
                   <p className="text-lg text-muted-foreground">
-                    As service-disabled veterans, we understand the unique challenges you face. 
+                    As service-disabled veterans, we understand the unique challenges you face.
                     One-third of all mesothelioma cases affect veterans.
                   </p>
                 </div>
@@ -212,7 +204,7 @@ export default function LocationPage({ params }: LocationPageProps) {
                       </li>
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h3 className="font-semibold text-lg mb-4">VA Benefits Available</h3>
                     <ul className="space-y-3">
@@ -314,15 +306,15 @@ export default function LocationPage({ params }: LocationPageProps) {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               {keyword.city} Residents: Get Legal Help Now
             </h2>
-            
+
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Don&apos;t let time run out on your mesothelioma claim. 
+              Don&apos;t let time run out on your mesothelioma claim.
               <span className="font-bold">Call today for immediate help from attorneys who understand {keyword.state} asbestos exposure cases.</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="text-lg px-8 py-6 h-auto bg-background text-foreground hover:bg-background/90"
                 asChild
               >
@@ -332,10 +324,10 @@ export default function LocationPage({ params }: LocationPageProps) {
                   <span className="ml-2 text-xs bg-green-600 text-white px-2 py-1 rounded">Call Now</span>
                 </a>
               </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg" 
+
+              <Button
+                variant="outline"
+                size="lg"
                 className="text-lg px-8 py-6 h-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               >
                 Start Free Assessment

@@ -3,42 +3,42 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, TrendingUp, Users } from "lucide-react"
 import Link from "next/link"
 
-// Featured high-value locations based on your "unicorn" keywords research
+// Featured high-value locations
 const featuredLocations = [
   {
     state: "New Mexico",
     city: "Albuquerque",
-    description: "High CPC, low competition market",
+    description: "Experienced attorneys serving asbestos victims",
     slug: "new-mexico/albuquerque"
   },
   {
-    state: "Missouri", 
+    state: "Missouri",
     city: "St. Louis",
-    description: "Emerging market with strong potential",
+    description: "Trusted legal representation for mesothelioma cases",
     slug: "missouri/st-louis"
   },
   {
     state: "Texas",
     city: "Houston",
-    description: "Major industrial exposure hub",
+    description: "Specialized lawyers with industrial exposure expertise",
     slug: "texas/houston"
   },
   {
     state: "California",
-    city: "Los Angeles", 
-    description: "High-volume metropolitan area",
+    city: "Los Angeles",
+    description: "Leading mesothelioma legal advocates",
     slug: "california/los-angeles"
   },
   {
     state: "New York",
     city: "Buffalo",
-    description: "Underserved market with opportunity",
+    description: "Dedicated to helping asbestos exposure victims",
     slug: "new-york/buffalo"
   },
   {
     state: "Ohio",
     city: "Cleveland",
-    description: "Strong manufacturing history",
+    description: "Expert legal support for manufacturing workers",
     slug: "ohio/cleveland"
   }
 ]
@@ -53,7 +53,7 @@ export const FeaturedLocations = () => {
               Featured Locations
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We connect mesothelioma victims with experienced local attorneys across the United States. 
+              We connect mesothelioma victims with experienced local attorneys across the United States.
               Our focused approach ensures you get specialized legal help in your area.
             </p>
           </div>
@@ -121,7 +121,7 @@ export const FeaturedLocations = () => {
           <div className="text-center p-8 bg-background rounded-lg border">
             <h3 className="text-xl font-semibold mb-3">Don&apos;t See Your Location?</h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              We serve mesothelioma victims across all 50 states. Even if your city isn&apos;t featured, 
+              We serve mesothelioma victims across all 50 states. Even if your city isn&apos;t featured,
               we can connect you with experienced legal help in your area.
             </p>
             <Button size="lg">

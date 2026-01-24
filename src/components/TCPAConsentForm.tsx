@@ -17,7 +17,7 @@ export function TCPAConsentForm() {
     e.preventDefault()
     if (consent.phoneConsent && consent.disclaimer) {
       // Process Pay Per Call lead
-      console.log('Lead captured:', consent)
+      // TODO: Integrate with lead tracking system
       // Redirect to thank you or call tracking
     }
   }
@@ -41,7 +41,7 @@ export function TCPAConsentForm() {
             <div className="relative">
               <input
                 type="tel"
-                placeholder="(555) 123-4567"
+                placeholder="(XXX) XXX-XXXX"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
                 required
               />
@@ -54,17 +54,17 @@ export function TCPAConsentForm() {
           {/* FCC Consent Checkboxes */}
           <div className="space-y-4 bg-gray-50 p-4 rounded-lg">
             <h4 className="font-semibold mb-3">Required Consents</h4>
-            
+
             <label className="flex items-start gap-3 cursor-pointer">
               <input
                 type="checkbox"
                 checked={consent.phoneConsent}
-                onChange={(e) => setConsent({...consent, phoneConsent: e.target.checked})}
+                onChange={(e) => setConsent({ ...consent, phoneConsent: e.target.checked })}
                 className="mt-1 h-4 w-4 text-primary focus:ring-primary"
                 required
               />
               <span className="text-sm">
-                I agree to be contacted by phone about mesothelioma legal options. 
+                I agree to be contacted by phone about mesothelioma legal options.
                 <span className="text-red-600">*</span> Required
               </span>
             </label>
@@ -73,7 +73,7 @@ export function TCPAConsentForm() {
               <input
                 type="checkbox"
                 checked={consent.emailConsent}
-                onChange={(e) => setConsent({...consent, emailConsent: e.target.checked})}
+                onChange={(e) => setConsent({ ...consent, emailConsent: e.target.checked })}
                 className="mt-1 h-4 w-4 text-primary focus:ring-primary"
               />
               <span className="text-sm">
@@ -89,7 +89,7 @@ export function TCPAConsentForm() {
             </label>
             <select
               value={consent.selectedAttorney}
-              onChange={(e) => setConsent({...consent, selectedAttorney: e.target.value})}
+              onChange={(e) => setConsent({ ...consent, selectedAttorney: e.target.value })}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
             >
               <option value="">Select your preference</option>
@@ -105,21 +105,21 @@ export function TCPAConsentForm() {
               <input
                 type="checkbox"
                 checked={consent.disclaimer}
-                onChange={(e) => setConsent({...consent, disclaimer: e.target.checked})}
+                onChange={(e) => setConsent({ ...consent, disclaimer: e.target.checked })}
                 className="mt-1 h-4 w-4 text-primary focus:ring-primary"
                 required
               />
               <span className="text-sm">
-                I understand that this is a legal referral service and not an attorney-client relationship. 
+                I understand that this is a legal referral service and not an attorney-client relationship.
                 <span className="text-red-600">*</span> Required
               </span>
             </label>
           </div>
 
           {/* Submit Button */}
-          <Button 
-            type="submit" 
-            size="lg" 
+          <Button
+            type="submit"
+            size="lg"
             className="w-full text-lg py-4 h-auto"
             disabled={!consent.phoneConsent || !consent.disclaimer}
           >
@@ -132,8 +132,8 @@ export function TCPAConsentForm() {
         <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-800">
           <h4 className="font-semibold mb-2">📋 FCC Compliant Communication</h4>
           <p>
-            By submitting this form, you provide prior express written consent for one-to-one communication 
-            with participating mesothelioma attorneys. We will not share your information with multiple firms. 
+            By submitting this form, you provide prior express written consent for one-to-one communication
+            with participating mesothelioma attorneys. We will not share your information with multiple firms.
             You can withdraw consent at any time.
           </p>
         </div>

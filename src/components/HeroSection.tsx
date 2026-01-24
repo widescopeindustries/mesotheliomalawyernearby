@@ -12,21 +12,21 @@ export const HeroSection = () => {
             <Shield className="h-5 w-5 text-primary" />
             <span className="text-sm font-semibold text-primary">Service-Disabled Veteran-Owned</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6">
             Get Experienced Legal Help for
             <span className="text-primary"> Mesothelioma</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Connect with specialized mesothelioma lawyers who understand the urgency of your situation. 
+            Connect with specialized mesothelioma lawyers who understand the urgency of your situation.
             As a veteran-owned service, we&apos;re committed to helping you get the compensation you deserve.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button size="lg" className="text-lg px-8 py-6 h-auto">
               <Phone className="h-5 w-5 mr-2" />
-              (800) 123-4567
+              (682) 999-0953
               <span className="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded">24/7</span>
             </Button>
             <Link href="/about">
@@ -35,7 +35,7 @@ export const HeroSection = () => {
               </Button>
             </Link>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="flex items-center gap-3">
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
