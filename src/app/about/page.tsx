@@ -6,7 +6,7 @@ import { Award, Heart, Users, Phone } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'About Us - Veteran-Owned Mesothelioma Legal Referral Service',
   description: 'Learn about our veteran-owned mesothelioma legal referral service. Built on integrity, service, and commitment to helping asbestos exposure victims find experienced legal help.',
-  keywords: ['about mesothelioma legal help', 'veteran owned legal service', 'sdvosb mesothelioma', 'asbestos legal referral'],
+  keywords: ['about mesothelioma lawyer nearby', 'veteran owned legal service', 'sdvosb mesothelioma', 'asbestos legal referral'],
   openGraph: {
     title: 'About Us - Veteran-Owned Mesothelioma Legal Service',
     description: 'A veteran-owned company dedicated to connecting mesothelioma victims with experienced legal representation.',
@@ -31,7 +31,7 @@ export default function AboutPage() {
             Veterans Serving Those Who Served: Built on a Foundation of Honor
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            Mesothelioma Legal Help is a veteran-owned platform dedicated to connecting asbestos exposure victims with experienced legal representation. We&apos;re not just another directory; we&apos;re your fellow service members committed to helping you navigate the legal process with dignity and respect.
+            Mesothelioma Lawyer Nearby is a veteran-owned platform dedicated to connecting asbestos exposure victims with experienced legal representation. We&apos;re not just another directory; we&apos;re your fellow service members committed to helping you navigate the legal process with dignity and respect.
           </p>
         </div>
       </div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                   <div className="flex flex-col md:flex-row gap-6 mb-6">
                     <div className="flex-1">
                       <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-                        Mesothelioma Legal Help is proudly owned and operated by{" "}
+                        Mesothelioma Lawyer Nearby is proudly owned and operated by{" "}
                         <strong className="font-semibold text-foreground">Widescope Industries LLC</strong>,
                         a Texas-based, Service-Disabled Veteran-Owned Small Business (SDVOSB) officially certified
                         by the U.S. Small Business Administration (SBA).

@@ -5,11 +5,11 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Mesothelioma Legal Help - Veteran-Owned Legal Referral Service',
+  title: 'Mesothelioma Lawyer Nearby - Veteran-Owned Legal Referral Service',
   description: 'Connect with experienced mesothelioma lawyers across the United States. Veteran-owned service providing trusted legal guidance for asbestos exposure victims.',
-  keywords: ['mesothelioma lawyer', 'asbestos attorney', 'veteran owned legal', 'mesothelioma legal help', 'asbestos lawsuit'],
+  keywords: ['mesothelioma lawyer', 'asbestos attorney', 'veteran owned legal', 'mesothelioma lawyer nearby', 'asbestos lawsuit'],
   openGraph: {
-    title: 'Mesothelioma Legal Help - Veteran-Owned Service',
+    title: 'Mesothelioma Lawyer Nearby - Veteran-Owned Service',
     description: 'Trusted legal referral service connecting mesothelioma victims with experienced attorneys.',
     type: 'website',
     url: 'https://mesotheliomalawyernearby.vercel.app',
