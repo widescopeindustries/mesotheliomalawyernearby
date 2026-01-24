@@ -44,10 +44,10 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
       title: `${keyword.city}, ${keyword.state} Mesothelioma Lawyers | Veteran-Owned Service`,
       description: `Veteran-owned mesothelioma legal referral service for ${keyword.city} residents. Get help from experienced attorneys who understand asbestos exposure cases.`,
       type: 'website',
-      url: `https://mesothelioma-legal-help.com/location/${params.slug}`,
+      url: `https://mesotheliomalawyernearby.vercel.app/location/${params.slug}`,
     },
     alternates: {
-      canonical: `https://mesothelioma-legal-help.com/location/${params.slug}`
+      canonical: `https://mesotheliomalawyernearby.vercel.app/location/${params.slug}`
     }
   }
 }

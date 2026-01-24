@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Mesothelioma Legal Help - Veteran-Owned Service',
     description: 'Trusted legal referral service connecting mesothelioma victims with experienced attorneys.',
     type: 'website',
-    url: 'https://mesothelioma-legal-help.com',
+    url: 'https://mesotheliomalawyernearby.vercel.app',
   },
 }
 

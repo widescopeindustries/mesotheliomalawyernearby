@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     title: 'About Us - Veteran-Owned Mesothelioma Legal Service',
     description: 'A veteran-owned company dedicated to connecting mesothelioma victims with experienced legal representation.',
     type: 'website',
-    url: 'https://mesothelioma-legal-help.com/about',
+    url: 'https://mesotheliomalawyernearby.vercel.app/about',
   },
   alternates: {
-    canonical: 'https://mesothelioma-legal-help.com/about',
+    canonical: 'https://mesotheliomalawyernearby.vercel.app/about',
   },
 }
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Our Mission</h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              To empower mesothelioma victims and their families with reliable, compassionate guidance and connect them with the most qualified, 
+              To empower mesothelioma victims and their families with reliable, compassionate guidance and connect them with the most qualified,
               experienced legal professionals in the country. We believe in <strong className="text-foreground">integrity, service,
                 and unwavering support</strong> — because facing mesothelioma is challenging enough without having to worry about finding trustworthy legal help.
             </p>
@@ -218,7 +218,7 @@ export default function AboutPage() {
                   </div>
                   <div className="mt-8 p-4 bg-primary/10 border-l-4 border-primary rounded">
                     <p className="text-sm md:text-base text-foreground font-medium">
-                      As veterans who&apos;ve transitioned to civilian life, we understand the challenges you face. 
+                      As veterans who&apos;ve transitioned to civilian life, we understand the challenges you face.
                       Let us help you connect with legal professionals who respect your service and understand your unique situation.
                     </p>
                   </div>

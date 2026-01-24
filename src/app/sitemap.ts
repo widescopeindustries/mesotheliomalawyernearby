@@ -1,7 +1,7 @@
 import { TARGET_KEYWORDS } from '@/data/keywords'
 
 export default function sitemap() {
-    const baseUrl = 'https://mesothelioma-legal-help.com'
+    const baseUrl = 'https://mesotheliomalawyernearby.vercel.app'
 
     // Get current date for lastModified
     const currentDate = new Date().toISOString()
