@@ -89,30 +89,30 @@ export default function LocationPage({ params }: LocationPageProps) {
 
             {/* Trust Signals */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="flex items-center gap-2 bg-background px-4 py-2 rounded-full shadow-sm">
-                <Clock className="h-5 w-5 text-green-600" />
+              <div className="flex items-center gap-2 bg-background px-4 py-2 rounded-full shadow-sm transition-all duration-200 hover:shadow-md hover:bg-muted">
+                <Clock className="h-5 w-5 text-accent" />
                 <span className="text-sm font-medium">24/7 Available</span>
               </div>
-              <div className="flex items-center gap-2 bg-background px-4 py-2 rounded-full shadow-sm">
-                <CheckCircle className="h-5 w-5 text-blue-600" />
+              <div className="flex items-center gap-2 bg-background px-4 py-2 rounded-full shadow-sm transition-all duration-200 hover:shadow-md hover:bg-muted">
+                <CheckCircle className="h-5 w-5 text-secondary" />
                 <span className="text-sm font-medium">Free Consultation</span>
               </div>
-              <div className="flex items-center gap-2 bg-background px-4 py-2 rounded-full shadow-sm">
-                <Scale className="h-5 w-5 text-purple-600" />
+              <div className="flex items-center gap-2 bg-background px-4 py-2 rounded-full shadow-sm transition-all duration-200 hover:shadow-md hover:bg-muted">
+                <Scale className="h-5 w-5 text-primary" />
                 <span className="text-sm font-medium">$0 Unless You Win</span>
               </div>
             </div>
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="text-lg px-8 py-6 h-auto bg-green-600 hover:bg-green-700" asChild>
+              <Button size="lg" className="text-lg px-8 py-6 h-auto bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-xl" asChild>
                 <a href={`tel:${localPhone.replace(/[^\d]/g, '')}`}>
                   <Phone className="h-5 w-5 mr-2" />
                   {localPhone}
-                  <span className="ml-2 text-xs bg-white/20 px-2 py-1 rounded">Free Call</span>
+                  <span className="ml-2 text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">Free Call</span>
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-2 transition-all duration-200 hover:bg-muted hover:shadow-lg" asChild>
                 <Link href="/contact">Request Callback</Link>
               </Button>
             </div>
@@ -155,12 +155,12 @@ export default function LocationPage({ params }: LocationPageProps) {
             </p>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center transition-all duration-200 hover:shadow-xl hover:scale-105 hover:border-accent/50">
                 <CardContent className="p-8">
-                  <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-200 hover:bg-primary/20 hover:scale-110">
                     <Scale className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Specialized Attorneys</h3>
+                  <h3 className="font-serif text-xl font-bold mb-3">Specialized Attorneys</h3>
                   <p className="text-muted-foreground">
                     We only connect you with attorneys who specialize in mesothelioma and
                     asbestos cases - not general practice lawyers.
@@ -168,12 +168,12 @@ export default function LocationPage({ params }: LocationPageProps) {
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center transition-all duration-200 hover:shadow-xl hover:scale-105 hover:border-accent/50">
                 <CardContent className="p-8">
-                  <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="h-8 w-8 text-green-600" />
+                  <div className="h-16 w-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-200 hover:bg-secondary/20 hover:scale-110">
+                    <CheckCircle className="h-8 w-8 text-secondary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">No Upfront Costs</h3>
+                  <h3 className="font-serif text-xl font-bold mb-3">No Upfront Costs</h3>
                   <p className="text-muted-foreground">
                     All attorneys in our network work on contingency - you pay nothing
                     unless you receive compensation.
@@ -181,12 +181,12 @@ export default function LocationPage({ params }: LocationPageProps) {
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center transition-all duration-200 hover:shadow-xl hover:scale-105 hover:border-accent/50">
                 <CardContent className="p-8">
-                  <div className="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="h-8 w-8 text-blue-600" />
+                  <div className="h-16 w-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-200 hover:bg-accent/20 hover:scale-110">
+                    <Shield className="h-8 w-8 text-accent" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Veteran-Owned</h3>
+                  <h3 className="font-serif text-xl font-bold mb-3">Veteran-Owned</h3>
                   <p className="text-muted-foreground">
                     Our SDVOSB-certified business understands military asbestos exposure
                     and serves with honor.
@@ -281,43 +281,43 @@ export default function LocationPage({ params }: LocationPageProps) {
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-bold mb-4">What You May Recover:</h3>
+                    <h3 className="font-serif text-xl font-bold mb-4">What You May Recover:</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                         <span><strong>Medical Expenses</strong> - Past and future treatment costs</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                         <span><strong>Lost Wages</strong> - Income lost due to illness</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                         <span><strong>Pain & Suffering</strong> - Physical and emotional distress</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                         <span><strong>Loss of Consortium</strong> - Impact on family relationships</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                         <span><strong>Punitive Damages</strong> - When companies acted recklessly</span>
                       </li>
                     </ul>
                   </div>
-                  <div className="bg-primary/5 p-6 rounded-lg">
-                    <h3 className="text-xl font-bold mb-4">Average Compensation:</h3>
+                  <div className="bg-accent/10 p-8 rounded-lg transition-all duration-200 hover:bg-accent/15">
+                    <h3 className="font-serif text-xl font-bold mb-4">Average Compensation:</h3>
                     <div className="space-y-4">
                       <div>
-                        <div className="text-3xl font-bold text-primary">$1 - $1.4 Million</div>
+                        <div className="text-3xl font-bold text-accent">$1 - $1.4 Million</div>
                         <p className="text-sm text-muted-foreground">Average Settlement</p>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-primary">$2.4 Million+</div>
+                        <div className="text-2xl font-bold text-secondary">$2.4 Million+</div>
                         <p className="text-sm text-muted-foreground">Average Trial Verdict</p>
                       </div>
                       <div>
-                        <div className="text-xl font-bold text-green-600">$30+ Billion</div>
+                        <div className="text-xl font-bold text-accent">$30+ Billion</div>
                         <p className="text-sm text-muted-foreground">Available in Asbestos Trust Funds</p>
                       </div>
                     </div>
@@ -372,7 +372,7 @@ export default function LocationPage({ params }: LocationPageProps) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 size="lg"
-                className="text-lg px-8 py-6 h-auto bg-white text-primary hover:bg-gray-100"
+                className="text-lg px-8 py-6 h-auto bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-200 hover:shadow-2xl"
                 asChild
               >
                 <a href={`tel:${localPhone.replace(/[^\d]/g, '')}`}>
@@ -383,7 +383,7 @@ export default function LocationPage({ params }: LocationPageProps) {
               <Button
                 variant="outline"
                 size="lg"
-                className="text-lg px-8 py-6 h-auto border-white text-white hover:bg-white hover:text-primary"
+                className="text-lg px-8 py-6 h-auto border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all duration-200 hover:shadow-xl"
                 asChild
               >
                 <Link href="/contact">Request Free Consultation</Link>
