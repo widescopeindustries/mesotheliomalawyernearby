@@ -8,7 +8,7 @@ export const TARGET_KEYWORDS = [
     kd: 0,
     cpc: 155,
     volume: 700,
-    slug: "new-mexico/albuquerque"
+    slug: "new-mexico-albuquerque"
   },
   {
     keyword: "missouri mesothelioma lawyer",
@@ -17,7 +17,7 @@ export const TARGET_KEYWORDS = [
     kd: 5,
     cpc: 115,
     volume: 90,
-    slug: "missouri/st-louis"
+    slug: "missouri-st-louis"
   },
   {
     keyword: "los angeles mesothelioma lawyer",
@@ -26,7 +26,7 @@ export const TARGET_KEYWORDS = [
     kd: 4,
     cpc: 100,
     volume: 150,
-    slug: "california/los-angeles"
+    slug: "california-los-angeles"
   },
   {
     keyword: "mesothelioma lawyer nj",
@@ -35,7 +35,7 @@ export const TARGET_KEYWORDS = [
     kd: 3,
     cpc: 90,
     volume: 60,
-    slug: "new-jersey/newark"
+    slug: "new-jersey-newark"
   },
   {
     keyword: "montana mesothelioma attorney",
@@ -44,7 +44,7 @@ export const TARGET_KEYWORDS = [
     kd: 0,
     cpc: 30,
     volume: 250,
-    slug: "montana/billings"
+    slug: "montana-billings"
   },
   {
     keyword: "mesothelioma lawyer kentucky",
@@ -53,7 +53,7 @@ export const TARGET_KEYWORDS = [
     kd: 0,
     cpc: 40,
     volume: 90,
-    slug: "kentucky/louisville"
+    slug: "kentucky-louisville"
   },
   {
     keyword: "chicago mesothelioma lawyer",
@@ -62,7 +62,7 @@ export const TARGET_KEYWORDS = [
     kd: 7,
     cpc: 55,
     volume: 50,
-    slug: "illinois/chicago"
+    slug: "illinois-chicago"
   },
   {
     keyword: "michigan mesothelioma lawyer",
@@ -71,7 +71,7 @@ export const TARGET_KEYWORDS = [
     kd: 9,
     cpc: 40,
     volume: 500,
-    slug: "michigan/detroit"
+    slug: "michigan-detroit"
   },
   // Expanded locations - Texas
   {
@@ -81,7 +81,7 @@ export const TARGET_KEYWORDS = [
     kd: 8,
     cpc: 85,
     volume: 320,
-    slug: "texas/houston"
+    slug: "texas-houston"
   },
   {
     keyword: "dallas mesothelioma attorney",
@@ -90,7 +90,7 @@ export const TARGET_KEYWORDS = [
     kd: 6,
     cpc: 75,
     volume: 180,
-    slug: "texas/dallas"
+    slug: "texas-dallas"
   },
   // Expanded locations - Florida
   {
@@ -100,7 +100,7 @@ export const TARGET_KEYWORDS = [
     kd: 5,
     cpc: 70,
     volume: 220,
-    slug: "florida/tampa"
+    slug: "florida-tampa"
   },
   {
     keyword: "miami mesothelioma attorney",
@@ -109,7 +109,7 @@ export const TARGET_KEYWORDS = [
     kd: 7,
     cpc: 65,
     volume: 140,
-    slug: "florida/miami"
+    slug: "florida-miami"
   },
   // Expanded locations - Pennsylvania
   {
@@ -119,7 +119,7 @@ export const TARGET_KEYWORDS = [
     kd: 6,
     cpc: 80,
     volume: 170,
-    slug: "pennsylvania/philadelphia"
+    slug: "pennsylvania-philadelphia"
   },
   {
     keyword: "pittsburgh asbestos attorney",
@@ -128,7 +128,7 @@ export const TARGET_KEYWORDS = [
     kd: 4,
     cpc: 60,
     volume: 90,
-    slug: "pennsylvania/pittsburgh"
+    slug: "pennsylvania-pittsburgh"
   },
   // Expanded locations - Ohio
   {
@@ -138,7 +138,7 @@ export const TARGET_KEYWORDS = [
     kd: 3,
     cpc: 55,
     volume: 85,
-    slug: "ohio/cleveland"
+    slug: "ohio-cleveland"
   },
   {
     keyword: "columbus ohio asbestos lawyer",
@@ -147,7 +147,7 @@ export const TARGET_KEYWORDS = [
     kd: 2,
     cpc: 50,
     volume: 60,
-    slug: "ohio/columbus"
+    slug: "ohio-columbus"
   },
   // Expanded locations - New York
   {
@@ -157,7 +157,7 @@ export const TARGET_KEYWORDS = [
     kd: 10,
     cpc: 95,
     volume: 280,
-    slug: "new-york/new-york-city"
+    slug: "new-york-new-york-city"
   },
   {
     keyword: "buffalo ny asbestos lawyer",
@@ -166,7 +166,7 @@ export const TARGET_KEYWORDS = [
     kd: 2,
     cpc: 45,
     volume: 55,
-    slug: "new-york/buffalo"
+    slug: "new-york-buffalo"
   },
   // Expanded locations - Washington
   {
@@ -176,7 +176,7 @@ export const TARGET_KEYWORDS = [
     kd: 5,
     cpc: 70,
     volume: 110,
-    slug: "washington/seattle"
+    slug: "washington-seattle"
   },
   // Expanded locations - Virginia
   {
@@ -186,7 +186,7 @@ export const TARGET_KEYWORDS = [
     kd: 3,
     cpc: 55,
     volume: 95,
-    slug: "virginia/norfolk"
+    slug: "virginia-norfolk"
   },
   // Expanded locations - Massachusetts
   {
@@ -196,7 +196,7 @@ export const TARGET_KEYWORDS = [
     kd: 6,
     cpc: 75,
     volume: 130,
-    slug: "massachusetts/boston"
+    slug: "massachusetts-boston"
   },
   // Expanded locations - Louisiana
   {
@@ -206,7 +206,7 @@ export const TARGET_KEYWORDS = [
     kd: 4,
     cpc: 60,
     volume: 100,
-    slug: "louisiana/new-orleans"
+    slug: "louisiana-new-orleans"
   },
   // Expanded locations - Arizona
   {
@@ -216,7 +216,7 @@ export const TARGET_KEYWORDS = [
     kd: 3,
     cpc: 55,
     volume: 85,
-    slug: "arizona/phoenix"
+    slug: "arizona-phoenix"
   },
   // Expanded locations - Maryland
   {
@@ -226,7 +226,7 @@ export const TARGET_KEYWORDS = [
     kd: 4,
     cpc: 60,
     volume: 75,
-    slug: "maryland/baltimore"
+    slug: "maryland-baltimore"
   },
   // Expanded locations - Wisconsin
   {
@@ -236,7 +236,7 @@ export const TARGET_KEYWORDS = [
     kd: 2,
     cpc: 45,
     volume: 70,
-    slug: "wisconsin/milwaukee"
+    slug: "wisconsin-milwaukee"
   },
   // Expanded locations - Indiana
   {
@@ -246,7 +246,7 @@ export const TARGET_KEYWORDS = [
     kd: 1,
     cpc: 40,
     volume: 65,
-    slug: "indiana/indianapolis"
+    slug: "indiana-indianapolis"
   },
   // Expanded locations - Minnesota
   {
@@ -256,7 +256,7 @@ export const TARGET_KEYWORDS = [
     kd: 3,
     cpc: 50,
     volume: 80,
-    slug: "minnesota/minneapolis"
+    slug: "minnesota-minneapolis"
   },
   // Expanded locations - Alabama
   {
@@ -266,7 +266,7 @@ export const TARGET_KEYWORDS = [
     kd: 1,
     cpc: 35,
     volume: 55,
-    slug: "alabama/birmingham"
+    slug: "alabama-birmingham"
   },
   // Expanded locations - West Virginia
   {
@@ -276,7 +276,7 @@ export const TARGET_KEYWORDS = [
     kd: 0,
     cpc: 30,
     volume: 45,
-    slug: "west-virginia/charleston"
+    slug: "west-virginia-charleston"
   }
 ] as const
 
