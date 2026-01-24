@@ -24,10 +24,12 @@ export const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 h-auto transition-all duration-200 hover:shadow-xl">
-              <Phone className="h-5 w-5 mr-2" />
-              (682) 999-0953
-              <span className="ml-2 text-xs bg-accent-foreground/20 text-accent-foreground px-2 py-1 rounded">24/7</span>
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 h-auto transition-all duration-200 hover:shadow-xl" asChild>
+              <a href="tel:682-999-0953" aria-label="Call us 24/7 at (682) 999-0953">
+                <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
+                (682) 999-0953
+                <span className="ml-2 text-xs bg-accent-foreground/20 text-accent-foreground px-2 py-1 rounded">24/7</span>
+              </a>
             </Button>
             <Link href="/about">
               <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-2 transition-all duration-200 hover:bg-muted hover:shadow-lg">
@@ -42,7 +44,7 @@ export const HeroSection = () => {
                 <Phone className="h-6 w-6 text-accent" />
               </div>
               <div className="text-left">
-                <h3 className="font-serif font-semibold text-foreground">Immediate Help</h3>
+                <h2 className="font-serif font-semibold text-foreground text-base">Immediate Help</h2>
                 <p className="text-sm text-muted-foreground">Available 24/7</p>
               </div>
             </div>
@@ -51,7 +53,7 @@ export const HeroSection = () => {
                 <Shield className="h-6 w-6 text-accent" />
               </div>
               <div className="text-left">
-                <h3 className="font-serif font-semibold text-foreground">Veteran Trusted</h3>
+                <h2 className="font-serif font-semibold text-foreground text-base">Veteran Trusted</h2>
                 <p className="text-sm text-muted-foreground">SDVOSB Certified</p>
               </div>
             </div>
@@ -60,7 +62,7 @@ export const HeroSection = () => {
                 <Clock className="h-6 w-6 text-accent" />
               </div>
               <div className="text-left">
-                <h3 className="font-serif font-semibold text-foreground">Fast Response</h3>
+                <h2 className="font-serif font-semibold text-foreground text-base">Fast Response</h2>
                 <p className="text-sm text-muted-foreground">Quick Legal Action</p>
               </div>
             </div>

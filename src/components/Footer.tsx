@@ -53,14 +53,14 @@ export function Footer() {
                         <h3 className="font-serif font-semibold mb-4">Contact Us</h3>
                         <ul className="space-y-3 text-sm opacity-90">
                             <li>
-                                <a href="tel:682-999-0953" className="flex items-center gap-2 hover:text-accent transition-colors">
-                                    <Phone className="h-4 w-4" />
+                                <a href="tel:682-999-0953" className="flex items-center gap-2 hover:text-accent transition-colors" aria-label="Call us at (682) 999-0953">
+                                    <Phone className="h-4 w-4" aria-hidden="true" />
                                     (682) 999-0953
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:mesolawyernearme@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors break-all">
-                                    <Mail className="h-4 w-4 flex-shrink-0" />
+                                <a href="mailto:mesolawyernearme@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors break-all" aria-label="Email us at mesolawyernearme@gmail.com">
+                                    <Mail className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
                                     mesolawyernearme@gmail.com
                                 </a>
                             </li>

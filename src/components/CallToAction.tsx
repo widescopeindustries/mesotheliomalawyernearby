@@ -52,7 +52,7 @@ export const CallToAction = () => {
                 <Clock className="h-6 w-6 flex-shrink-0 text-accent" />
               </div>
               <div className="text-left">
-                <h4 className="font-serif font-semibold">Fast Response</h4>
+                <h3 className="font-serif font-semibold text-base">Fast Response</h3>
                 <p className="text-sm opacity-90">We answer 24/7</p>
               </div>
             </div>
@@ -61,7 +61,7 @@ export const CallToAction = () => {
                 <Shield className="h-6 w-6 flex-shrink-0 text-accent" />
               </div>
               <div className="text-left">
-                <h4 className="font-serif font-semibold">No Risk</h4>
+                <h3 className="font-serif font-semibold text-base">No Risk</h3>
                 <p className="text-sm opacity-90">Free consultation</p>
               </div>
             </div>
@@ -70,7 +70,7 @@ export const CallToAction = () => {
                 <Phone className="h-6 w-6 flex-shrink-0 text-accent" />
               </div>
               <div className="text-left">
-                <h4 className="font-serif font-semibold">Immediate Help</h4>
+                <h3 className="font-serif font-semibold text-base">Immediate Help</h3>
                 <p className="text-sm opacity-90">Call right now</p>
               </div>
             </div>

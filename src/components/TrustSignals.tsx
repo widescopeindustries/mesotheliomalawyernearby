@@ -13,7 +13,7 @@ export const TrustSignals = () => {
           <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto text-lg">
             As a veteran-owned company, we built this service on the foundation of integrity, honor, and commitment to those who served.
           </p>
-          
+
           {/* Main Trust Signals */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <Card className="text-center p-8 transition-all duration-200 hover:shadow-xl hover:scale-105 hover:border-accent">
@@ -72,7 +72,7 @@ export const TrustSignals = () => {
                 <CheckCircle className="h-8 w-8 text-secondary flex-shrink-0" />
               </div>
               <div>
-                <h4 className="font-serif font-semibold mb-1">No Upfront Costs</h4>
+                <h3 className="font-serif font-semibold mb-1 text-base">No Upfront Costs</h3>
                 <p className="text-sm text-muted-foreground">Free consultation, no hidden fees</p>
               </div>
             </div>
@@ -82,7 +82,7 @@ export const TrustSignals = () => {
                 <Clock className="h-8 w-8 text-primary flex-shrink-0" />
               </div>
               <div>
-                <h4 className="font-serif font-semibold mb-1">Quick Response</h4>
+                <h3 className="font-serif font-semibold mb-1 text-base">Quick Response</h3>
                 <p className="text-sm text-muted-foreground">Immediate attention to your case</p>
               </div>
             </div>
@@ -92,7 +92,7 @@ export const TrustSignals = () => {
                 <Shield className="h-8 w-8 text-accent flex-shrink-0" />
               </div>
               <div>
-                <h4 className="font-serif font-semibold mb-1">Confidential & Secure</h4>
+                <h3 className="font-serif font-semibold mb-1 text-base">Confidential & Secure</h3>
                 <p className="text-sm text-muted-foreground">Your information is always protected</p>
               </div>
             </div>
