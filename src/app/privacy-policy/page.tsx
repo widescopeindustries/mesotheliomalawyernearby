@@ -108,7 +108,7 @@ export default function PrivacyPolicyPage() {
                             <li>Withdraw consent</li>
                         </ul>
                         <p>
-                            To exercise these rights, please contact us at help@mesotheliomalawyernearby.com or call (682) 999-0953.
+                            To exercise these rights, please contact us at mesolawyernearme@gmail.com or call (682) 999-0953.
                         </p>
                     </section>
 
@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage() {
                         <p>If you have questions about this Privacy Policy, please contact us:</p>
                         <ul className="list-none pl-0 mt-4">
                             <li><strong>Widescope Industries LLC</strong></li>
-                            <li>Email: help@mesotheliomalawyernearby.com</li>
+                            <li>Email: mesolawyernearme@gmail.com</li>
                             <li>Phone: (682) 999-0953</li>
                         </ul>
                     </section>

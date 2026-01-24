@@ -79,8 +79,8 @@ export default function ContactPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="font-semibold text-lg mb-1">Email Us</h3>
-                                                    <a href="mailto:help@mesotheliomalawyernearby.com" className="text-primary hover:underline">
-                                                        help@mesotheliomalawyernearby.com
+                                                    <a href="mailto:mesolawyernearme@gmail.com" className="text-primary hover:underline">
+                                                        mesolawyernearme@gmail.com
                                                     </a>
                                                     <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
                                                 </div>

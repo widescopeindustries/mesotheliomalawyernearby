@@ -59,9 +59,9 @@ export function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:help@mesotheliomalawyernearby.com" className="flex items-center gap-2 hover:text-white transition-colors">
+                                <a href="mailto:mesolawyernearme@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
                                     <Mail className="h-4 w-4" />
-                                    help@mesotheliomalawyernearby.com
+                                    mesolawyernearme@gmail.com
                                 </a>
                             </li>
                             <li className="flex items-start gap-2">
