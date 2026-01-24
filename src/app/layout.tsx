@@ -7,12 +7,12 @@ import { Footer } from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Mesothelioma Lawyer Nearby - Veteran-Owned Legal Referral Service',
-  description: 'Connect with experienced mesothelioma lawyers across the United States. Veteran-owned service providing trusted legal guidance for asbestos exposure victims.',
-  keywords: ['mesothelioma lawyer', 'asbestos attorney', 'veteran owned legal', 'mesothelioma lawyer nearby', 'asbestos lawsuit'],
+  title: 'Best Mesothelioma Lawyers Near Me | Veteran-Owned Legal Referral',
+  description: 'Find the best mesothelioma lawyers near you. Free case evaluation. Veteran-owned referral service connecting asbestos exposure victims with top-rated attorneys. No upfront costs.',
+  keywords: ['best mesothelioma lawyers near me', 'mesothelioma attorney assistance', 'mesothelioma lawyer near me', 'asbestos attorney', 'veteran owned legal', 'mesothelioma lawsuit'],
   openGraph: {
-    title: 'Mesothelioma Lawyer Nearby - Veteran-Owned Service',
-    description: 'Trusted legal referral service connecting mesothelioma victims with experienced attorneys.',
+    title: 'Best Mesothelioma Lawyers Near Me | Veteran-Owned Service',
+    description: 'Veteran-owned legal referral service. Connect with top-rated mesothelioma attorneys. Free consultation.',
     type: 'website',
     url: 'https://mesotheliomalawyernearby.vercel.app',
   },

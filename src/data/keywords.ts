@@ -277,6 +277,43 @@ export const TARGET_KEYWORDS = [
     cpc: 30,
     volume: 45,
     slug: "west-virginia-charleston"
+  },
+  // HIGH PRIORITY - Low KD gems from Ahrefs data
+  {
+    keyword: "tennessee mesothelioma attorney",
+    state: "Tennessee",
+    city: "Nashville",
+    kd: 1,
+    cpc: 90,
+    volume: 800,
+    slug: "tennessee-nashville"
+  },
+  {
+    keyword: "mesothelioma lawyer arizona",
+    state: "Arizona",
+    city: "Tucson",
+    kd: 1,
+    cpc: 300,
+    volume: 900,
+    slug: "arizona-tucson"
+  },
+  {
+    keyword: "ohio mesothelioma lawyer",
+    state: "Ohio",
+    city: "Columbus",
+    kd: 9,
+    cpc: 95,
+    volume: 1200,
+    slug: "ohio-columbus"
+  },
+  {
+    keyword: "maryland mesothelioma lawyer",
+    state: "Maryland",
+    city: "Annapolis",
+    kd: 3,
+    cpc: 70,
+    volume: 600,
+    slug: "maryland-annapolis"
   }
 ] as const
 
@@ -305,7 +342,8 @@ export const STATE_SOL = {
   "Indiana": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
   "Minnesota": { personal: "4 years", wrongfulDeath: "3 years", notes: "One of the longer SOL periods" },
   "Alabama": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
-  "West Virginia": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" }
+  "West Virginia": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Tennessee": { personal: "1 year", wrongfulDeath: "1 year", notes: "Very short deadline - immediate action required" }
 } as const
 
 // Expanded asbestos exposure sites data for authority content

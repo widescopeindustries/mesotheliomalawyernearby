@@ -42,7 +42,7 @@ export function Header() {
                         ))}
                     </div>
 
-                    {/* CTA Button */}
+                    {/* CTA Button - Desktop */}
                     <div className="hidden md:flex items-center gap-4">
                         <Button asChild size="sm" className="bg-green-600 hover:bg-green-700">
                             <a href="tel:682-999-0953" className="flex items-center gap-2">
@@ -52,17 +52,28 @@ export function Header() {
                         </Button>
                     </div>
 
-                    {/* Mobile menu button */}
-                    <button
-                        className="md:hidden p-2"
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    >
-                        {mobileMenuOpen ? (
-                            <X className="h-6 w-6" />
-                        ) : (
-                            <Menu className="h-6 w-6" />
-                        )}
-                    </button>
+                    {/* Mobile: Phone + Menu */}
+                    <div className="flex md:hidden items-center gap-2">
+                        {/* Always visible phone button on mobile */}
+                        <Button asChild size="sm" className="bg-green-600 hover:bg-green-700">
+                            <a href="tel:682-999-0953" className="flex items-center gap-1 text-xs">
+                                <Phone className="h-4 w-4" />
+                                <span className="hidden sm:inline">Call Now</span>
+                            </a>
+                        </Button>
+
+                        {/* Mobile menu button */}
+                        <button
+                            className="p-2"
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        >
+                            {mobileMenuOpen ? (
+                                <X className="h-6 w-6" />
+                            ) : (
+                                <Menu className="h-6 w-6" />
+                            )}
+                        </button>
+                    </div>
                 </div>
 
                 {/* Mobile Navigation */}

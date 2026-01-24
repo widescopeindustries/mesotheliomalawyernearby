@@ -92,6 +92,26 @@ export function TCPAConsentForm() {
             <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-600 text-sm mt-1" />
           </div>
 
+          {/* Inquiring For Self or Loved One */}
+          <div>
+            <label htmlFor="inquiringFor" className="block text-sm font-medium mb-2">
+              Who is this case for? *
+            </label>
+            <select
+              id="inquiringFor"
+              name="inquiringFor"
+              required
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+            >
+              <option value="">Select an option</option>
+              <option value="Myself - I have been diagnosed">Myself - I have been diagnosed</option>
+              <option value="My spouse or partner">My spouse or partner</option>
+              <option value="My parent">My parent</option>
+              <option value="Another family member">Another family member</option>
+              <option value="I am a caregiver">I am a caregiver</option>
+            </select>
+          </div>
+
           {/* Email */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-2">
