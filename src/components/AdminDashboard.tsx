@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import TCPAConsentForm from '@/components/TCPAConsentForm'
+import { TCPAConsentForm } from '@/components/TCPAConsentForm'
 import { TARGET_KEYWORDS } from '@/data/keywords'
 import { BarChart3, TrendingUp, Users, Clock, AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
