@@ -26,6 +26,30 @@ export default function sitemap() {
             changeFrequency: 'monthly' as const,
             priority: 0.9,
         },
+        {
+            url: `${baseUrl}/contact`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/privacy-policy`,
+            lastModified: currentDate,
+            changeFrequency: 'yearly' as const,
+            priority: 0.3,
+        },
+        {
+            url: `${baseUrl}/terms-of-service`,
+            lastModified: currentDate,
+            changeFrequency: 'yearly' as const,
+            priority: 0.3,
+        },
+        {
+            url: `${baseUrl}/disclaimer`,
+            lastModified: currentDate,
+            changeFrequency: 'yearly' as const,
+            priority: 0.3,
+        },
     ]
 
     // Add all programmatic location pages
