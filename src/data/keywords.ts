@@ -140,15 +140,6 @@ export const TARGET_KEYWORDS = [
     volume: 85,
     slug: "ohio-cleveland"
   },
-  {
-    keyword: "columbus ohio asbestos lawyer",
-    state: "Ohio",
-    city: "Columbus",
-    kd: 2,
-    cpc: 50,
-    volume: 60,
-    slug: "ohio-columbus"
-  },
   // Expanded locations - New York
   {
     keyword: "new york mesothelioma attorney",
@@ -314,6 +305,273 @@ export const TARGET_KEYWORDS = [
     cpc: 70,
     volume: 600,
     slug: "maryland-annapolis"
+  },
+  // ========== NEW PAGES - KD 0 UNICORNS (January 2026) ==========
+  {
+    keyword: "utah mesothelioma lawyer",
+    state: "Utah",
+    city: "Salt Lake City",
+    kd: 0,
+    cpc: 19,
+    volume: 450,
+    slug: "utah-salt-lake-city"
+  },
+  {
+    keyword: "mesothelioma lawyer kansas",
+    state: "Kansas",
+    city: "Wichita",
+    kd: 0,
+    cpc: 60,
+    volume: 200,
+    slug: "kansas-wichita"
+  },
+  {
+    keyword: "mesothelioma lawyer arkansas",
+    state: "Arkansas",
+    city: "Little Rock",
+    kd: 0,
+    cpc: 50,
+    volume: 200,
+    slug: "arkansas-little-rock"
+  },
+  {
+    keyword: "peritoneal mesothelioma lawyer",
+    state: "Nationwide",
+    city: "Peritoneal Specialists",
+    kd: 0,
+    cpc: 4,
+    volume: 200,
+    slug: "peritoneal-mesothelioma"
+  },
+  // ========== NEW PAGES - KD 1-5 HIGH PRIORITY ==========
+  {
+    keyword: "colorado mesothelioma lawyer",
+    state: "Colorado",
+    city: "Denver",
+    kd: 3,
+    cpc: 40,
+    volume: 400,
+    slug: "colorado-denver"
+  },
+  {
+    keyword: "georgia mesothelioma lawyer",
+    state: "Georgia",
+    city: "Atlanta",
+    kd: 5,
+    cpc: 40,
+    volume: 350,
+    slug: "georgia-atlanta"
+  },
+  {
+    keyword: "south carolina mesothelioma lawyer",
+    state: "South Carolina",
+    city: "Charleston",
+    kd: 4,
+    cpc: 35,
+    volume: 180,
+    slug: "south-carolina-charleston"
+  },
+  {
+    keyword: "north carolina mesothelioma lawyer",
+    state: "North Carolina",
+    city: "Charlotte",
+    kd: 5,
+    cpc: 45,
+    volume: 220,
+    slug: "north-carolina-charlotte"
+  },
+  {
+    keyword: "oklahoma mesothelioma lawyer",
+    state: "Oklahoma",
+    city: "Oklahoma City",
+    kd: 2,
+    cpc: 55,
+    volume: 190,
+    slug: "oklahoma-oklahoma-city"
+  },
+  {
+    keyword: "mississippi mesothelioma lawyer",
+    state: "Mississippi",
+    city: "Jackson",
+    kd: 1,
+    cpc: 45,
+    volume: 175,
+    slug: "mississippi-jackson"
+  },
+  {
+    keyword: "connecticut mesothelioma lawyer",
+    state: "Connecticut",
+    city: "Hartford",
+    kd: 3,
+    cpc: 50,
+    volume: 150,
+    slug: "connecticut-hartford"
+  },
+  {
+    keyword: "iowa mesothelioma lawyer",
+    state: "Iowa",
+    city: "Des Moines",
+    kd: 1,
+    cpc: 35,
+    volume: 120,
+    slug: "iowa-des-moines"
+  },
+  {
+    keyword: "nebraska mesothelioma lawyer",
+    state: "Nebraska",
+    city: "Omaha",
+    kd: 1,
+    cpc: 30,
+    volume: 100,
+    slug: "nebraska-omaha"
+  },
+  {
+    keyword: "nevada mesothelioma lawyer",
+    state: "Nevada",
+    city: "Las Vegas",
+    kd: 2,
+    cpc: 40,
+    volume: 130,
+    slug: "nevada-las-vegas"
+  },
+  {
+    keyword: "new hampshire mesothelioma lawyer",
+    state: "New Hampshire",
+    city: "Manchester",
+    kd: 0,
+    cpc: 35,
+    volume: 85,
+    slug: "new-hampshire-manchester"
+  },
+  {
+    keyword: "rhode island mesothelioma lawyer",
+    state: "Rhode Island",
+    city: "Providence",
+    kd: 1,
+    cpc: 40,
+    volume: 125,
+    slug: "rhode-island-providence"
+  },
+  {
+    keyword: "delaware mesothelioma lawyer",
+    state: "Delaware",
+    city: "Wilmington",
+    kd: 0,
+    cpc: 45,
+    volume: 120,
+    slug: "delaware-wilmington"
+  },
+  // ========== ADDITIONAL TEXAS CITIES ==========
+  {
+    keyword: "fort worth mesothelioma lawyer",
+    state: "Texas",
+    city: "Fort Worth",
+    kd: 4,
+    cpc: 75,
+    volume: 200,
+    slug: "texas-fort-worth"
+  },
+  {
+    keyword: "san antonio mesothelioma lawyer",
+    state: "Texas",
+    city: "San Antonio",
+    kd: 3,
+    cpc: 65,
+    volume: 180,
+    slug: "texas-san-antonio"
+  },
+  {
+    keyword: "austin mesothelioma lawyer",
+    state: "Texas",
+    city: "Austin",
+    kd: 4,
+    cpc: 60,
+    volume: 160,
+    slug: "texas-austin"
+  },
+  // ========== ADDITIONAL CALIFORNIA CITIES ==========
+  {
+    keyword: "san diego mesothelioma lawyer",
+    state: "California",
+    city: "San Diego",
+    kd: 5,
+    cpc: 70,
+    volume: 160,
+    slug: "california-san-diego"
+  },
+  {
+    keyword: "san francisco mesothelioma lawyer",
+    state: "California",
+    city: "San Francisco",
+    kd: 6,
+    cpc: 85,
+    volume: 200,
+    slug: "california-san-francisco"
+  },
+  {
+    keyword: "sacramento mesothelioma lawyer",
+    state: "California",
+    city: "Sacramento",
+    kd: 4,
+    cpc: 55,
+    volume: 120,
+    slug: "california-sacramento"
+  },
+  // ========== ADDITIONAL FLORIDA CITIES ==========
+  {
+    keyword: "jacksonville mesothelioma lawyer",
+    state: "Florida",
+    city: "Jacksonville",
+    kd: 3,
+    cpc: 55,
+    volume: 140,
+    slug: "florida-jacksonville"
+  },
+  {
+    keyword: "orlando mesothelioma lawyer",
+    state: "Florida",
+    city: "Orlando",
+    kd: 4,
+    cpc: 50,
+    volume: 110,
+    slug: "florida-orlando"
+  },
+  // ========== ADDITIONAL HIGH-VALUE CITIES ==========
+  {
+    keyword: "cincinnati mesothelioma lawyer",
+    state: "Ohio",
+    city: "Cincinnati",
+    kd: 3,
+    cpc: 50,
+    volume: 95,
+    slug: "ohio-cincinnati"
+  },
+  {
+    keyword: "denver asbestos attorney",
+    state: "Colorado",
+    city: "Colorado Springs",
+    kd: 2,
+    cpc: 35,
+    volume: 75,
+    slug: "colorado-colorado-springs"
+  },
+  {
+    keyword: "portland mesothelioma lawyer",
+    state: "Oregon",
+    city: "Portland",
+    kd: 3,
+    cpc: 55,
+    volume: 130,
+    slug: "oregon-portland"
+  },
+  {
+    keyword: "baton rouge mesothelioma lawyer",
+    state: "Louisiana",
+    city: "Baton Rouge",
+    kd: 2,
+    cpc: 65,
+    volume: 140,
+    slug: "louisiana-baton-rouge"
   }
 ] as const
 
@@ -343,7 +601,25 @@ export const STATE_SOL = {
   "Minnesota": { personal: "4 years", wrongfulDeath: "3 years", notes: "One of the longer SOL periods" },
   "Alabama": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
   "West Virginia": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
-  "Tennessee": { personal: "1 year", wrongfulDeath: "1 year", notes: "Very short deadline - immediate action required" }
+  "Tennessee": { personal: "1 year", wrongfulDeath: "1 year", notes: "Very short deadline - immediate action required" },
+  "Utah": { personal: "4 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Kansas": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Arkansas": { personal: "3 years", wrongfulDeath: "3 years", notes: "Discovery rule applies" },
+  "Colorado": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Georgia": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "South Carolina": { personal: "3 years", wrongfulDeath: "3 years", notes: "Discovery rule applies" },
+  "North Carolina": { personal: "3 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Oklahoma": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Mississippi": { personal: "3 years", wrongfulDeath: "3 years", notes: "Discovery rule applies" },
+  "Connecticut": { personal: "3 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Iowa": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Nebraska": { personal: "4 years", wrongfulDeath: "2 years", notes: "One of the longer SOL periods" },
+  "Nevada": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "New Hampshire": { personal: "3 years", wrongfulDeath: "3 years", notes: "Discovery rule applies" },
+  "Rhode Island": { personal: "3 years", wrongfulDeath: "3 years", notes: "Discovery rule applies" },
+  "Delaware": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Oregon": { personal: "2 years", wrongfulDeath: "3 years", notes: "Discovery rule applies" },
+  "Nationwide": { personal: "Varies by state", wrongfulDeath: "Varies by state", notes: "Contact us to determine your state's deadline" }
 } as const
 
 // Expanded asbestos exposure sites data for authority content
@@ -433,6 +709,107 @@ export const EXPOSURE_SITES = {
     { name: "Avondale Shipyard", city: "Avondale", type: "Shipyard" },
     { name: "ExxonMobil Baton Rouge Refinery", city: "Baton Rouge", type: "Oil Refinery" },
     { name: "Dow Chemical", city: "Plaquemine", type: "Chemical Processing" }
+  ],
+  "Utah": [
+    { name: "Kennecott Copper Mine", city: "Bingham Canyon", type: "Mining" },
+    { name: "Hill Air Force Base", city: "Ogden", type: "Military" },
+    { name: "Geneva Steel", city: "Orem", type: "Steel Mill" },
+    { name: "Dugway Proving Ground", city: "Tooele County", type: "Military" }
+  ],
+  "Kansas": [
+    { name: "Boeing Wichita", city: "Wichita", type: "Aerospace" },
+    { name: "Sunflower Army Ammunition Plant", city: "De Soto", type: "Military" },
+    { name: "Wolf Creek Generating Station", city: "Burlington", type: "Power Plant" },
+    { name: "Koch Industries Refinery", city: "Wichita", type: "Oil Refinery" }
+  ],
+  "Arkansas": [
+    { name: "Pine Bluff Arsenal", city: "Pine Bluff", type: "Military" },
+    { name: "Reynolds Metals Company", city: "Jacksonville", type: "Aluminum" },
+    { name: "International Paper", city: "Pine Bluff", type: "Paper Mill" },
+    { name: "Entergy Nuclear Plant", city: "Russellville", type: "Power Plant" }
+  ],
+  "Colorado": [
+    { name: "Rocky Flats Plant", city: "Golden", type: "Government Facility" },
+    { name: "CF&I Steel", city: "Pueblo", type: "Steel Mill" },
+    { name: "Gates Rubber Company", city: "Denver", type: "Manufacturing" },
+    { name: "Climax Molybdenum Mine", city: "Leadville", type: "Mining" }
+  ],
+  "Georgia": [
+    { name: "Lockheed Martin Marietta", city: "Marietta", type: "Aerospace" },
+    { name: "Kings Bay Naval Submarine Base", city: "St. Marys", type: "Military" },
+    { name: "Plant Vogtle Nuclear", city: "Waynesboro", type: "Power Plant" },
+    { name: "Georgia-Pacific", city: "Atlanta", type: "Paper Mill" }
+  ],
+  "South Carolina": [
+    { name: "Charleston Naval Shipyard", city: "Charleston", type: "Shipyard" },
+    { name: "Savannah River Site", city: "Aiken", type: "Government Facility" },
+    { name: "Springs Industries", city: "Fort Mill", type: "Textile" },
+    { name: "Westinghouse Savannah River", city: "Aiken", type: "Nuclear" }
+  ],
+  "North Carolina": [
+    { name: "Norfolk Naval Shipyard (NC)", city: "Elizabeth City", type: "Shipyard" },
+    { name: "Burlington Industries", city: "Greensboro", type: "Textile" },
+    { name: "Duke Energy Power Plants", city: "Charlotte", type: "Power Generation" },
+    { name: "Camp Lejeune", city: "Jacksonville", type: "Military" }
+  ],
+  "Oklahoma": [
+    { name: "Tinker Air Force Base", city: "Oklahoma City", type: "Military" },
+    { name: "ConocoPhillips Refinery", city: "Ponca City", type: "Oil Refinery" },
+    { name: "General Motors Oklahoma City", city: "Oklahoma City", type: "Automotive" },
+    { name: "Kerr-McGee", city: "Oklahoma City", type: "Chemical Processing" }
+  ],
+  "Mississippi": [
+    { name: "Ingalls Shipbuilding", city: "Pascagoula", type: "Shipyard" },
+    { name: "Chevron Refinery", city: "Pascagoula", type: "Oil Refinery" },
+    { name: "Grand Gulf Nuclear Station", city: "Port Gibson", type: "Power Plant" },
+    { name: "Columbus Air Force Base", city: "Columbus", type: "Military" }
+  ],
+  "Connecticut": [
+    { name: "Electric Boat", city: "Groton", type: "Shipyard" },
+    { name: "Pratt & Whitney", city: "East Hartford", type: "Aerospace" },
+    { name: "Millstone Nuclear Power Station", city: "Waterford", type: "Power Plant" },
+    { name: "Sikorsky Aircraft", city: "Stratford", type: "Aerospace" }
+  ],
+  "Iowa": [
+    { name: "Iowa Army Ammunition Plant", city: "Middletown", type: "Military" },
+    { name: "John Deere", city: "Waterloo", type: "Manufacturing" },
+    { name: "Duane Arnold Energy Center", city: "Palo", type: "Power Plant" },
+    { name: "Quaker Oats", city: "Cedar Rapids", type: "Food Processing" }
+  ],
+  "Nebraska": [
+    { name: "Offutt Air Force Base", city: "Bellevue", type: "Military" },
+    { name: "Cooper Nuclear Station", city: "Brownville", type: "Power Plant" },
+    { name: "Union Pacific Railroad Shops", city: "Omaha", type: "Railroad" },
+    { name: "Cornhusker Army Ammunition Plant", city: "Grand Island", type: "Military" }
+  ],
+  "Nevada": [
+    { name: "Nevada Test Site", city: "Mercury", type: "Government Facility" },
+    { name: "Nellis Air Force Base", city: "Las Vegas", type: "Military" },
+    { name: "Hoover Dam", city: "Boulder City", type: "Power Generation" },
+    { name: "Basic Magnesium Incorporated", city: "Henderson", type: "Chemical Processing" }
+  ],
+  "New Hampshire": [
+    { name: "Portsmouth Naval Shipyard", city: "Kittery", type: "Shipyard" },
+    { name: "Seabrook Station Nuclear", city: "Seabrook", type: "Power Plant" },
+    { name: "Sanders Associates", city: "Nashua", type: "Defense Contractor" }
+  ],
+  "Rhode Island": [
+    { name: "Quonset Point Naval Air Station", city: "North Kingstown", type: "Military" },
+    { name: "Electric Boat Quonset", city: "North Kingstown", type: "Shipyard" },
+    { name: "Providence Gas Company", city: "Providence", type: "Utility" },
+    { name: "Brown & Sharpe", city: "North Kingstown", type: "Manufacturing" }
+  ],
+  "Delaware": [
+    { name: "DuPont Chemical", city: "Wilmington", type: "Chemical Processing" },
+    { name: "Chrysler Newark Assembly", city: "Newark", type: "Automotive" },
+    { name: "Delaware City Refinery", city: "Delaware City", type: "Oil Refinery" },
+    { name: "Dover Air Force Base", city: "Dover", type: "Military" }
+  ],
+  "Oregon": [
+    { name: "Portland Ship Repair Yard", city: "Portland", type: "Shipyard" },
+    { name: "Umatilla Chemical Depot", city: "Hermiston", type: "Military" },
+    { name: "Georgia-Pacific Lumber", city: "Toledo", type: "Paper Mill" },
+    { name: "PGE Trojan Nuclear Plant", city: "Rainier", type: "Power Plant" }
   ]
 } as const
 
