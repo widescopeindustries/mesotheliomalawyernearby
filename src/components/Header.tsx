@@ -45,9 +45,9 @@ export function Header() {
                     {/* CTA Button - Desktop */}
                     <div className="hidden md:flex items-center gap-4">
                         <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-lg">
-                            <a href="tel:682-999-0953" className="flex items-center gap-2">
+                            <a href="tel:214-699-4543" className="flex items-center gap-2">
                                 <Phone className="h-4 w-4" />
-                                (682) 999-0953
+                                (214) 699-4543
                             </a>
                         </Button>
                     </div>
@@ -56,7 +56,7 @@ export function Header() {
                     <div className="flex md:hidden items-center gap-2">
                         {/* Always visible phone button on mobile */}
                         <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-lg">
-                            <a href="tel:682-999-0953" className="flex items-center gap-1 text-xs">
+                            <a href="tel:214-699-4543" className="flex items-center gap-1 text-xs">
                                 <Phone className="h-4 w-4" />
                                 <span className="hidden sm:inline">Call Now</span>
                             </a>
@@ -92,9 +92,9 @@ export function Header() {
                                 </Link>
                             ))}
                             <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-lg w-full mt-2">
-                                <a href="tel:682-999-0953" className="flex items-center justify-center gap-2">
+                                <a href="tel:214-699-4543" className="flex items-center justify-center gap-2">
                                     <Phone className="h-4 w-4" />
-                                    (682) 999-0953
+                                    (214) 699-4543
                                 </a>
                             </Button>
                         </div>

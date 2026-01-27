@@ -25,9 +25,9 @@ export const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 h-auto transition-all duration-200 hover:shadow-xl" asChild>
-              <a href="tel:682-999-0953" aria-label="Call us 24/7 at (682) 999-0953">
+              <a href="tel:214-699-4543" aria-label="Call us 24/7 at (214) 699-4543">
                 <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
-                (682) 999-0953
+                (214) 699-4543
                 <span className="ml-2 text-xs bg-accent-foreground/20 text-accent-foreground px-2 py-1 rounded">24/7</span>
               </a>
             </Button>

@@ -30,8 +30,8 @@ export function ContactForm() {
                 <p className="text-sm text-muted-foreground">
                     Need immediate assistance? Call us now:
                 </p>
-                <a href="tel:682-999-0953" className="text-xl font-bold text-primary hover:underline">
-                    (682) 999-0953
+                <a href="tel:214-699-4543" className="text-xl font-bold text-primary hover:underline">
+                    (214) 699-4543
                 </a>
             </div>
         )

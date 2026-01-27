@@ -28,9 +28,9 @@ export function StickyMobileCTA() {
         size="lg"
         className="w-full bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-2xl shadow-lg py-6"
       >
-        <a href="tel:682-999-0953" className="flex items-center justify-center gap-2 text-lg font-semibold">
+        <a href="tel:214-699-4543" className="flex items-center justify-center gap-2 text-lg font-semibold">
           <Phone className="h-5 w-5" />
-          Call Now: (682) 999-0953
+          Call Now: (214) 699-4543
         </a>
       </Button>
     </div>

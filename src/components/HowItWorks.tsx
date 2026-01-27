@@ -91,8 +91,8 @@ export const HowItWorks = () => {
                 <h3 className="font-serif font-semibold text-lg text-foreground mb-1">Need Immediate Help?</h3>
                 <p className="text-muted-foreground">
                   Time is critical in mesothelioma cases. Call us now at{' '}
-                  <a href="tel:682-999-0953" className="font-bold text-accent hover:text-accent/80 transition-colors">
-                    (682) 999-0953
+                  <a href="tel:214-699-4543" className="font-bold text-accent hover:text-accent/80 transition-colors">
+                    (214) 699-4543
                   </a>{' '}
                   for immediate assistance. Our team is standing by 24/7 to help you understand your legal options.
                 </p>

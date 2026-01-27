@@ -29,9 +29,9 @@ export const CallToAction = () => {
               className="text-lg px-8 py-6 h-auto bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-200 hover:shadow-2xl"
               asChild
             >
-              <a href="tel:682-999-0953">
+              <a href="tel:214-699-4543">
                 <Phone className="h-5 w-5 mr-2" />
-                (682) 999-0953
+                (214) 699-4543
                 <span className="ml-2 text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">24/7 Available</span>
               </a>
             </Button>
