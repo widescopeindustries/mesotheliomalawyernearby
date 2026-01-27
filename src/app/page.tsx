@@ -4,14 +4,20 @@ import { TrustSignals } from '@/components/TrustSignals'
 import { HowItWorks } from '@/components/HowItWorks'
 import { FeaturedLocations } from '@/components/FeaturedLocations'
 import { TCPAConsentForm } from '@/components/TCPAConsentForm'
+import { FAQSection } from '@/components/FAQSection'
+import { MesotheliomaInfo } from '@/components/MesotheliomaInfo'
+import { SchemaMarkup } from '@/components/SchemaMarkup'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <SchemaMarkup />
       <HeroSection />
       <TrustSignals />
+      <MesotheliomaInfo />
       <HowItWorks />
       <FeaturedLocations />
+      <FAQSection />
       <TCPAConsentForm />
       <CallToAction />
     </main>
