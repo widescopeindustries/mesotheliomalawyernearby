@@ -1,7 +1,7 @@
 import { TARGET_KEYWORDS } from '@/data/keywords'
 
 export default function robots() {
-    const baseUrl = 'https://mesotheliomalawyernearby.vercel.app'
+    const baseUrl = 'https://mesotheliomalawyernearby.com'
 
     return {
         rules: [
