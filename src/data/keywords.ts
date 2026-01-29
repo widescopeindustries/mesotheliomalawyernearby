@@ -403,15 +403,6 @@ export const TARGET_KEYWORDS = [
     volume: 200,
     slug: "arkansas-little-rock"
   },
-  {
-    keyword: "peritoneal mesothelioma lawyer",
-    state: "Nationwide",
-    city: "Peritoneal Specialists",
-    kd: 0,
-    cpc: 4,
-    volume: 200,
-    slug: "peritoneal-mesothelioma"
-  },
   // ========== NEW PAGES - KD 1-5 HIGH PRIORITY ==========
   {
     keyword: "colorado mesothelioma lawyer",

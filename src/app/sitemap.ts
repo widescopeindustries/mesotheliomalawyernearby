@@ -34,6 +34,12 @@ export default function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${baseUrl}/types/peritoneal-mesothelioma`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
             url: `${baseUrl}/privacy-policy`,
             lastModified: currentDate,
             changeFrequency: 'yearly' as const,

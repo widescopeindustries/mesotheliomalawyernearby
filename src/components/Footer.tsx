@@ -34,6 +34,7 @@ export function Footer() {
                             <li><Link href="/" className="hover:text-accent transition-colors">Home</Link></li>
                             <li><Link href="/about" className="hover:text-accent transition-colors">About Us</Link></li>
                             <li><Link href="/veteran-resources" className="hover:text-accent transition-colors">Veteran Resources</Link></li>
+                            <li><Link href="/types/peritoneal-mesothelioma" className="hover:text-accent transition-colors">Peritoneal Mesothelioma</Link></li>
                             <li><Link href="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
                         </ul>
                     </div>
