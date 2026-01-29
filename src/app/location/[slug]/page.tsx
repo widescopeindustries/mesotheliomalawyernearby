@@ -31,26 +31,36 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
     }
   }
 
+  // Use custom meta title for state pages, otherwise generate city-based title
+  const pageTitle = (keyword as any).metaTitle 
+    ? (keyword as any).metaTitle
+    : `${keyword.city}, ${keyword.state} Mesothelioma Lawyer - Free Consultation | Veteran-Owned`
+  
+  const isStatePage = (keyword as any).isStatePage
+  const locationDesc = isStatePage 
+    ? keyword.state 
+    : `${keyword.city}, ${keyword.state}`
+
   return {
-    title: `${keyword.city}, ${keyword.state} Mesothelioma Lawyer - Free Consultation | Veteran-Owned`,
-    description: `Find an experienced mesothelioma attorney in ${keyword.city}, ${keyword.state}. Veteran-owned referral service. Free consultation. We help asbestos exposure victims get the compensation they deserve.`,
+    title: pageTitle,
+    description: `Find an experienced mesothelioma attorney in ${locationDesc}. Veteran-owned referral service. Free consultation. We help asbestos exposure victims get the compensation they deserve.`,
     keywords: [
-      `${keyword.city.toLowerCase()} mesothelioma lawyer`,
+      `${keyword.state.toLowerCase()} mesothelioma lawyer`,
       `${keyword.state.toLowerCase()} mesothelioma attorney`,
-      `${keyword.city.toLowerCase()} asbestos lawyer`,
-      `${keyword.state.toLowerCase()} asbestos attorney`,
+      `${keyword.state.toLowerCase()} asbestos lawyer`,
+      isStatePage ? `mesothelioma lawyer ${keyword.state.toLowerCase()}` : `${keyword.city.toLowerCase()} mesothelioma lawyer`,
       'mesothelioma lawsuit',
       'asbestos compensation',
       'veteran mesothelioma help'
     ],
     openGraph: {
-      title: `${keyword.city}, ${keyword.state} Mesothelioma Lawyers | Veteran-Owned Service`,
-      description: `Veteran-owned mesothelioma legal referral service for ${keyword.city} residents. Connect with experienced attorneys who specialize in asbestos exposure cases.`,
+      title: pageTitle,
+      description: `Veteran-owned mesothelioma legal referral service for ${locationDesc} residents. Connect with experienced attorneys who specialize in asbestos exposure cases.`,
       type: 'website',
-      url: `https://mesotheliomalawyernearby.vercel.app/location/${params.slug}`,
+      url: `https://mesotheliomalawyernearby.com/location/${params.slug}`,
     },
     alternates: {
-      canonical: `https://mesotheliomalawyernearby.vercel.app/location/${params.slug}`
+      canonical: `https://mesotheliomalawyernearby.com/location/${params.slug}`
     }
   }
 }
@@ -64,8 +74,15 @@ export default function LocationPage({ params }: LocationPageProps) {
 
   const exposureSites = EXPOSURE_SITES[keyword.state as keyof typeof EXPOSURE_SITES] || []
   const stateSol = STATE_SOL[keyword.state as keyof typeof STATE_SOL]
-  const localPhone = '(682) 999-0953'
+  const localPhone = '(214) 699-4543'
   const selectedFaqs = COMMON_FAQS.slice(0, 5)
+  
+  // Check if this is a state-level page
+  const isStatePage = (keyword as any).isStatePage || keyword.city === 'Statewide'
+  const displayLocation = isStatePage ? keyword.state : `${keyword.city}, ${keyword.state}`
+  const h1Title = isStatePage 
+    ? `${keyword.state} Mesothelioma Lawyer`
+    : `${keyword.city}, ${keyword.state} Mesothelioma Lawyer`
 
   return (
     <div className="min-h-screen">
@@ -79,11 +96,11 @@ export default function LocationPage({ params }: LocationPageProps) {
             </Badge>
 
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              {keyword.city}, {keyword.state} Mesothelioma Lawyer
+              {h1Title}
             </h1>
 
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              If you or a loved one was diagnosed with mesothelioma in {keyword.city}, our veteran-owned
+              If you or a loved one was diagnosed with mesothelioma in {displayLocation}, our veteran-owned
               service connects you with experienced attorneys who fight for maximum compensation.
             </p>
 
@@ -147,7 +164,7 @@ export default function LocationPage({ params }: LocationPageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-4">
-              Why Choose Mesothelioma Lawyer Nearby in {keyword.city}?
+              Why Choose Mesothelioma Lawyer Nearby in {displayLocation}?
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
               As a veteran-owned service, we understand the urgency of mesothelioma cases and the
@@ -274,7 +291,7 @@ export default function LocationPage({ params }: LocationPageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">
-              Compensation for {keyword.city} Mesothelioma Victims
+              Compensation for {displayLocation} Mesothelioma Victims
             </h2>
 
             <Card className="border-2 border-primary/20">
@@ -362,7 +379,7 @@ export default function LocationPage({ params }: LocationPageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Get Your Free {keyword.city} Mesothelioma Case Review
+              Get Your Free {displayLocation} Mesothelioma Case Review
             </h2>
             <p className="text-xl mb-8 opacity-90">
               Time is critical. Contact us today for a free, confidential consultation with

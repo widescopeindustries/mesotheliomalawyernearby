@@ -1,5 +1,74 @@
 // High-value, low-difficulty keywords from research data
 export const TARGET_KEYWORDS = [
+  // ========== STATE-LEVEL UNICORN PAGES (KD 0-5, Exact Keyword Match) ==========
+  // These pages target the exact search queries from Gemini's research
+  {
+    keyword: "new mexico mesothelioma lawyer",
+    state: "New Mexico",
+    city: "Statewide",
+    kd: 0,
+    cpc: 155,
+    volume: 700,
+    slug: "new-mexico",
+    isStatePage: true,
+    metaTitle: "New Mexico Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "montana mesothelioma attorney",
+    state: "Montana",
+    city: "Statewide",
+    kd: 0,
+    cpc: 30,
+    volume: 250,
+    slug: "montana",
+    isStatePage: true,
+    metaTitle: "Montana Mesothelioma Attorney | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "mesothelioma lawyer kentucky",
+    state: "Kentucky",
+    city: "Statewide",
+    kd: 0,
+    cpc: 40,
+    volume: 90,
+    slug: "kentucky",
+    isStatePage: true,
+    metaTitle: "Kentucky Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "mesothelioma lawyer nj",
+    state: "New Jersey",
+    city: "Statewide",
+    kd: 3,
+    cpc: 90,
+    volume: 60,
+    slug: "new-jersey",
+    isStatePage: true,
+    metaTitle: "New Jersey Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "michigan mesothelioma lawyer",
+    state: "Michigan",
+    city: "Statewide",
+    kd: 4,
+    cpc: 30,
+    volume: 500,
+    slug: "michigan",
+    isStatePage: true,
+    metaTitle: "Michigan Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "missouri mesothelioma lawyer",
+    state: "Missouri",
+    city: "Statewide",
+    kd: 5,
+    cpc: 115,
+    volume: 90,
+    slug: "missouri",
+    isStatePage: true,
+    metaTitle: "Missouri Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  // ========== CITY-LEVEL PAGES ==========
   // UNICORN Keywords - KD 0-5, CPC $100+
   {
     keyword: "new mexico mesothelioma lawyer",
