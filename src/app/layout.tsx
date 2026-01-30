@@ -4,6 +4,7 @@ import { Inter, Merriweather } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { StickyMobileCTA } from '@/components/StickyMobileCTA'
+import Script from 'next/script'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -37,6 +38,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-RMF02ZX0XS" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-RMF02ZX0XS');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.variable} ${merriweather.variable} font-sans`}>
         <Header />
         {children}
