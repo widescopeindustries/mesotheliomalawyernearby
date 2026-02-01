@@ -324,6 +324,138 @@ export const EXPOSURE_SITE_DETAILS: ExposureSiteDetail[] = [
         healthImpact: "Louisiana's mesothelioma rates are significantly influenced by Avondale exposure. Workers who built ships in the 1960s and 1970s are now developing mesothelioma at elevated rates. The African American community, which made up a significant portion of Avondale's workforce, has been particularly affected.",
         legalHistory: "Avondale and numerous asbestos product suppliers have faced extensive litigation. Louisiana courts have handled thousands of asbestos cases, many originating from Avondale exposure. Substantial verdicts and settlements have been awarded to affected workers and families.",
         currentStatus: "Avondale Shipyard closed in 2014 after Northrop Grumman decided not to bid on new contracts. The site is being redeveloped for other industrial uses. Former workers are encouraged to undergo medical monitoring and to consult with mesothelioma attorneys if diagnosed with asbestos-related diseases."
+    },
+    {
+        id: "3m-company-st-paul",
+        name: "3M Company",
+        city: "St. Paul",
+        state: "Minnesota",
+        type: "Manufacturing Facility",
+        yearsActive: "1902–Present",
+        peakExposure: "1950s–1980s",
+        estimatedWorkers: "Tens of thousands over decades",
+        asbestosProducts: [
+            "Adhesives",
+            "Tapes",
+            "Industrial coatings",
+            "Roofing materials",
+            "Laboratory equipment"
+        ],
+        history: "3M, originally the Minnesota Mining and Manufacturing Company, operated extensive facilities in the St. Paul area. For decades, the company used asbestos in various product lines due to its durability and heat resistance.",
+        exposureDetails: "Workers in 3M manufacturing plants handled raw asbestos and asbestos-containing materials during the production of tapes, adhesives, and coatings. Maintenance workers were also exposed while servicing industrial machinery insulated with asbestos.",
+        healthImpact: "Minnesota health records show clusters of mesothelioma cases among former 3M employees. The long latency period means workers exposed decades ago continue to be diagnosed today.",
+        legalHistory: "3M has faced numerous lawsuits regarding asbestos exposure at its facilities. Many former workers have successfully sought compensation through settlements and asbestos trust funds.",
+        currentStatus: "3M has long since phased out asbestos in its products and implemented strict safety protocols at its modern facilities. Legacy exposure remains a major concern for retired employees."
+    },
+    {
+        id: "palo-verde-nuclear-station",
+        name: "Palo Verde Nuclear Generating Station",
+        city: "Tonopah",
+        state: "Arizona",
+        type: "Power Plant",
+        yearsActive: "1986–Present",
+        peakExposure: "1970s–1980s (Construction)",
+        estimatedWorkers: "Thousands of construction and maintenance workers",
+        asbestosProducts: [
+            "Boiler insulation",
+            "Pipe lagging",
+            "Gaskets",
+            "Fireproofing materials",
+            "Electrical insulation"
+        ],
+        history: "Palo Verde is the largest nuclear power plant in the United States. During its massive construction phase in the late 1970s and early 1980s, asbestos-containing materials were still widely used in industrial power plant applications.",
+        exposureDetails: "Construction workers, electricians, and pipefitters at Palo Verde were exposed to asbestos during the installation of massive piping and cooling systems. Maintenance workers during early operational years also encountered asbestos in high-heat areas.",
+        healthImpact: "Mesothelioma cases have been reported among Arizona construction tradesmen who worked on large-scale utility projects like Palo Verde.",
+        legalHistory: "Litigation involving Arizona utility workers has frequently named asbestos product manufacturers and contractors involved in plant construction.",
+        currentStatus: "Modern operations at Palo Verde follow strict NRC and OSHA guidelines for asbestos management. Most legacy asbestos has been identified or abated."
+    },
+    {
+        id: "bethlehem-steel-sparrows-point",
+        name: "Bethlehem Steel Sparrows Point",
+        city: "Sparrows Point",
+        state: "Maryland",
+        type: "Steel Mill & Shipyard",
+        yearsActive: "1887–2012",
+        peakExposure: "1940s–1970s",
+        estimatedWorkers: "Over 30,000 at peak",
+        asbestosProducts: [
+            "Furnace insulation",
+            "Boiler linings",
+            "Ship insulation",
+            "Pipe covering",
+            "Protective clothing"
+        ],
+        history: "Sparrows Point was once the largest steel mill in the world. It also featured a major shipyard that built vessels for the U.S. Navy and merchant marine.",
+        exposureDetails: "Steelworkers faced extreme heat and handled asbestos-lined furnaces and ladles. Shipyard workers worked in confined spaces installing asbestos insulation in vessels. The dust was often so thick it was described as 'snow' by former workers.",
+        healthImpact: "The Sparrows Point area has one of the highest mesothelioma rates in the United States. Thousands of former workers have suffered from asbestos-related diseases.",
+        legalHistory: "Maryland courts have seen massive volumes of asbestos litigation stemming from Bethlehem Steel operations. Numerous multi-million dollar verdicts and settlements have been awarded.",
+        currentStatus: "The mill closed in 2012 and the site has been redeveloped as a logistics hub (Tradepoint Atlantic). Extensive environmental cleanup was required due to the industrial legacy."
+    },
+    {
+        id: "alabama-dry-dock",
+        name: "Alabama Dry Dock and Shipbuilding Company (ADDSCO)",
+        city: "Mobile",
+        state: "Alabama",
+        type: "Shipyard",
+        yearsActive: "1917–1980s",
+        peakExposure: "1940s–1970s",
+        estimatedWorkers: "Over 30,000 during WWII",
+        asbestosProducts: [
+            "Ship insulation",
+            "Boiler covering",
+            "Pipe lagging",
+            "Gaskets",
+            "Valve packing"
+        ],
+        history: "ADDSCO was a major shipbuilding and repair facility on Pinto Island. It built hundreds of ships for the U.S. Navy and the Liberty ship program during WWII.",
+        exposureDetails: "Workers in the hulls of ships were exposed to high concentrations of asbestos dust during insulation installation and repair. The confined nature of ship work meant fibers were easily inhaled by all trades present.",
+        healthImpact: "Mobile, Alabama, has significant mesothelioma rates linked to its history as a major naval port and shipbuilding center.",
+        legalHistory: "Thousands of Alabama residents have filed claims against ADDSCO and asbestos manufacturers. The facility is a well-known source of exposure in the legal community.",
+        currentStatus: "The original ADDSCO operations ceased in the 1980s, but the Pinto Island site continues to be used for industrial ship repair under different ownership."
+    },
+    {
+        id: "boston-naval-shipyard",
+        name: "Boston Naval Shipyard",
+        city: "Charlestown",
+        state: "Massachusetts",
+        type: "Naval Shipyard",
+        yearsActive: "1801–1974",
+        peakExposure: "1940s–1960s",
+        estimatedWorkers: "Over 50,000 at peak",
+        asbestosProducts: [
+            "Hull insulation",
+            "Steam pipe covering",
+            "Boiler insulation",
+            "Turbine lagging",
+            "Gaskets"
+        ],
+        history: "Also known as the Charlestown Navy Yard, this was one of the oldest naval facilities in the country. It was a primary repair and maintenance hub for the Atlantic Fleet.",
+        exposureDetails: "Navy veterans and civilian workers were exposed to asbestos during the overhaul and repair of ships. Removing old insulation created massive amounts of airborne dust in poorly ventilated engine rooms.",
+        healthImpact: "Massachusetts ranks high for mesothelioma deaths, with many cases originating from the naval shipyards in Boston and Quincy.",
+        legalHistory: "Veterans and shipyard workers have successfully filed thousands of trust fund claims and lawsuits related to Boston Naval Shipyard exposure.",
+        currentStatus: "Now a National Historical Park, the site is home to the USS Constitution. Modern visitors are not at risk, as the facility has been extensively abated."
+    },
+    {
+        id: "union-carbide-institute",
+        name: "Union Carbide",
+        city: "Institute",
+        state: "West Virginia",
+        type: "Chemical Plant",
+        yearsActive: "1940s–Present",
+        peakExposure: "1950s–1980s",
+        estimatedWorkers: "Thousands of chemical and maintenance workers",
+        asbestosProducts: [
+            "Pipe insulation",
+            "Boiler insulation",
+            "Chemical reactor linings",
+            "Gaskets",
+            "Protective gear"
+        ],
+        history: "The Union Carbide plant in Institute was a major producer of chemicals and synthetic materials. The Kanawha Valley, known as 'Chemical Valley,' hosted several such facilities.",
+        exposureDetails: "Maintenance workers and pipefitters were exposed to asbestos while repairing chemical lines and reactors that required high-temperature insulation. The widespread use of asbestos in the plant's infrastructure led to chronic exposure for many.",
+        healthImpact: "West Virginia has one of the highest rates of mesothelioma per capita, largely due to the concentration of chemical plants and coal mines.",
+        legalHistory: "Union Carbide has been a frequent defendant in West Virginia asbestos litigation. Trust funds and settlements have provided millions in compensation to affected families.",
+        currentStatus: "The facility is now operated by Bayer CropScience and other entities. Modern safety standards for hazardous materials are strictly enforced."
     }
 ]
 

@@ -6,6 +6,7 @@ import { Phone, MapPin, Clock, Shield, AlertTriangle, CheckCircle, Scale, Buildi
 import Link from 'next/link'
 import { TARGET_KEYWORDS, EXPOSURE_SITES, STATE_SOL, COMMON_FAQS } from '@/data/keywords'
 import { EXPOSURE_SITE_DETAILS } from '@/data/exposure-sites'
+import { SchemaMarkup } from '@/components/SchemaMarkup'
 
 interface LocationPageProps {
   params: {
@@ -86,6 +87,7 @@ export default function LocationPage({ params }: LocationPageProps) {
 
   return (
     <div className="min-h-screen">
+      <SchemaMarkup />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/10 to-primary/5 py-16">
         <div className="container mx-auto px-4">
