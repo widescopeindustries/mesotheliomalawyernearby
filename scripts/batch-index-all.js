@@ -14,11 +14,45 @@ const path = require('path');
 const SERVICE_ACCOUNT_FILE = path.join(__dirname, '..', 'gsc-service-account.json');
 
 // Base URL for the site
-const BASE_URL = 'https://mesotheliomalawyernearby.vercel.app';
+const BASE_URL = 'https://mesotheliomalawyernearby.com';
 
 // All location slugs from TARGET_KEYWORDS
 const LOCATION_SLUGS = [
-  // Original locations
+  // State Pages (High SV)
+  'minnesota',
+  'illinois',
+  'arizona',
+  'maryland',
+  'colorado',
+  'alabama',
+  'louisiana',
+  'massachusetts',
+  'west-virginia',
+  'utah',
+  'kansas',
+  'arkansas',
+  'washington',
+  'oklahoma',
+  'mississippi',
+  'connecticut',
+  'indiana',
+  'new-mexico',
+  'montana',
+  'kentucky',
+  'new-jersey',
+  'michigan',
+  'missouri',
+  'texas',
+  'california',
+  'florida',
+  'new-york',
+  'pennsylvania',
+  'ohio',
+  'georgia',
+  'north-carolina',
+  'virginia',
+  'tennessee',
+  // Original city locations
   'new-mexico-albuquerque',
   'missouri-st-louis',
   'california-los-angeles',
@@ -55,7 +89,6 @@ const LOCATION_SLUGS = [
   'utah-salt-lake-city',
   'kansas-wichita',
   'arkansas-little-rock',
-  'peritoneal-mesothelioma',
   // NEW KD 1-5 pages
   'colorado-denver',
   'georgia-atlanta',
@@ -89,12 +122,36 @@ const LOCATION_SLUGS = [
   'louisiana-baton-rouge',
 ];
 
+// Exposure site pages to index
+const EXPOSURE_SITE_IDS = [
+  'los-alamos-national-laboratory',
+  'four-corners-generating-station',
+  'houston-ship-channel-refineries',
+  'todd-shipyards-galveston',
+  'long-beach-naval-shipyard',
+  'hunters-point-naval-shipyard',
+  'philadelphia-naval-shipyard',
+  'norfolk-naval-shipyard',
+  'newport-news-shipbuilding',
+  'ford-rouge-plant',
+  'republic-steel-cleveland',
+  'johns-manville-manville',
+  'avondale-shipyard',
+  '3m-company-st-paul',
+  'palo-verde-nuclear-station',
+  'bethlehem-steel-sparrows-point',
+  'alabama-dry-dock',
+  'boston-naval-shipyard',
+  'union-carbide-institute',
+];
+
 // Additional important pages
 const OTHER_PAGES = [
   '',           // Homepage
   '/about',
   '/contact',
   '/veteran-resources',
+  '/types/peritoneal-mesothelioma',
 ];
 
 async function batchIndex() {
@@ -117,6 +174,7 @@ async function batchIndex() {
     const urls = [
       ...OTHER_PAGES.map(page => `${BASE_URL}${page}`),
       ...LOCATION_SLUGS.map(slug => `${BASE_URL}/location/${slug}`),
+      ...EXPOSURE_SITE_IDS.map(id => `${BASE_URL}/exposure-sites/${id}`),
     ];
 
     console.log(`\n📋 Total URLs to index: ${urls.length}`);

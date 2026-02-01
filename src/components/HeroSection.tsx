@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Phone, Shield, Clock } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export const HeroSection = () => {
   return (
@@ -8,8 +9,14 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Veteran Badge */}
-          <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8 transition-all duration-200 hover:bg-accent/30">
-            <Shield className="h-5 w-5 text-accent" />
+          <div className="inline-flex items-center gap-3 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8 transition-all duration-200 hover:bg-accent/30">
+            <Image 
+              src="/images/sba-sdvosb-logo.png" 
+              alt="SDVOSB Logo" 
+              width={24} 
+              height={24}
+              className="object-contain"
+            />
             <span className="text-sm font-semibold text-accent-foreground">Service-Disabled Veteran-Owned</span>
           </div>
 

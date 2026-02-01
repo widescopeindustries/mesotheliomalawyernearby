@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Phone, Shield, Clock } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { useScrollAnimation } from "@/lib/animations"
 
 export const EnhancedHeroSection = () => {
@@ -21,11 +22,17 @@ export const EnhancedHeroSection = () => {
           {/* Veteran Badge */}
           <div 
             ref={badgeRef}
-            className={`inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8 transition-all duration-700 transform ${
+            className={`inline-flex items-center gap-3 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8 transition-all duration-700 transform ${
               badgeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
             }`}
           >
-            <Shield className="h-5 w-5 text-accent" />
+            <Image 
+              src="/images/sba-sdvosb-logo.png" 
+              alt="SDVOSB Logo" 
+              width={24} 
+              height={24}
+              className="object-contain"
+            />
             <span className="text-sm font-semibold text-accent-foreground">Service-Disabled Veteran-Owned</span>
           </div>
 
