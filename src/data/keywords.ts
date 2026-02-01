@@ -178,6 +178,193 @@ export const TARGET_KEYWORDS = [
     isStatePage: true,
     metaTitle: "Tennessee Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
   },
+  {
+    keyword: "minnesota mesothelioma lawyer",
+    state: "Minnesota",
+    city: "Statewide",
+    kd: 2,
+    cpc: 50,
+    volume: 2400,
+    slug: "minnesota",
+    isStatePage: true,
+    metaTitle: "Minnesota Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "illinois mesothelioma lawyer",
+    state: "Illinois",
+    city: "Statewide",
+    kd: 14,
+    cpc: 55,
+    volume: 2200,
+    slug: "illinois",
+    isStatePage: true,
+    metaTitle: "Illinois Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "arizona mesothelioma lawyer",
+    state: "Arizona",
+    city: "Statewide",
+    kd: 1,
+    cpc: 60,
+    volume: 900,
+    slug: "arizona",
+    isStatePage: true,
+    metaTitle: "Arizona Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "maryland mesothelioma lawyer",
+    state: "Maryland",
+    city: "Statewide",
+    kd: 1,
+    cpc: 70,
+    volume: 600,
+    slug: "maryland",
+    isStatePage: true,
+    metaTitle: "Maryland Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "colorado mesothelioma lawyer",
+    state: "Colorado",
+    city: "Statewide",
+    kd: 2,
+    cpc: 40,
+    volume: 400,
+    slug: "colorado",
+    isStatePage: true,
+    metaTitle: "Colorado Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "alabama mesothelioma lawyer",
+    state: "Alabama",
+    city: "Statewide",
+    kd: 0,
+    cpc: 35,
+    volume: 300,
+    slug: "alabama",
+    isStatePage: true,
+    metaTitle: "Alabama Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "louisiana mesothelioma lawyer",
+    state: "Louisiana",
+    city: "Statewide",
+    kd: 16,
+    cpc: 60,
+    volume: 250,
+    slug: "louisiana",
+    isStatePage: true,
+    metaTitle: "Louisiana Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "massachusetts mesothelioma lawyer",
+    state: "Massachusetts",
+    city: "Statewide",
+    kd: 12,
+    cpc: 75,
+    volume: 250,
+    slug: "massachusetts",
+    isStatePage: true,
+    metaTitle: "Massachusetts Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "west virginia mesothelioma lawyer",
+    state: "West Virginia",
+    city: "Statewide",
+    kd: 2,
+    cpc: 35,
+    volume: 300,
+    slug: "west-virginia",
+    isStatePage: true,
+    metaTitle: "West Virginia Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "utah mesothelioma lawyer",
+    state: "Utah",
+    city: "Statewide",
+    kd: 0,
+    cpc: 19,
+    volume: 450,
+    slug: "utah",
+    isStatePage: true,
+    metaTitle: "Utah Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "mesothelioma lawyer kansas",
+    state: "Kansas",
+    city: "Statewide",
+    kd: 0,
+    cpc: 60,
+    volume: 200,
+    slug: "kansas",
+    isStatePage: true,
+    metaTitle: "Kansas Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "mesothelioma lawyer arkansas",
+    state: "Arkansas",
+    city: "Statewide",
+    kd: 0,
+    cpc: 50,
+    volume: 200,
+    slug: "arkansas",
+    isStatePage: true,
+    metaTitle: "Arkansas Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "washington mesothelioma lawyer",
+    state: "Washington",
+    city: "Statewide",
+    kd: 5,
+    cpc: 70,
+    volume: 550,
+    slug: "washington",
+    isStatePage: true,
+    metaTitle: "Washington Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "oklahoma mesothelioma lawyer",
+    state: "Oklahoma",
+    city: "Statewide",
+    kd: 2,
+    cpc: 55,
+    volume: 380,
+    slug: "oklahoma",
+    isStatePage: true,
+    metaTitle: "Oklahoma Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "mississippi mesothelioma lawyer",
+    state: "Mississippi",
+    city: "Statewide",
+    kd: 1,
+    cpc: 45,
+    volume: 350,
+    slug: "mississippi",
+    isStatePage: true,
+    metaTitle: "Mississippi Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "connecticut mesothelioma lawyer",
+    state: "Connecticut",
+    city: "Statewide",
+    kd: 3,
+    cpc: 50,
+    volume: 270,
+    slug: "connecticut",
+    isStatePage: true,
+    metaTitle: "Connecticut Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "indiana mesothelioma lawyer",
+    state: "Indiana",
+    city: "Statewide",
+    kd: 1,
+    cpc: 40,
+    volume: 260,
+    slug: "indiana",
+    isStatePage: true,
+    metaTitle: "Indiana Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
   // ========== CITY-LEVEL PAGES ==========
   // UNICORN Keywords - KD 0-5, CPC $100+
   {
@@ -980,6 +1167,55 @@ export const EXPOSURE_SITES = {
     { name: "Umatilla Chemical Depot", city: "Hermiston", type: "Military" },
     { name: "Georgia-Pacific Lumber", city: "Toledo", type: "Paper Mill" },
     { name: "PGE Trojan Nuclear Plant", city: "Rainier", type: "Power Plant" }
+  ],
+  "Minnesota": [
+    { name: "3M Company", city: "St. Paul", type: "Manufacturing" },
+    { name: "Northern States Power", city: "Various", type: "Power Generation" },
+    { name: "Koch Refinery", city: "Pine Bend", type: "Oil Refinery" },
+    { name: "Reserve Mining Co.", city: "Silver Bay", type: "Mining" },
+    { name: "Conwed Corporation", city: "Cloquet", type: "Manufacturing" }
+  ],
+  "Arizona": [
+    { name: "Palo Verde Nuclear Station", city: "Tonopah", type: "Power Plant" },
+    { name: "Phelps Dodge Copper Mine", city: "Morenci", type: "Mining" },
+    { name: "Salt River Project", city: "Various", type: "Power & Water" },
+    { name: "Cholla Power Plant", city: "Joseph City", type: "Power Plant" },
+    { name: "Magma Copper Mine", city: "San Manuel", type: "Mining" }
+  ],
+  "Maryland": [
+    { name: "Bethlehem Steel", city: "Sparrows Point", type: "Steel Mill & Shipyard" },
+    { name: "Calvert Cliffs Nuclear Plant", city: "Lusby", type: "Power Plant" },
+    { name: "Baltimore Gas & Electric", city: "Various", type: "Utility" },
+    { name: "Aberdeen Proving Ground", city: "Aberdeen", type: "Military" },
+    { name: "W.R. Grace Chemical", city: "Curtis Bay", type: "Chemical Processing" }
+  ],
+  "Alabama": [
+    { name: "Alabama Dry Dock", city: "Mobile", type: "Shipyard" },
+    { name: "Browns Ferry Nuclear Plant", city: "Athens", type: "Power Plant" },
+    { name: "Redstone Arsenal", city: "Huntsville", type: "Military" },
+    { name: "Anniston Army Depot", city: "Anniston", type: "Military" },
+    { name: "Alabama Power", city: "Various", type: "Utility" }
+  ],
+  "Massachusetts": [
+    { name: "Boston Naval Shipyard", city: "Charlestown", type: "Shipyard" },
+    { name: "General Dynamics", city: "Quincy", type: "Shipyard" },
+    { name: "Pilgrim Nuclear Station", city: "Plymouth", type: "Power Plant" },
+    { name: "General Electric", city: "Lynn", type: "Manufacturing" },
+    { name: "W.R. Grace", city: "Cambridge", type: "Chemical Processing" }
+  ],
+  "West Virginia": [
+    { name: "Union Carbide", city: "Institute", type: "Chemical Processing" },
+    { name: "Weirton Steel", city: "Weirton", type: "Steel Mill" },
+    { name: "John E. Amos Power Plant", city: "Winfield", type: "Power Plant" },
+    { name: "DuPont", city: "Parkersburg", type: "Chemical Processing" },
+    { name: "Mountaineer Power Plant", city: "New Haven", type: "Power Plant" }
+  ],
+  "Indiana": [
+    { name: "U.S. Steel Gary Works", city: "Gary", type: "Steel Mill" },
+    { name: "Eli Lilly", city: "Indianapolis", type: "Pharmaceuticals" },
+    { name: "AM General", city: "South Bend", type: "Automotive" },
+    { name: "Alcoa", city: "Newburgh", type: "Aluminum" },
+    { name: "Bethlehem Steel", city: "Burns Harbor", type: "Steel Mill" }
   ]
 } as const
 
