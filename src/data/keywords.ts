@@ -68,6 +68,116 @@ export const TARGET_KEYWORDS = [
     isStatePage: true,
     metaTitle: "Missouri Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
   },
+  {
+    keyword: "texas mesothelioma lawyer",
+    state: "Texas",
+    city: "Statewide",
+    kd: 7,
+    cpc: 110,
+    volume: 900,
+    slug: "texas",
+    isStatePage: true,
+    metaTitle: "Texas Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "california mesothelioma lawyer",
+    state: "California",
+    city: "Statewide",
+    kd: 9,
+    cpc: 130,
+    volume: 1200,
+    slug: "california",
+    isStatePage: true,
+    metaTitle: "California Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "florida mesothelioma lawyer",
+    state: "Florida",
+    city: "Statewide",
+    kd: 8,
+    cpc: 105,
+    volume: 800,
+    slug: "florida",
+    isStatePage: true,
+    metaTitle: "Florida Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "new york mesothelioma lawyer",
+    state: "New York",
+    city: "Statewide",
+    kd: 10,
+    cpc: 140,
+    volume: 700,
+    slug: "new-york",
+    isStatePage: true,
+    metaTitle: "New York Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "pennsylvania mesothelioma lawyer",
+    state: "Pennsylvania",
+    city: "Statewide",
+    kd: 7,
+    cpc: 95,
+    volume: 650,
+    slug: "pennsylvania",
+    isStatePage: true,
+    metaTitle: "Pennsylvania Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "ohio mesothelioma lawyer",
+    state: "Ohio",
+    city: "Statewide",
+    kd: 6,
+    cpc: 85,
+    volume: 500,
+    slug: "ohio",
+    isStatePage: true,
+    metaTitle: "Ohio Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "georgia mesothelioma lawyer",
+    state: "Georgia",
+    city: "Statewide",
+    kd: 6,
+    cpc: 80,
+    volume: 420,
+    slug: "georgia",
+    isStatePage: true,
+    metaTitle: "Georgia Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "north carolina mesothelioma lawyer",
+    state: "North Carolina",
+    city: "Statewide",
+    kd: 5,
+    cpc: 75,
+    volume: 360,
+    slug: "north-carolina",
+    isStatePage: true,
+    metaTitle: "North Carolina Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "virginia mesothelioma lawyer",
+    state: "Virginia",
+    city: "Statewide",
+    kd: 5,
+    cpc: 70,
+    volume: 330,
+    slug: "virginia",
+    isStatePage: true,
+    metaTitle: "Virginia Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "tennessee mesothelioma lawyer",
+    state: "Tennessee",
+    city: "Statewide",
+    kd: 4,
+    cpc: 65,
+    volume: 300,
+    slug: "tennessee",
+    isStatePage: true,
+    metaTitle: "Tennessee Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
   // ========== CITY-LEVEL PAGES ==========
   // UNICORN Keywords - KD 0-5, CPC $100+
   {
