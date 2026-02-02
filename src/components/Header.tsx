@@ -45,7 +45,15 @@ export function Header() {
                     {/* CTA Button - Desktop */}
                     <div className="hidden md:flex items-center gap-4">
                         <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-lg">
-                            <a href="tel:214-699-4543" className="flex items-center gap-2">
+                            <a 
+                                href="tel:214-699-4543" 
+                                className="flex items-center gap-2"
+                                onClick={() => {
+                                    if (typeof window !== 'undefined' && (window as any).gtag) {
+                                        (window as any).gtag('event', 'click_to_call', { 'event_category': 'engagement', 'event_label': 'header_desktop' });
+                                    }
+                                }}
+                            >
                                 <Phone className="h-4 w-4" />
                                 (214) 699-4543
                             </a>
@@ -56,7 +64,15 @@ export function Header() {
                     <div className="flex md:hidden items-center gap-2">
                         {/* Always visible phone button on mobile */}
                         <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-lg">
-                            <a href="tel:214-699-4543" className="flex items-center gap-1 text-xs">
+                            <a 
+                                href="tel:214-699-4543" 
+                                className="flex items-center gap-1 text-xs"
+                                onClick={() => {
+                                    if (typeof window !== 'undefined' && (window as any).gtag) {
+                                        (window as any).gtag('event', 'click_to_call', { 'event_category': 'engagement', 'event_label': 'header_mobile' });
+                                    }
+                                }}
+                            >
                                 <Phone className="h-4 w-4" />
                                 <span className="hidden sm:inline">Call Now</span>
                             </a>
@@ -92,7 +108,15 @@ export function Header() {
                                 </Link>
                             ))}
                             <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-lg w-full mt-2">
-                                <a href="tel:214-699-4543" className="flex items-center justify-center gap-2">
+                                <a 
+                                    href="tel:214-699-4543" 
+                                    className="flex items-center justify-center gap-2"
+                                    onClick={() => {
+                                        if (typeof window !== 'undefined' && (window as any).gtag) {
+                                            (window as any).gtag('event', 'click_to_call', { 'event_category': 'engagement', 'event_label': 'header_mobile_menu' });
+                                        }
+                                    }}
+                                >
                                     <Phone className="h-4 w-4" />
                                     (214) 699-4543
                                 </a>

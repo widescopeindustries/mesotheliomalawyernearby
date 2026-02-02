@@ -4,9 +4,21 @@ import { useForm, ValidationError } from '@formspree/react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Phone, CheckCircle, Loader2 } from 'lucide-react'
+import { useEffect } from 'react'
 
 export function TCPAConsentForm() {
   const [state, handleSubmit] = useForm("xeeandap")
+
+  useEffect(() => {
+    if (state.succeeded) {
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'generate_lead', {
+          'event_category': 'form',
+          'event_label': 'meso_lead_evaluation'
+        });
+      }
+    }
+  }, [state.succeeded]);
 
   if (state.succeeded) {
     return (
