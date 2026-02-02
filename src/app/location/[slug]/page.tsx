@@ -417,28 +417,73 @@ export default function LocationPage({ params }: LocationPageProps) {
         </div>
       </section>
 
+      {/* Learn More About Mesothelioma */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-center mb-6">Learn More About Mesothelioma</h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+              <Link href="/types/pleural-mesothelioma" className="px-4 py-3 bg-muted hover:bg-primary/10 rounded-lg text-sm font-medium transition-colors text-center">
+                Pleural Mesothelioma
+              </Link>
+              <Link href="/types/peritoneal-mesothelioma" className="px-4 py-3 bg-muted hover:bg-primary/10 rounded-lg text-sm font-medium transition-colors text-center">
+                Peritoneal Mesothelioma
+              </Link>
+              <Link href="/types/pericardial-mesothelioma" className="px-4 py-3 bg-muted hover:bg-primary/10 rounded-lg text-sm font-medium transition-colors text-center">
+                Pericardial Mesothelioma
+              </Link>
+              <Link href="/mesothelioma-lawsuit" className="px-4 py-3 bg-muted hover:bg-primary/10 rounded-lg text-sm font-medium transition-colors text-center">
+                Mesothelioma Lawsuit Guide
+              </Link>
+              <Link href="/asbestos-lawyer" className="px-4 py-3 bg-muted hover:bg-primary/10 rounded-lg text-sm font-medium transition-colors text-center">
+                Asbestos Lawyer
+              </Link>
+              <Link href="/directory" className="px-4 py-3 bg-muted hover:bg-primary/10 rounded-lg text-sm font-medium transition-colors text-center">
+                Lawyer Directory
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Related Locations */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-muted/40">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl font-bold text-center mb-8">
-              Other Locations We Serve
+            <h2 className="text-2xl font-bold text-center mb-4">
+              Other {keyword.state} Locations
             </h2>
+            {/* Same-state cities first */}
+            {TARGET_KEYWORDS.filter(k => k.state === keyword.state && k.slug !== keyword.slug).length > 0 && (
+              <div className="flex flex-wrap justify-center gap-3 mb-6">
+                {TARGET_KEYWORDS.filter(k => k.state === keyword.state && k.slug !== keyword.slug).map((location) => (
+                  <Link
+                    key={location.slug}
+                    href={`/location/${location.slug}`}
+                    className="px-4 py-2 bg-background hover:bg-primary/10 rounded-full text-sm font-medium transition-colors"
+                  >
+                    <MapPin className="h-3 w-3 inline mr-1" />
+                    {(location as any).isStatePage ? `${location.state} (Statewide)` : location.city}
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            <h3 className="text-lg font-semibold text-center mb-4 text-muted-foreground">Nationwide Coverage</h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {TARGET_KEYWORDS.filter(k => k.slug !== keyword.slug).slice(0, 8).map((location) => (
+              {TARGET_KEYWORDS.filter(k => k.state !== keyword.state && (k as any).isStatePage).slice(0, 12).map((location) => (
                 <Link
                   key={location.slug}
                   href={`/location/${location.slug}`}
-                  className="px-4 py-2 bg-muted hover:bg-primary/10 rounded-full text-sm font-medium transition-colors"
+                  className="px-4 py-2 bg-background hover:bg-primary/10 rounded-full text-sm font-medium transition-colors"
                 >
-                  <MapPin className="h-3 w-3 inline mr-1" />
-                  {location.city}, {location.state}
+                  {location.state}
                 </Link>
               ))}
+              <Link href="/directory" className="px-4 py-2 bg-accent/10 hover:bg-accent/20 rounded-full text-sm font-medium transition-colors text-accent">
+                View All States →
+              </Link>
             </div>
-            <p className="text-center text-muted-foreground mt-4 text-sm">
-              We connect mesothelioma victims with attorneys nationwide
-            </p>
           </div>
         </div>
       </section>

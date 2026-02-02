@@ -365,6 +365,105 @@ export const TARGET_KEYWORDS = [
     isStatePage: true,
     metaTitle: "Indiana Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
   },
+  {
+    keyword: "wisconsin mesothelioma lawyer",
+    state: "Wisconsin",
+    city: "Statewide",
+    kd: 2,
+    cpc: 45,
+    volume: 200,
+    slug: "wisconsin",
+    isStatePage: true,
+    metaTitle: "Wisconsin Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "oregon mesothelioma lawyer",
+    state: "Oregon",
+    city: "Statewide",
+    kd: 3,
+    cpc: 55,
+    volume: 200,
+    slug: "oregon",
+    isStatePage: true,
+    metaTitle: "Oregon Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "nevada mesothelioma lawyer",
+    state: "Nevada",
+    city: "Statewide",
+    kd: 2,
+    cpc: 40,
+    volume: 180,
+    slug: "nevada",
+    isStatePage: true,
+    metaTitle: "Nevada Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "iowa mesothelioma lawyer",
+    state: "Iowa",
+    city: "Statewide",
+    kd: 1,
+    cpc: 35,
+    volume: 150,
+    slug: "iowa",
+    isStatePage: true,
+    metaTitle: "Iowa Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "nebraska mesothelioma lawyer",
+    state: "Nebraska",
+    city: "Statewide",
+    kd: 1,
+    cpc: 30,
+    volume: 130,
+    slug: "nebraska",
+    isStatePage: true,
+    metaTitle: "Nebraska Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "new hampshire mesothelioma lawyer",
+    state: "New Hampshire",
+    city: "Statewide",
+    kd: 0,
+    cpc: 35,
+    volume: 170,
+    slug: "new-hampshire",
+    isStatePage: true,
+    metaTitle: "New Hampshire Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "rhode island mesothelioma lawyer",
+    state: "Rhode Island",
+    city: "Statewide",
+    kd: 1,
+    cpc: 40,
+    volume: 250,
+    slug: "rhode-island",
+    isStatePage: true,
+    metaTitle: "Rhode Island Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "delaware mesothelioma lawyer",
+    state: "Delaware",
+    city: "Statewide",
+    kd: 0,
+    cpc: 45,
+    volume: 240,
+    slug: "delaware",
+    isStatePage: true,
+    metaTitle: "Delaware Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "south carolina mesothelioma lawyer",
+    state: "South Carolina",
+    city: "Statewide",
+    kd: 4,
+    cpc: 35,
+    volume: 200,
+    slug: "south-carolina",
+    isStatePage: true,
+    metaTitle: "South Carolina Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
   // ========== CITY-LEVEL PAGES ==========
   // UNICORN Keywords - KD 0-5, CPC $100+
   {

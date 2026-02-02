@@ -40,6 +40,48 @@ export default function sitemap() {
             priority: 0.8,
         },
         {
+            url: `${baseUrl}/types/pleural-mesothelioma`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/types/pericardial-mesothelioma`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/directory`,
+            lastModified: currentDate,
+            changeFrequency: 'weekly' as const,
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/best-mesothelioma-lawyers`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/mesothelioma-lawyer-near-me`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/asbestos-lawyer`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/mesothelioma-lawsuit`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
             url: `${baseUrl}/privacy-policy`,
             lastModified: currentDate,
             changeFrequency: 'yearly' as const,

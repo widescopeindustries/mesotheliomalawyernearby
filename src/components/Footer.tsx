@@ -32,17 +32,25 @@ export function Footer() {
                         <h3 className="font-serif font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2 text-sm opacity-90">
                             <li><Link href="/" className="hover:text-accent transition-colors">Home</Link></li>
+                            <li><Link href="/directory" className="hover:text-accent transition-colors">Lawyer Directory</Link></li>
+                            <li><Link href="/mesothelioma-lawyer-near-me" className="hover:text-accent transition-colors">Find a Lawyer Near Me</Link></li>
+                            <li><Link href="/best-mesothelioma-lawyers" className="hover:text-accent transition-colors">Best Mesothelioma Lawyers</Link></li>
+                            <li><Link href="/mesothelioma-lawsuit" className="hover:text-accent transition-colors">Mesothelioma Lawsuit</Link></li>
+                            <li><Link href="/asbestos-lawyer" className="hover:text-accent transition-colors">Asbestos Lawyer</Link></li>
                             <li><Link href="/about" className="hover:text-accent transition-colors">About Us</Link></li>
-                            <li><Link href="/veteran-resources" className="hover:text-accent transition-colors">Veteran Resources</Link></li>
-                            <li><Link href="/types/peritoneal-mesothelioma" className="hover:text-accent transition-colors">Peritoneal Mesothelioma</Link></li>
                             <li><Link href="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
                         </ul>
                     </div>
 
-                    {/* Legal */}
+                    {/* Resources */}
                     <div>
-                        <h3 className="font-serif font-semibold mb-4">Legal</h3>
+                        <h3 className="font-serif font-semibold mb-4">Resources</h3>
                         <ul className="space-y-2 text-sm opacity-90">
+                            <li><Link href="/types/pleural-mesothelioma" className="hover:text-accent transition-colors">Pleural Mesothelioma</Link></li>
+                            <li><Link href="/types/peritoneal-mesothelioma" className="hover:text-accent transition-colors">Peritoneal Mesothelioma</Link></li>
+                            <li><Link href="/types/pericardial-mesothelioma" className="hover:text-accent transition-colors">Pericardial Mesothelioma</Link></li>
+                            <li><Link href="/veteran-resources" className="hover:text-accent transition-colors">Veteran Resources</Link></li>
+                            <li><Link href="/statistics" className="hover:text-accent transition-colors">Mesothelioma Statistics</Link></li>
                             <li><Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link></li>
                             <li><Link href="/terms-of-service" className="hover:text-accent transition-colors">Terms of Service</Link></li>
                             <li><Link href="/disclaimer" className="hover:text-accent transition-colors">Legal Disclaimer</Link></li>
