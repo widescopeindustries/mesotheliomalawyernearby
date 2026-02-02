@@ -44,10 +44,10 @@ export async function generateMetadata({ params }: ExposureSitePageProps): Promi
             title: `${site.name} Asbestos Exposure History`,
             description: `Detailed history of asbestos exposure at ${site.name}. Learn about worker exposure, health impacts, and legal options.`,
             type: 'article',
-            url: `https://mesotheliomalawyernearby.vercel.app/exposure-sites/${params.id}`,
+            url: `https://mesotheliomalawyernearby.com/exposure-sites/${params.id}`,
         },
         alternates: {
-            canonical: `https://mesotheliomalawyernearby.vercel.app/exposure-sites/${params.id}`
+            canonical: `https://mesotheliomalawyernearby.com/exposure-sites/${params.id}`
         }
     }
 }

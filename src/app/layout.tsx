@@ -4,7 +4,7 @@ import { Inter, Merriweather } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { StickyMobileCTA } from '@/components/StickyMobileCTA'
-import Script from 'next/script'
+import { GoogleAnalytics } from '@/lib/analytics'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Best Mesothelioma Lawyers Near Me | Veteran-Owned Service',
     description: 'Veteran-owned legal referral service. Connect with top-rated mesothelioma attorneys. Free consultation.',
     type: 'website',
-    url: 'https://mesotheliomalawyernearby.vercel.app',
+    url: 'https://mesotheliomalawyernearby.com',
   },
 }
 
@@ -39,17 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google tag (gtag.js) */}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TE3T9D4KC0" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-TE3T9D4KC0');
-          `}
-        </Script>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-TE3T9D4KC0"} />
       </head>
       <body className={`${inter.variable} ${merriweather.variable} font-sans`}>
         <Header />

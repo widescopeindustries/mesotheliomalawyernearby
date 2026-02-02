@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     title: 'Veteran Mesothelioma Resources - Military Asbestos Guide',
     description: 'Complete resource for veterans with mesothelioma from Navy asbestos exposure. VA benefits and legal help.',
     type: 'website',
-    url: 'https://mesotheliomalawyernearby.vercel.app/veteran-resources',
+    url: 'https://mesotheliomalawyernearby.com/veteran-resources',
   },
   alternates: {
-    canonical: 'https://mesotheliomalawyernearby.vercel.app/veteran-resources'
+    canonical: 'https://mesotheliomalawyernearby.com/veteran-resources'
   }
 }
 

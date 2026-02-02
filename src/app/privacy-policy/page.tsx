@@ -4,7 +4,7 @@ export const metadata: Metadata = {
     title: 'Privacy Policy - Mesothelioma Lawyer Nearby',
     description: 'Privacy policy for Mesothelioma Lawyer Nearby. Learn how we collect, use, and protect your personal information.',
     alternates: {
-        canonical: 'https://mesotheliomalawyernearby.vercel.app/privacy-policy',
+        canonical: 'https://mesotheliomalawyernearby.com/privacy-policy',
     },
 }
 

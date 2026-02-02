@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     title: 'About Us - Veteran-Owned Mesothelioma Legal Service',
     description: 'A veteran-owned company dedicated to connecting mesothelioma victims with experienced legal representation.',
     type: 'website',
-    url: 'https://mesotheliomalawyernearby.vercel.app/about',
+    url: 'https://mesotheliomalawyernearby.com/about',
   },
   alternates: {
-    canonical: 'https://mesotheliomalawyernearby.vercel.app/about',
+    canonical: 'https://mesotheliomalawyernearby.com/about',
   },
 }
 

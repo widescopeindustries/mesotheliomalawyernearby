@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       authors: [post.author],
     },
     alternates: {
-      canonical: `https://mesotheliomalawyernearby.vercel.app/blog/${params.slug}`
+      canonical: `https://mesotheliomalawyernearby.com/blog/${params.slug}`
     }
   }
 }
@@ -89,14 +89,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       "name": "Mesothelioma Lawyer Nearby",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mesotheliomalawyernearby.vercel.app/logo.png"
+        "url": "https://mesotheliomalawyernearby.com/logo.png"
       }
     },
     "datePublished": post.publishedAt,
     "dateModified": post.updatedAt || post.publishedAt,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://mesotheliomalawyernearby.vercel.app/blog/${post.slug}`
+      "@id": `https://mesotheliomalawyernearby.com/blog/${post.slug}`
     }
   }
 

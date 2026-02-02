@@ -4,7 +4,7 @@ export const metadata: Metadata = {
     title: 'Legal Disclaimer - Mesothelioma Lawyer Nearby',
     description: 'Legal disclaimer for Mesothelioma Lawyer Nearby. Important information about our legal referral services.',
     alternates: {
-        canonical: 'https://mesotheliomalawyernearby.vercel.app/disclaimer',
+        canonical: 'https://mesotheliomalawyernearby.com/disclaimer',
     },
 }
 

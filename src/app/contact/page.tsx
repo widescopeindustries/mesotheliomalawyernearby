@@ -11,10 +11,10 @@ export const metadata: Metadata = {
         title: 'Contact Mesothelioma Lawyer Nearby',
         description: 'Connect with experienced mesothelioma attorneys. Free, confidential consultation.',
         type: 'website',
-        url: 'https://mesotheliomalawyernearby.vercel.app/contact',
+        url: 'https://mesotheliomalawyernearby.com/contact',
     },
     alternates: {
-        canonical: 'https://mesotheliomalawyernearby.vercel.app/contact',
+        canonical: 'https://mesotheliomalawyernearby.com/contact',
     },
 }
 

@@ -4,7 +4,7 @@ export const metadata: Metadata = {
     title: 'Terms of Service - Mesothelioma Lawyer Nearby',
     description: 'Terms of Service for Mesothelioma Lawyer Nearby. Read our terms and conditions for using our legal referral services.',
     alternates: {
-        canonical: 'https://mesotheliomalawyernearby.vercel.app/terms-of-service',
+        canonical: 'https://mesotheliomalawyernearby.com/terms-of-service',
     },
 }
 
