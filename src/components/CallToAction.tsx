@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Phone, Shield, Clock } from "lucide-react"
 import { trackPhoneClick } from "@/components/Analytics"
