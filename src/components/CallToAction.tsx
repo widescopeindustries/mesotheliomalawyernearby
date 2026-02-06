@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Phone, Shield, Clock } from "lucide-react"
+import { trackPhoneClick } from "@/components/Analytics"
 
 export const CallToAction = () => {
   return (
@@ -29,7 +30,10 @@ export const CallToAction = () => {
               className="text-lg px-8 py-6 h-auto bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-200 hover:shadow-2xl"
               asChild
             >
-              <a href="tel:214-699-4543">
+              <a
+                href="tel:214-699-4543"
+                onClick={() => trackPhoneClick('214-699-4543', 'CTA Section')}
+              >
                 <Phone className="h-5 w-5 mr-2" />
                 (214) 699-4543
                 <span className="ml-2 text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">24/7 Available</span>

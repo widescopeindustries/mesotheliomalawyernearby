@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Phone, Shield, Clock } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { trackPhoneClick } from "@/components/Analytics"
 
 export const HeroSection = () => {
   return (
@@ -10,10 +11,10 @@ export const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Veteran Badge */}
           <div className="inline-flex items-center gap-3 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8 transition-all duration-200 hover:bg-accent/30">
-            <Image 
-              src="/images/sba-sdvosb-logo.png" 
-              alt="SDVOSB Logo" 
-              width={24} 
+            <Image
+              src="/images/sba-sdvosb-logo.png"
+              alt="SDVOSB Logo"
+              width={24}
               height={24}
               className="object-contain"
             />
@@ -32,7 +33,11 @@ export const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 h-auto transition-all duration-200 hover:shadow-xl" asChild>
-              <a href="tel:214-699-4543" aria-label="Call us 24/7 at (214) 699-4543">
+              <a
+                href="tel:214-699-4543"
+                aria-label="Call us 24/7 at (214) 699-4543"
+                onClick={() => trackPhoneClick('214-699-4543', 'Hero Section')}
+              >
                 <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
                 (214) 699-4543
                 <span className="ml-2 text-xs bg-accent-foreground/20 text-accent-foreground px-2 py-1 rounded">24/7</span>
