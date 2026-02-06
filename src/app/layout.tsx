@@ -1,33 +1,31 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
-import { Inter, Merriweather } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { StickyMobileCTA } from '@/components/StickyMobileCTA'
 import { GoogleAnalytics } from '@/lib/analytics'
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-})
-
-const merriweather = Merriweather({
-  weight: ['300', '400', '700', '900'],
-  subsets: ['latin'],
-  variable: '--font-serif',
-  display: 'swap',
-})
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5, // Allow users to zoom up to 500% for accessibility
+}
 
 export const metadata: Metadata = {
-  title: 'Best Mesothelioma Lawyers Near Me | Veteran-Owned Legal Referral',
-  description: 'Find the best mesothelioma lawyers near you. Free case evaluation. Veteran-owned referral service connecting asbestos exposure victims with top-rated attorneys. No upfront costs.',
-  keywords: ['best mesothelioma lawyers near me', 'mesothelioma attorney assistance', 'mesothelioma lawyer near me', 'asbestos attorney', 'veteran owned legal', 'mesothelioma lawsuit'],
+  title: 'Mesothelioma Lawyers | Free Consultation | Veteran-Owned',
+  description: 'Find experienced mesothelioma lawyers who understand your situation. Free case evaluation. Veteran-owned service. We help asbestos exposure victims get the compensation they deserve. No upfront costs.',
+  keywords: ['mesothelioma lawyer', 'asbestos attorney', 'mesothelioma lawsuit', 'veteran legal help', 'asbestos exposure lawyer'],
+  metadataBase: new URL('https://mesotheliomalawyernearby.com'),
   openGraph: {
-    title: 'Best Mesothelioma Lawyers Near Me | Veteran-Owned Service',
-    description: 'Veteran-owned legal referral service. Connect with top-rated mesothelioma attorneys. Free consultation.',
+    title: 'Mesothelioma Lawyers | Veteran-Owned Service',
+    description: 'Veteran-owned legal referral service. Connect with experienced mesothelioma attorneys. Free consultation. No pressure.',
     type: 'website',
     url: 'https://mesotheliomalawyernearby.com',
+    siteName: 'Mesothelioma Lawyer Nearby',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
@@ -39,11 +37,35 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Preload Atkinson Hyperlegible font for accessibility */}
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet"
+        />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-TE3T9D4KC0"} />
       </head>
-      <body className={`${inter.variable} ${merriweather.variable} font-sans`}>
+      <body className="font-sans antialiased">
+        {/* Skip link for keyboard navigation - accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-accent focus:text-accent-foreground focus:px-6 focus:py-3 focus:rounded-lg focus:font-bold"
+        >
+          Skip to main content
+        </a>
+
         <Header />
-        {children}
+        <main id="main-content" role="main">
+          {children}
+        </main>
         <Footer />
         <StickyMobileCTA />
       </body>

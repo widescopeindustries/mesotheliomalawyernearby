@@ -2,56 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Atkinson Hyperlegible - designed for low-vision readers */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 60% 8%;
-    --card: 0 0% 100%;
-    --card-foreground: 210 60% 8%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 60% 8%;
-    /* Navy Primary: #002147 = hsl(210, 100%, 14%) */
-    --primary: 210 100% 14%;
-    --primary-foreground: 0 0% 100%;
-    /* Gold/Bronze Accent: #D4AF37 = hsl(43, 64%, 52%) */
-    --accent: 43 64% 52%;
-    --accent-foreground: 210 60% 8%;
-    /* Bronze Secondary: #CD7F32 = hsl(30, 60%, 50%) */
-    --secondary: 30 60% 50%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 20% 40%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 43 64% 52%;
-    --radius: 0.5rem;
+    /* ELDERLY-ACCESSIBLE COLOR PALETTE */
+    /* Warm off-white background - easier on eyes than pure white */
+    --background: 40 33% 98%;
+    /* Dark charcoal foreground - 7:1+ contrast ratio, less harsh than pure black */
+    --foreground: 210 29% 24%;
+    
+    /* Card styling */
+    --card: 40 33% 99%;
+    --card-foreground: 210 29% 24%;
+    
+    --popover: 40 33% 99%;
+    --popover-foreground: 210 29% 24%;
+    
+    /* Deep Navy Primary: Trust, stability, medical professionalism */
+    --primary: 210 100% 18%;
+    --primary-foreground: 40 33% 98%;
+    
+    /* Warm Amber Accent: Urgency without panic */
+    --accent: 38 92% 50%;
+    --accent-foreground: 210 29% 15%;
+    
+    /* Forest Green Secondary: Trust and calm */
+    --secondary: 158 64% 32%;
+    --secondary-foreground: 40 33% 98%;
+    
+    /* Muted colors for less important elements */
+    --muted: 40 20% 94%;
+    --muted-foreground: 210 14% 45%;
+    
+    /* Soft red for urgent warnings (not aggressive) */
+    --destructive: 0 65% 48%;
+    --destructive-foreground: 40 33% 98%;
+    
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 38 92% 50%;
+    
+    /* Larger border radius for friendly feel */
+    --radius: 0.75rem;
   }
 
+  /* Dark mode - still accessible */
   .dark {
-    --background: 210 60% 8%;
-    --foreground: 210 40% 98%;
-    --card: 210 50% 12%;
-    --card-foreground: 210 40% 98%;
-    --popover: 210 50% 12%;
-    --popover-foreground: 210 40% 98%;
-    /* Navy Primary (lighter in dark mode) */
-    --primary: 210 100% 25%;
-    --primary-foreground: 210 40% 98%;
-    /* Gold/Bronze Accent */
-    --accent: 43 64% 52%;
-    --accent-foreground: 210 60% 8%;
-    /* Bronze Secondary */
-    --secondary: 30 60% 50%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 43 64% 52%;
+    --background: 210 25% 10%;
+    --foreground: 40 20% 94%;
+    --card: 210 20% 14%;
+    --card-foreground: 40 20% 94%;
+    --popover: 210 20% 14%;
+    --popover-foreground: 40 20% 94%;
+    --primary: 210 80% 35%;
+    --primary-foreground: 40 20% 94%;
+    --accent: 38 85% 55%;
+    --accent-foreground: 210 25% 10%;
+    --secondary: 158 50% 40%;
+    --secondary-foreground: 40 20% 94%;
+    --muted: 210 20% 18%;
+    --muted-foreground: 40 15% 65%;
+    --destructive: 0 55% 45%;
+    --destructive-foreground: 40 20% 94%;
+    --border: 210 20% 22%;
+    --input: 210 20% 22%;
+    --ring: 38 85% 55%;
   }
 }
 
@@ -60,7 +77,168 @@
     @apply border-border;
   }
 
+  html {
+    /* Base font size 18px minimum for elderly readability */
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    /* Atkinson Hyperlegible as primary font - designed for accessibility */
+    font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+    /* Generous line height for readability */
+    line-height: 1.7;
+    /* Prevent layout shift */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Larger, more readable headings */
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+    line-height: 1.2;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+    line-height: 1.3;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold;
+    line-height: 1.4;
+  }
+
+  h4 {
+    @apply text-lg md:text-xl font-semibold;
+    line-height: 1.4;
+  }
+
+  p {
+    @apply text-base md:text-lg;
+    line-height: 1.7;
+    /* Optimal reading width */
+    max-width: 70ch;
+  }
+
+  /* Clear focus indicators for keyboard navigation */
+  *:focus-visible {
+    @apply outline-none ring-4 ring-accent ring-offset-2 ring-offset-background;
+  }
+
+  /* Larger touch targets - minimum 48x48px for arthritic hands */
+  button, 
+  [role="button"],
+  a {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  /* Links should be clearly identifiable */
+  a {
+    @apply text-primary underline-offset-4;
+    text-decoration-thickness: 2px;
+  }
+
+  a:hover {
+    @apply underline;
+  }
+
+  /* Form inputs - large and clear */
+  input, textarea, select {
+    @apply text-lg p-4;
+    min-height: 56px;
+  }
+
+  /* Labels always visible - never use placeholder only */
+  label {
+    @apply text-base font-medium block mb-2;
+  }
+}
+
+@layer components {
+  /* Senior-friendly card styling */
+  .senior-card {
+    @apply bg-card rounded-2xl p-8 md:p-10;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Large, friendly CTA buttons */
+  .senior-cta {
+    @apply inline-flex items-center justify-center gap-3;
+    @apply text-lg md:text-xl font-bold;
+    @apply px-8 py-5 md:px-10 md:py-6;
+    @apply rounded-xl;
+    @apply transition-all duration-200;
+    @apply shadow-lg hover:shadow-xl;
+    min-height: 64px;
+  }
+
+  .senior-cta-primary {
+    @apply senior-cta;
+    @apply bg-accent text-accent-foreground;
+    @apply hover:bg-accent/90;
+  }
+
+  .senior-cta-secondary {
+    @apply senior-cta;
+    @apply bg-primary text-primary-foreground;
+    @apply hover:bg-primary/90;
+  }
+
+  /* Phone number styling - large and clickable */
+  .phone-number {
+    @apply text-2xl md:text-3xl font-bold;
+    @apply flex items-center gap-3;
+    @apply cursor-pointer;
+  }
+
+  /* Warning box for urgent info (statute of limitations) */
+  .warning-box {
+    @apply bg-amber-50 border-l-4 border-amber-500;
+    @apply p-6 rounded-r-xl;
+    @apply text-amber-900;
+  }
+
+  /* Trust badge styling */
+  .trust-badge {
+    @apply inline-flex items-center gap-3;
+    @apply bg-secondary/10 text-secondary;
+    @apply px-5 py-3 rounded-full;
+    @apply text-base font-semibold;
+  }
+
+  /* Section spacing for breathing room */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  /* Text container - optimal reading width */
+  .text-container {
+    @apply max-w-3xl mx-auto;
+  }
+
+  /* No motion for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Sticky mobile CTA - thumb reachable at bottom */
+@layer utilities {
+  .sticky-bottom-cta {
+    @apply fixed bottom-0 left-0 right-0;
+    @apply bg-accent text-accent-foreground;
+    @apply py-4 px-6;
+    @apply shadow-[0_-4px_20px_rgba(0,0,0,0.15)];
+    @apply z-50;
+    /* Safe area for iPhone notch */
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
   }
 }
