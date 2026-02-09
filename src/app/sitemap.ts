@@ -13,8 +13,8 @@ const BLOG_POSTS = [
 export default function sitemap() {
     const baseUrl = 'https://mesotheliomalawyernearby.com'
 
-    // Updated date - February 5, 2026
-    const currentDate = '2026-02-05T00:00:00.000Z'
+    // Dynamic date - always shows current date for SEO freshness signals
+    const currentDate = new Date().toISOString()
 
     // Core pages - Homepage and main navigation
     const corePages = [
