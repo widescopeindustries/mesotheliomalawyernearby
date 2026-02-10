@@ -23,7 +23,7 @@ export const CallToAction = () => {
           {/* Urgency warning - gentle, not aggressive */}
           <div className="bg-amber-500/20 border border-amber-400/40 rounded-2xl p-6 md:p-8 mb-10 max-w-2xl mx-auto">
             <div className="flex items-start gap-4">
-              <AlertTriangle className="h-8 w-8 text-amber-300 flex-shrink-0 mt-1" aria-hidden="true" />
+              <AlertTriangle className="h-8 w-8 text-amber-300 flex-shrink-0 mt-1" aria-hidden="true" role="img" />
               <div className="text-left">
                 <h3 className="font-bold text-lg md:text-xl text-amber-100 mb-2">
                   Time Limits May Apply
@@ -44,7 +44,7 @@ export const CallToAction = () => {
               onClick={() => trackPhoneClick('214-699-4543', 'CTA Section')}
               className="group inline-flex items-center gap-4 bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-7 md:px-14 md:py-8 rounded-2xl shadow-elevated hover:shadow-xl transition-all duration-200"
             >
-              <Phone className="h-9 w-9 md:h-11 md:w-11" aria-hidden="true" />
+              <Phone className="h-9 w-9 md:h-11 md:w-11" aria-hidden="true" role="img" />
               <span className="text-2xl md:text-4xl font-bold">
                 (214) 699-4543
               </span>
@@ -58,15 +58,15 @@ export const CallToAction = () => {
           {/* Trust indicators */}
           <div className="flex flex-wrap justify-center gap-6 md:gap-10">
             <div className="flex items-center gap-3 text-primary-foreground/90">
-              <Shield className="h-6 w-6" aria-hidden="true" />
+              <Shield className="h-6 w-6" aria-hidden="true" role="img" />
               <span className="text-base md:text-lg font-medium">Veteran-Owned</span>
             </div>
             <div className="flex items-center gap-3 text-primary-foreground/90">
-              <Phone className="h-6 w-6" aria-hidden="true" />
+              <Phone className="h-6 w-6" aria-hidden="true" role="img" />
               <span className="text-base md:text-lg font-medium">Free Consultation</span>
             </div>
             <div className="flex items-center gap-3 text-primary-foreground/90">
-              <Shield className="h-6 w-6" aria-hidden="true" />
+              <Shield className="h-6 w-6" aria-hidden="true" role="img" />
               <span className="text-base md:text-lg font-medium">No Upfront Fees</span>
             </div>
           </div>

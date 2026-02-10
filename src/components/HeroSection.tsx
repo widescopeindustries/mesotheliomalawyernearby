@@ -41,7 +41,7 @@ export const HeroSection = () => {
 
           {/* Reassurance message - reduces anxiety */}
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            <Heart className="inline h-5 w-5 text-secondary mr-2" aria-hidden="true" />
+            <Heart className="inline h-5 w-5 text-secondary mr-2" aria-hidden="true" role="img" />
             Take your time. We&apos;re here to answer questions, not pressure you.
           </p>
 
@@ -54,7 +54,7 @@ export const HeroSection = () => {
               onClick={() => trackPhoneClick('214-699-4543', 'Hero Section')}
               className="group inline-flex items-center gap-4 bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 md:px-12 md:py-7 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200"
             >
-              <Phone className="h-8 w-8 md:h-10 md:w-10" aria-hidden="true" />
+              <Phone className="h-8 w-8 md:h-10 md:w-10" aria-hidden="true" role="img" />
               <span className="text-2xl md:text-3xl font-bold">
                 (214) 699-4543
               </span>
@@ -80,7 +80,7 @@ export const HeroSection = () => {
             {/* Card 1 */}
             <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border">
               <div className="h-14 w-14 rounded-full bg-secondary/15 flex items-center justify-center mb-5 mx-auto">
-                <Phone className="h-7 w-7 text-secondary" aria-hidden="true" />
+                <Phone className="h-7 w-7 text-secondary" aria-hidden="true" role="img" />
               </div>
               <h2 className="font-bold text-xl text-foreground mb-2">
                 Immediate Help
@@ -93,7 +93,7 @@ export const HeroSection = () => {
             {/* Card 2 */}
             <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border">
               <div className="h-14 w-14 rounded-full bg-secondary/15 flex items-center justify-center mb-5 mx-auto">
-                <Shield className="h-7 w-7 text-secondary" aria-hidden="true" />
+                <Shield className="h-7 w-7 text-secondary" aria-hidden="true" role="img" />
               </div>
               <h2 className="font-bold text-xl text-foreground mb-2">
                 Veteran-Owned
@@ -106,7 +106,7 @@ export const HeroSection = () => {
             {/* Card 3 */}
             <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border">
               <div className="h-14 w-14 rounded-full bg-secondary/15 flex items-center justify-center mb-5 mx-auto">
-                <Clock className="h-7 w-7 text-secondary" aria-hidden="true" />
+                <Clock className="h-7 w-7 text-secondary" aria-hidden="true" role="img" />
               </div>
               <h2 className="font-bold text-xl text-foreground mb-2">
                 No Upfront Costs

@@ -25,7 +25,7 @@ export function TCPAConsentForm() {
     return (
       <div className="w-full max-w-2xl mx-auto bg-secondary/10 border-2 border-secondary rounded-2xl p-8 md:p-12 text-center">
         <div className="h-20 w-20 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-          <CheckCircle className="h-10 w-10 text-secondary" aria-hidden="true" />
+          <CheckCircle className="h-10 w-10 text-secondary" aria-hidden="true" role="img" />
         </div>
         <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
           Thank You!
@@ -43,7 +43,7 @@ export function TCPAConsentForm() {
           className="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-5 rounded-xl font-bold text-xl transition-all"
           aria-label="Call us at 214-699-4543"
         >
-          <Phone className="h-6 w-6" aria-hidden="true" />
+          <Phone className="h-6 w-6" aria-hidden="true" role="img" />
           (214) 699-4543
         </a>
       </div>
@@ -114,7 +114,7 @@ export function TCPAConsentForm() {
               className="w-full px-5 py-4 text-lg border-2 border-border rounded-xl bg-background focus:ring-4 focus:ring-accent/30 focus:border-accent transition-all pr-14"
             />
             <div className="absolute right-4 top-1/2 -translate-y-1/2">
-              <Phone className="h-6 w-6 text-muted-foreground" aria-hidden="true" />
+              <Phone className="h-6 w-6 text-muted-foreground" aria-hidden="true" role="img" />
             </div>
           </div>
           <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-destructive text-base mt-2 block" />
@@ -162,8 +162,9 @@ export function TCPAConsentForm() {
         <div className="bg-muted/50 p-6 md:p-8 rounded-2xl border border-border space-y-6">
           <h4 className="font-bold text-lg text-foreground">Your Permission</h4>
 
-          <label className="flex items-start gap-4 cursor-pointer p-3 rounded-xl hover:bg-muted/70 transition-colors">
+          <label htmlFor="phoneConsent" className="flex items-start gap-4 cursor-pointer p-3 rounded-xl hover:bg-muted/70 transition-colors text-left w-full">
             <input
+              id="phoneConsent"
               type="checkbox"
               name="phoneConsent"
               value="I agree to be contacted by phone"
@@ -176,8 +177,9 @@ export function TCPAConsentForm() {
             </span>
           </label>
 
-          <label className="flex items-start gap-4 cursor-pointer p-3 rounded-xl hover:bg-muted/70 transition-colors">
+          <label htmlFor="disclaimer" className="flex items-start gap-4 cursor-pointer p-3 rounded-xl hover:bg-muted/70 transition-colors text-left w-full">
             <input
+              id="disclaimer"
               type="checkbox"
               name="disclaimer"
               value="I understand this is a legal referral service"
@@ -203,12 +205,12 @@ export function TCPAConsentForm() {
         >
           {state.submitting ? (
             <>
-              <Loader2 className="h-6 w-6 mr-3 animate-spin" aria-hidden="true" />
+              <Loader2 className="h-6 w-6 mr-3 animate-spin" aria-hidden="true" role="img" />
               <span>Sending Your Request...</span>
             </>
           ) : (
             <>
-              <Phone className="h-6 w-6 mr-3" aria-hidden="true" />
+              <Phone className="h-6 w-6 mr-3" aria-hidden="true" role="img" />
               <span>Request My Free Consultation</span>
             </>
           )}
@@ -219,15 +221,15 @@ export function TCPAConsentForm() {
       <div className="mt-8 pt-8 border-t border-border">
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-muted-foreground">
           <div className="flex items-center gap-2">
-            <Lock className="h-5 w-5" aria-hidden="true" />
+            <Lock className="h-5 w-5" aria-hidden="true" role="img" />
             <span className="text-base">100% Confidential</span>
           </div>
           <div className="flex items-center gap-2">
-            <Shield className="h-5 w-5" aria-hidden="true" />
+            <Shield className="h-5 w-5" aria-hidden="true" role="img" />
             <span className="text-base">Veteran-Owned</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle className="h-5 w-5" aria-hidden="true" />
+            <CheckCircle className="h-5 w-5" aria-hidden="true" role="img" />
             <span className="text-base">No Obligation</span>
           </div>
         </div>

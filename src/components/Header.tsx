@@ -28,7 +28,7 @@ export function Header() {
                         className="flex items-center gap-3 transition-opacity hover:opacity-80 focus:opacity-80 min-h-touch"
                         aria-label="Mesothelioma Lawyer Nearby - Go to homepage"
                     >
-                        <Shield className="h-10 w-10 text-primary" aria-hidden="true" />
+                        <Shield className="h-10 w-10 text-primary" aria-hidden="true" role="img" />
                         <div className="flex flex-col">
                             <span className="font-serif font-bold text-xl leading-tight text-foreground">
                                 Mesothelioma
@@ -60,7 +60,7 @@ export function Header() {
                             className="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-4 rounded-xl font-bold text-lg transition-all duration-200 hover:shadow-lg min-h-touch"
                             aria-label="Call us at 214-699-4543"
                         >
-                            <Phone className="h-5 w-5" aria-hidden="true" />
+                            <Phone className="h-5 w-5" aria-hidden="true" role="img" />
                             (214) 699-4543
                         </a>
                     </div>
@@ -74,7 +74,7 @@ export function Header() {
                             className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground px-4 py-3 rounded-xl font-bold text-base transition-all duration-200 min-h-touch min-w-touch"
                             aria-label="Call us at 214-699-4543"
                         >
-                            <Phone className="h-5 w-5" aria-hidden="true" />
+                            <Phone className="h-5 w-5" aria-hidden="true" role="img" />
                             <span className="hidden sm:inline">Call Now</span>
                         </a>
 
@@ -86,9 +86,9 @@ export function Header() {
                             aria-expanded={mobileMenuOpen}
                         >
                             {mobileMenuOpen ? (
-                                <X className="h-7 w-7" aria-hidden="true" />
+                                <X className="h-7 w-7" aria-hidden="true" role="img" />
                             ) : (
-                                <Menu className="h-7 w-7" aria-hidden="true" />
+                                <Menu className="h-7 w-7" aria-hidden="true" role="img" />
                             )}
                         </button>
                     </div>
@@ -119,7 +119,7 @@ export function Header() {
                                 className="flex items-center justify-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-5 rounded-xl font-bold text-xl mt-4 min-h-[60px]"
                                 aria-label="Call us at 214-699-4543"
                             >
-                                <Phone className="h-6 w-6" aria-hidden="true" />
+                                <Phone className="h-6 w-6" aria-hidden="true" role="img" />
                                 (214) 699-4543
                             </a>
                         </div>

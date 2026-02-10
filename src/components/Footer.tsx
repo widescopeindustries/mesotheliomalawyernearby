@@ -17,7 +17,7 @@ export function Footer() {
                             className="flex items-center gap-3 mb-6 transition-opacity hover:opacity-80 min-h-touch"
                             aria-label="Mesothelioma Lawyer Nearby - Go to homepage"
                         >
-                            <Shield className="h-10 w-10 text-accent" aria-hidden="true" />
+                            <Shield className="h-10 w-10 text-accent" aria-hidden="true" role="img" />
                             <div className="flex flex-col">
                                 <span className="font-serif font-bold text-xl leading-tight">
                                     Mesothelioma
@@ -32,7 +32,7 @@ export function Footer() {
                             victims with experienced attorneys who care.
                         </p>
                         <div className="inline-flex items-center gap-3 bg-accent/20 px-4 py-2 rounded-lg">
-                            <Shield className="h-5 w-5 text-accent" aria-hidden="true" />
+                            <Shield className="h-5 w-5 text-accent" aria-hidden="true" role="img" />
                             <span className="text-accent font-bold text-base">SDVOSB Certified</span>
                         </div>
                     </div>
@@ -89,6 +89,11 @@ export function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/exposure-sites" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Exposure Sites Directory
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/privacy-policy" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
                                     Privacy Policy
                                 </Link>
@@ -111,7 +116,7 @@ export function Footer() {
                                     className="flex items-center gap-3 text-lg font-bold hover:text-accent transition-colors min-h-touch"
                                     aria-label="Call us at (214) 699-4543"
                                 >
-                                    <Phone className="h-5 w-5" aria-hidden="true" />
+                                    <Phone className="h-5 w-5" aria-hidden="true" role="img" />
                                     (214) 699-4543
                                 </a>
                             </li>
@@ -121,12 +126,12 @@ export function Footer() {
                                     className="flex items-center gap-3 text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors min-h-touch break-all"
                                     aria-label="Email us"
                                 >
-                                    <Mail className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+                                    <Mail className="h-5 w-5 flex-shrink-0" aria-hidden="true" role="img" />
                                     mesolawyernearme@gmail.com
                                 </a>
                             </li>
                             <li className="flex items-center gap-3 text-base opacity-90 min-h-touch">
-                                <MapPin className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+                                <MapPin className="h-5 w-5 flex-shrink-0" aria-hidden="true" role="img" />
                                 <span>Serving clients nationwide</span>
                             </li>
                         </ul>
@@ -137,7 +142,7 @@ export function Footer() {
                             className="mt-6 inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-4 rounded-xl font-bold text-lg transition-all min-h-touch"
                             aria-label="Call us now"
                         >
-                            <Phone className="h-5 w-5" aria-hidden="true" />
+                            <Phone className="h-5 w-5" aria-hidden="true" role="img" />
                             Call Now - Free
                         </a>
                     </div>

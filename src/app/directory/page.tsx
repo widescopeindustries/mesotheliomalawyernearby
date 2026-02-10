@@ -148,13 +148,13 @@ export default function DirectoryPage() {
 
                       {cities.length > 0 && (
                         <div className="mb-4">
-                          <p className="text-xs text-muted-foreground mb-2">Cities covered:</p>
+                          <p className="text-xs text-muted-foreground mb-2">Major regions &amp; cities:</p>
                           <div className="flex flex-wrap gap-1">
-                            {cities.slice(0, 4).map(city => (
+                            {cities.map(city => (
                               <Link
                                 key={city.slug}
                                 href={`/location/${city.slug}`}
-                                className="text-xs px-2 py-1 bg-muted hover:bg-primary/10 rounded transition-colors"
+                                className="text-[10px] px-1.5 py-0.5 bg-muted hover:bg-primary/20 rounded-md transition-colors border border-transparent hover:border-primary/30"
                               >
                                 {city.city}
                               </Link>

@@ -24,7 +24,7 @@ export const TrustSignals = () => {
             <div className="bg-card rounded-2xl p-8 md:p-10 shadow-card border border-border">
               <div className="flex items-start gap-5">
                 <div className="h-16 w-16 rounded-2xl bg-secondary/15 flex items-center justify-center flex-shrink-0">
-                  <Shield className="h-8 w-8 text-secondary" aria-hidden="true" />
+                  <Shield className="h-8 w-8 text-secondary" aria-hidden="true" role="img" />
                 </div>
                 <div>
                   <h3 className="font-bold text-xl md:text-2xl text-foreground mb-3">
@@ -42,7 +42,7 @@ export const TrustSignals = () => {
             <div className="bg-card rounded-2xl p-8 md:p-10 shadow-card border border-border">
               <div className="flex items-start gap-5">
                 <div className="h-16 w-16 rounded-2xl bg-secondary/15 flex items-center justify-center flex-shrink-0">
-                  <Award className="h-8 w-8 text-secondary" aria-hidden="true" />
+                  <Award className="h-8 w-8 text-secondary" aria-hidden="true" role="img" />
                 </div>
                 <div>
                   <h3 className="font-bold text-xl md:text-2xl text-foreground mb-3">
@@ -60,7 +60,7 @@ export const TrustSignals = () => {
             <div className="bg-card rounded-2xl p-8 md:p-10 shadow-card border border-border">
               <div className="flex items-start gap-5">
                 <div className="h-16 w-16 rounded-2xl bg-secondary/15 flex items-center justify-center flex-shrink-0">
-                  <Clock className="h-8 w-8 text-secondary" aria-hidden="true" />
+                  <Clock className="h-8 w-8 text-secondary" aria-hidden="true" role="img" />
                 </div>
                 <div>
                   <h3 className="font-bold text-xl md:text-2xl text-foreground mb-3">
@@ -78,7 +78,7 @@ export const TrustSignals = () => {
             <div className="bg-card rounded-2xl p-8 md:p-10 shadow-card border border-border">
               <div className="flex items-start gap-5">
                 <div className="h-16 w-16 rounded-2xl bg-secondary/15 flex items-center justify-center flex-shrink-0">
-                  <Heart className="h-8 w-8 text-secondary" aria-hidden="true" />
+                  <Heart className="h-8 w-8 text-secondary" aria-hidden="true" role="img" />
                 </div>
                 <div>
                   <h3 className="font-bold text-xl md:text-2xl text-foreground mb-3">
@@ -96,7 +96,7 @@ export const TrustSignals = () => {
           {/* Simple Trust Indicators - no confusing badges */}
           <div className="grid sm:grid-cols-3 gap-6 md:gap-8">
             <div className="flex items-center gap-4 bg-card rounded-xl p-6 border border-border">
-              <CheckCircle className="h-8 w-8 text-secondary flex-shrink-0" aria-hidden="true" />
+              <CheckCircle className="h-8 w-8 text-secondary flex-shrink-0" aria-hidden="true" role="img" />
               <div>
                 <h4 className="font-bold text-lg text-foreground">No Upfront Costs</h4>
                 <p className="text-muted-foreground text-base">Free consultation, always</p>
@@ -104,7 +104,7 @@ export const TrustSignals = () => {
             </div>
 
             <div className="flex items-center gap-4 bg-card rounded-xl p-6 border border-border">
-              <Star className="h-8 w-8 text-secondary flex-shrink-0" aria-hidden="true" />
+              <Star className="h-8 w-8 text-secondary flex-shrink-0" aria-hidden="true" role="img" />
               <div>
                 <h4 className="font-bold text-lg text-foreground">Quick Response</h4>
                 <p className="text-muted-foreground text-base">We call you back fast</p>
@@ -112,7 +112,7 @@ export const TrustSignals = () => {
             </div>
 
             <div className="flex items-center gap-4 bg-card rounded-xl p-6 border border-border">
-              <Users className="h-8 w-8 text-secondary flex-shrink-0" aria-hidden="true" />
+              <Users className="h-8 w-8 text-secondary flex-shrink-0" aria-hidden="true" role="img" />
               <div>
                 <h4 className="font-bold text-lg text-foreground">Veterans First</h4>
                 <p className="text-muted-foreground text-base">We understand your service</p>
@@ -125,15 +125,15 @@ export const TrustSignals = () => {
             <p className="text-lg text-muted-foreground mb-6">Officially Recognized</p>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               <div className="inline-flex items-center gap-2 bg-card border border-border px-6 py-3 rounded-xl">
-                <Shield className="h-5 w-5 text-secondary" aria-hidden="true" />
+                <Shield className="h-5 w-5 text-secondary" aria-hidden="true" role="img" />
                 <span className="font-semibold text-foreground">SBA SDVOSB</span>
               </div>
               <div className="inline-flex items-center gap-2 bg-card border border-border px-6 py-3 rounded-xl">
-                <Award className="h-5 w-5 text-secondary" aria-hidden="true" />
+                <Award className="h-5 w-5 text-secondary" aria-hidden="true" role="img" />
                 <span className="font-semibold text-foreground">Veteran-Owned</span>
               </div>
               <div className="inline-flex items-center gap-2 bg-card border border-border px-6 py-3 rounded-xl">
-                <CheckCircle className="h-5 w-5 text-secondary" aria-hidden="true" />
+                <CheckCircle className="h-5 w-5 text-secondary" aria-hidden="true" role="img" />
                 <span className="font-semibold text-foreground">BBB Accredited</span>
               </div>
             </div>

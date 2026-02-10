@@ -56,7 +56,7 @@ export const FeaturedLocations = () => {
                 aria-describedby="search-help"
               />
               <div className="absolute right-5 top-1/2 -translate-y-1/2">
-                <Search className="h-6 w-6 text-muted-foreground" aria-hidden="true" />
+                <Search className="h-6 w-6 text-muted-foreground" aria-hidden="true" role="img" />
               </div>
             </div>
             <p id="search-help" className="text-muted-foreground text-base mt-3 text-center">
@@ -72,11 +72,11 @@ export const FeaturedLocations = () => {
                     href={`/location/${location.slug}`}
                     className="flex items-center gap-4 p-4 rounded-xl hover:bg-muted transition-colors min-h-touch"
                   >
-                    <MapPin className="h-5 w-5 text-secondary flex-shrink-0" aria-hidden="true" />
+                    <MapPin className="h-5 w-5 text-secondary flex-shrink-0" aria-hidden="true" role="img" />
                     <span className="text-lg font-medium text-foreground">
                       {'isStatePage' in location && location.isStatePage ? location.state : `${location.city}, ${location.state}`}
                     </span>
-                    <ArrowRight className="h-5 w-5 text-muted-foreground ml-auto" aria-hidden="true" />
+                    <ArrowRight className="h-5 w-5 text-muted-foreground ml-auto" aria-hidden="true" role="img" />
                   </Link>
                 ))}
               </div>
@@ -97,14 +97,14 @@ export const FeaturedLocations = () => {
                 >
                   <div className="bg-card border-2 border-border rounded-xl p-5 hover:border-accent hover:shadow-card transition-all min-h-touch flex items-center gap-4">
                     <div className="h-12 w-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/20 transition-colors">
-                      <MapPin className="h-6 w-6 text-secondary" aria-hidden="true" />
+                      <MapPin className="h-6 w-6 text-secondary" aria-hidden="true" role="img" />
                     </div>
                     <div className="flex-1">
                       <span className="font-bold text-lg text-foreground group-hover:text-accent transition-colors">
                         {location.state}
                       </span>
                     </div>
-                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-accent transition-colors" aria-hidden="true" />
+                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-accent transition-colors" aria-hidden="true" role="img" />
                   </div>
                 </Link>
               ))}
@@ -120,7 +120,7 @@ export const FeaturedLocations = () => {
                 aria-expanded={showAllStates}
               >
                 {showAllStates ? 'Show Less' : `View All ${statePages.length} States`}
-                <ArrowRight className={`h-5 w-5 transition-transform ${showAllStates ? 'rotate-90' : ''}`} aria-hidden="true" />
+                <ArrowRight className={`h-5 w-5 transition-transform ${showAllStates ? 'rotate-90' : ''}`} aria-hidden="true" role="img" />
               </button>
             </div>
           )}
@@ -135,7 +135,7 @@ export const FeaturedLocations = () => {
               className="inline-flex items-center gap-3 text-primary hover:text-primary/80 font-bold text-xl underline underline-offset-4 min-h-touch"
             >
               View Full Lawyer Directory
-              <ArrowRight className="h-5 w-5" aria-hidden="true" />
+              <ArrowRight className="h-5 w-5" aria-hidden="true" role="img" />
             </Link>
           </div>
         </div>

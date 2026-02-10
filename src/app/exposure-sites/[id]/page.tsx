@@ -2,9 +2,10 @@ import { Metadata } from 'next'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { Phone, MapPin, Calendar, Users, AlertTriangle, Shield, Building, Scale, FileText, Clock } from 'lucide-react'
+import { Phone, MapPin, Calendar, Users, AlertTriangle, Shield, Building, Scale, FileText, Clock, Search } from 'lucide-react'
 import Link from 'next/link'
 import { EXPOSURE_SITE_DETAILS, getExposureSiteById } from '@/data/exposure-sites'
+import { CallButton } from '@/components/CallButton'
 
 interface ExposureSitePageProps {
     params: {
@@ -58,8 +59,6 @@ export default function ExposureSitePage({ params }: ExposureSitePageProps) {
     if (!site) {
         return <div>Exposure site not found</div>
     }
-
-    const phoneNumber = '(682) 999-0953'
 
     return (
         <main className="min-h-screen">
@@ -121,12 +120,11 @@ export default function ExposureSitePage({ params }: ExposureSitePageProps) {
 
                         {/* CTA */}
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Button size="lg" className="text-lg px-8 py-6 h-auto bg-green-600 hover:bg-green-700" asChild>
-                                <a href={`tel:${phoneNumber.replace(/[^\d]/g, '')}`}>
-                                    <Phone className="h-5 w-5 mr-2" />
-                                    Free Case Review: {phoneNumber}
-                                </a>
-                            </Button>
+                            <CallButton
+                                phoneNumber="214-699-4543"
+                                location={`Exposure Site: ${site.name} Hero`}
+                                className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-xl"
+                            />
                             <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto" asChild>
                                 <Link href="/contact">Request Callback</Link>
                             </Button>
@@ -240,12 +238,12 @@ export default function ExposureSitePage({ params }: ExposureSitePageProps) {
                                     service today. We connect you with experienced attorneys who specialize in asbestos cases.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <Button size="lg" className="text-lg px-8" asChild>
-                                        <a href={`tel:${phoneNumber.replace(/[^\d]/g, '')}`}>
-                                            <Phone className="h-5 w-5 mr-2" />
-                                            Call Now: {phoneNumber}
-                                        </a>
-                                    </Button>
+                                    <CallButton
+                                        phoneNumber="214-699-4543"
+                                        location={`Exposure Site: ${site.name} Footer`}
+                                        className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 text-xl"
+                                        label="Call for Legal Consultation"
+                                    />
                                     <Button variant="outline" size="lg" className="text-lg px-8" asChild>
                                         <Link href="/contact">Free Case Evaluation</Link>
                                     </Button>
