@@ -1,14 +1,6 @@
 import { TARGET_KEYWORDS } from '@/data/keywords'
 import { EXPOSURE_SITE_DETAILS } from '@/data/exposure-sites'
-
-// Blog posts data - add new blog posts here
-const BLOG_POSTS = [
-    { slug: 'understanding-mesothelioma-diagnosis', title: 'Understanding Mesothelioma Diagnosis' },
-    { slug: 'veterans-asbestos-exposure', title: 'Veterans and Asbestos Exposure' },
-    { slug: 'mesothelioma-treatment-options', title: 'Mesothelioma Treatment Options' },
-    { slug: 'asbestos-trust-funds-explained', title: 'Asbestos Trust Funds Explained' },
-    { slug: 'filing-mesothelioma-lawsuit', title: 'Filing a Mesothelioma Lawsuit' },
-]
+import { BLOG_POSTS } from '@/data/blog/posts'
 
 export default function sitemap() {
     const baseUrl = 'https://mesotheliomalawyernearby.com'

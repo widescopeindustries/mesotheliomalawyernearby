@@ -1,0 +1,58 @@
+﻿≡ƒôè Google Search Console Performance Report
+
+======================================================================
+Site: sc-domain:mesotheliomalawyernearby.com
+Date: 2/8/2026
+
+
+≡ƒôà Date Range: 2026-02-02 to 2026-02-09
+
+≡ƒôê OVERALL PERFORMANCE (Last 7 Days)
+----------------------------------------------------------------------
+   Clicks:      1
+   Impressions: 451
+   CTR:         0.22%
+   Avg Position: 49.9
+
+≡ƒöì TOP SEARCH QUERIES
+----------------------------------------------------------------------
+   Query                                    Clicks  Impr   CTR    Pos
+   -------------------------------------------------------------------
+   asbestos attorney                             0      2   0.0%  29.0
+   asbestos attorney baton rouge                 0      3   0.0%  62.3
+   asbestos attorney baton rouge louisianaa      0      8   0.0%  60.0
+   asbestos attorneys                            0      8   0.0%  29.3
+   asbestos attorneys baton rouge                0      2   0.0%  56.5
+   asbestos exposure attorney baton rouge        0      1   0.0%  53.0
+   asbestos law firm                             0      1   0.0%  38.0
+   asbestos law firm baton rouge                 0      4   0.0%  77.5
+   asbestos lawyer                               0     11   0.0%  32.5
+   asbestos lawyer baton rouge                   0      3   0.0%  67.0
+
+≡ƒôä TOP PAGES
+----------------------------------------------------------------------
+   Page                                              Clicks  Impr
+   -------------------------------------------------------------------
+   https://mesotheliomalawyernearby.com/exposure-site      1     42
+   http://mesotheliomalawyernearby.com/                    0      6
+   https://mesotheliomalawyernearby.com/                   0     13
+   https://mesotheliomalawyernearby.com/contact            0    137
+   https://mesotheliomalawyernearby.com/disclaimer         0      6
+   https://mesotheliomalawyernearby.com/exposure-site      0     13
+   https://mesotheliomalawyernearby.com/exposure-site      0     27
+   https://mesotheliomalawyernearby.com/location/iowa      0      1
+   https://mesotheliomalawyernearby.com/location/loui      0    128
+   https://mesotheliomalawyernearby.com/location/loui      0     80
+
+≡ƒôæ INDEXING STATUS
+----------------------------------------------------------------------
+   Unable to fetch indexing status
+
+≡ƒô▒ DEVICE BREAKDOWN
+----------------------------------------------------------------------
+   DESKTOP   : 1 clicks, 345 impressions
+   MOBILE    : 0 clicks, 106 impressions
+
+======================================================================
+Γ£à GSC Report Complete!
+
