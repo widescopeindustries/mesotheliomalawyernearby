@@ -68,6 +68,42 @@ export default function sitemap() {
             changeFrequency: 'monthly' as const,
             priority: 0.9,
         },
+        {
+            url: `${baseUrl}/hunters-point-mesothelioma`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/louisiana-mesothelioma`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/long-beach-mesothelioma`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/philadelphia-naval-shipyard`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/tennessee-mesothelioma-lawyer`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/north-carolina-mesothelioma-lawyer`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly' as const,
+            priority: 0.9,
+        },
     ]
 
     // Information pages

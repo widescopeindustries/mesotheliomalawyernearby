@@ -127,6 +127,29 @@ export default function HuntersPointMesotheliomaPage() {
                             ))}
                         </div>
 
+                        <h3 className="text-2xl font-bold mb-4">Ships Serviced at Hunters Point</h3>
+                        <p className="text-lg leading-relaxed mb-6">
+                            Maintenance and overhaul of these vessels created significant asbestos dust throughout
+                            the shipyard dry docks and repair slips:
+                        </p>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                            {[
+                                'USS Hornet (CV-12)',
+                                'USS Hancock (CV-19)',
+                                'USS Shangri-La (CV-38)',
+                                'USS Midway (CV-41)',
+                                'USS Coral Sea (CV-43)',
+                                'USS Franklin D. Roosevelt',
+                                'USS Ranger (CV-61)',
+                                'USS Independence (CV-62)'
+                            ].map((ship, i) => (
+                                <div key={i} className="flex items-center gap-2 bg-background p-3 rounded-lg border shadow-sm">
+                                    <Shield className="h-4 w-4 text-primary" />
+                                    <span className="text-sm font-semibold">{ship}</span>
+                                </div>
+                            ))}
+                        </div>
+
                         <h3 className="text-2xl font-bold mb-4">Compensation Options for Hunters Point Workers</h3>
 
                         <p className="text-lg leading-relaxed mb-4">
