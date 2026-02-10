@@ -1,9 +1,8 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, ArrowRight, AlertTriangle, FileText, Scale, Clock, Users, Shield } from 'lucide-react'
+import { ArrowRight, AlertTriangle, Scale, Clock, Users, Shield } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { trackPhoneClick } from '@/components/Analytics'
+import { CallButton } from '@/components/CallButton'
 
 export const metadata: Metadata = {
     title: 'Hunters Point Naval Shipyard Asbestos Exposure & Mesothelioma Claims | Free Case Review',
@@ -31,14 +30,11 @@ export default function HuntersPointMesotheliomaPage() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <a
-                                href="tel:214-699-4543"
-                                onClick={() => trackPhoneClick('214-699-4543', 'Hunters Point Hero')}
-                                className="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-5 rounded-xl font-bold text-xl transition-all shadow-lg"
-                            >
-                                <Phone className="h-6 w-6" />
-                                (214) 699-4543
-                            </a>
+                            <CallButton
+                                phoneNumber="214-699-4543"
+                                location="Hunters Point Hero"
+                                className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-5 text-xl"
+                            />
                             <span className="text-lg opacity-80">Free & Confidential Case Review</span>
                         </div>
                     </div>
@@ -181,14 +177,11 @@ export default function HuntersPointMesotheliomaPage() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
-                            href="tel:214-699-4543"
-                            onClick={() => trackPhoneClick('214-699-4543', 'Hunters Point CTA')}
-                            className="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 rounded-xl font-bold text-2xl transition-all shadow-lg"
-                        >
-                            <Phone className="h-7 w-7" />
-                            (214) 699-4543
-                        </a>
+                        <CallButton
+                            phoneNumber="214-699-4543"
+                            location="Hunters Point Landing Page CTA"
+                            className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 text-2xl"
+                        />
                     </div>
                     <p className="mt-4 text-lg opacity-80">Available 24/7 • No Fee Unless You Win</p>
                 </div>

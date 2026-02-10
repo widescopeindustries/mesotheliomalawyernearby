@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, ArrowRight, AlertTriangle, Scale, Clock, Users, Ship, Building2, Anchor } from 'lucide-react'
+import { ArrowRight, AlertTriangle, Scale, Clock, Ship, Building2, Anchor } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
-import { trackPhoneClick } from '@/components/Analytics'
+import { CallButton } from '@/components/CallButton'
 
 export const metadata: Metadata = {
     title: 'Louisiana Mesothelioma Lawyers | Avondale Shipyard & Refinery Asbestos Claims',
@@ -30,14 +30,11 @@ export default function LouisianaMesotheliomaPage() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <a
-                                href="tel:214-699-4543"
-                                onClick={() => trackPhoneClick('214-699-4543', 'Louisiana Hero')}
-                                className="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-5 rounded-xl font-bold text-xl transition-all shadow-lg"
-                            >
-                                <Phone className="h-6 w-6" />
-                                (214) 699-4543
-                            </a>
+                            <CallButton
+                                phoneNumber="214-699-4543"
+                                location="Louisiana Hero"
+                                className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-5 text-xl"
+                            />
                             <span className="text-lg opacity-80">Free Louisiana Case Review</span>
                         </div>
                     </div>
@@ -221,14 +218,11 @@ export default function LouisianaMesotheliomaPage() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
-                            href="tel:214-699-4543"
-                            onClick={() => trackPhoneClick('214-699-4543', 'Louisiana CTA')}
-                            className="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 rounded-xl font-bold text-2xl transition-all shadow-lg"
-                        >
-                            <Phone className="h-7 w-7" />
-                            (214) 699-4543
-                        </a>
+                        <CallButton
+                            phoneNumber="214-699-4543"
+                            location="Louisiana Landing Page CTA"
+                            className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 text-2xl"
+                        />
                     </div>
                     <p className="mt-4 text-lg opacity-80">Free Consultation • No Win, No Fee</p>
                 </div>
