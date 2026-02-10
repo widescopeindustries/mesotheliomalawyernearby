@@ -2,18 +2,19 @@ import { Metadata } from 'next'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { 
-  BarChart3, Users, DollarSign, Clock, AlertTriangle, Shield, 
+import {
+  BarChart3, Users, DollarSign, Clock, AlertTriangle, Shield,
   Building, Anchor, Factory, Phone, TrendingUp, Calendar,
   MapPin, Heart, Scale
 } from 'lucide-react'
+import { CallButton } from '@/components/CallButton'
 
 export const metadata: Metadata = {
   title: 'Mesothelioma Statistics 2026 | Facts, Data & Trends',
   description: 'Comprehensive mesothelioma statistics for 2026: incidence rates, survival data, compensation averages, veteran impact, and asbestos exposure facts. Regularly updated.',
   keywords: [
     'mesothelioma statistics', 'mesothelioma facts', 'asbestos statistics',
-    'mesothelioma survival rate', 'mesothelioma cases per year', 
+    'mesothelioma survival rate', 'mesothelioma cases per year',
     'mesothelioma compensation statistics', 'veteran mesothelioma statistics'
   ],
   openGraph: {
@@ -52,6 +53,7 @@ export default function StatisticsPage() {
       "@type": "Organization",
       "name": "Mesothelioma Lawyer Nearby"
     },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
     "temporalCoverage": "1999-2026",
     "spatialCoverage": "United States"
   }
@@ -80,7 +82,7 @@ export default function StatisticsPage() {
               Mesothelioma Statistics 2026
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive data on mesothelioma incidence, survival rates, compensation, 
+              Comprehensive data on mesothelioma incidence, survival rates, compensation,
               and the impact on veterans. Sources include CDC, NIH, and court records.
             </p>
           </div>
@@ -170,7 +172,7 @@ export default function StatisticsPage() {
                         <span className="font-semibold">75%</span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-3">
-                        <div className="bg-primary h-3 rounded-full" style={{width: '75%'}}></div>
+                        <div className="bg-primary h-3 rounded-full" style={{ width: '75%' }}></div>
                       </div>
                     </div>
                     <div>
@@ -179,7 +181,7 @@ export default function StatisticsPage() {
                         <span className="font-semibold">20%</span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-3">
-                        <div className="bg-secondary h-3 rounded-full" style={{width: '20%'}}></div>
+                        <div className="bg-secondary h-3 rounded-full" style={{ width: '20%' }}></div>
                       </div>
                     </div>
                     <div>
@@ -188,7 +190,7 @@ export default function StatisticsPage() {
                         <span className="font-semibold">1%</span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-3">
-                        <div className="bg-accent h-3 rounded-full" style={{width: '5%'}}></div>
+                        <div className="bg-accent h-3 rounded-full" style={{ width: '5%' }}></div>
                       </div>
                     </div>
                     <div>
@@ -197,7 +199,7 @@ export default function StatisticsPage() {
                         <span className="font-semibold">&lt;1%</span>
                       </div>
                       <div className="w-full bg-muted rounded-full h-3">
-                        <div className="bg-muted-foreground h-3 rounded-full" style={{width: '4%'}}></div>
+                        <div className="bg-muted-foreground h-3 rounded-full" style={{ width: '4%' }}></div>
                       </div>
                     </div>
                   </div>
@@ -329,7 +331,7 @@ export default function StatisticsPage() {
 
             <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-6 mb-8">
               <p className="text-lg text-center">
-                <strong className="text-primary">Veterans account for approximately 30% of all mesothelioma cases</strong> in the United States, 
+                <strong className="text-primary">Veterans account for approximately 30% of all mesothelioma cases</strong> in the United States,
                 despite making up only about 7% of the population.
               </p>
             </div>
@@ -576,7 +578,7 @@ export default function StatisticsPage() {
                   </div>
                 </div>
                 <p className="text-xs text-muted-foreground mt-4">
-                  Percentages represent share of mesothelioma cases attributable to each occupation. 
+                  Percentages represent share of mesothelioma cases attributable to each occupation.
                   Source: Published epidemiological studies.
                 </p>
               </CardContent>
@@ -613,12 +615,12 @@ export default function StatisticsPage() {
               If you&apos;ve been diagnosed with mesothelioma, you may be entitled to compensation.
               Our veteran-owned service can connect you with experienced attorneys.
             </p>
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 h-auto" asChild>
-              <a href="tel:214-699-4543">
-                <Phone className="h-5 w-5 mr-2" />
-                Call (214) 699-4543 - Free Consultation
-              </a>
-            </Button>
+            <CallButton
+              phoneNumber="214-699-4543"
+              location="Statistics Page Footer"
+              label="Call (214) 699-4543 - Free Consultation"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+            />
           </div>
         </div>
       </section>
