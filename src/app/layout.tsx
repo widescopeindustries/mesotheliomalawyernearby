@@ -3,7 +3,7 @@ import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { StickyMobileCTA } from '@/components/StickyMobileCTA'
-import { GoogleAnalytics } from '@/lib/analytics'
+import { GoogleAnalytics, CallRail } from '@/lib/analytics'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -52,6 +52,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-TE3T9D4KC0"} />
+        <CallRail />
       </head>
       <body className="font-sans antialiased">
         {/* Skip link for keyboard navigation - accessibility */}

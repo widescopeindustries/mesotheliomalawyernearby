@@ -72,6 +72,16 @@ export function GoogleTagManager({ gtmId }: GoogleTagManagerProps) {
   )
 }
 
+export function CallRail() {
+  return (
+    <Script
+      id="callrail-swap"
+      strategy="afterInteractive"
+      src="//cdn.callrail.com/companies/265015816/38e817a8fef65da2ddaa/12/swap.js"
+    />
+  )
+}
+
 // Analytics event tracking functions
 export const trackEvent = (
   action: string,
@@ -80,7 +90,7 @@ export const trackEvent = (
   value?: number
 ) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    ;(window as any).gtag('event', action, {
+    ; (window as any).gtag('event', action, {
       event_category: category,
       event_label: label,
       value: value,
@@ -90,7 +100,7 @@ export const trackEvent = (
 
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    ;(window as any).gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+    ; (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
       page_path: url,
     })
   }
