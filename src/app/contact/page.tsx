@@ -62,8 +62,8 @@ export default function ContactPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="font-semibold text-lg mb-1">Call Us Now</h3>
-                                                    <a href="tel:682-999-0953" className="text-2xl font-bold text-primary hover:underline">
-                                                        (682) 999-0953
+                                                    <a href="tel:214-699-4543" className="text-2xl font-bold text-primary hover:underline">
+                                                        (214) 699-4543
                                                     </a>
                                                     <p className="text-sm text-muted-foreground mt-1">Available 24/7</p>
                                                 </div>
@@ -79,8 +79,8 @@ export default function ContactPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="font-semibold text-lg mb-1">Email Us</h3>
-                                                    <a href="mailto:mesolawyernearme@gmail.com" className="text-primary hover:underline">
-                                                        mesolawyernearme@gmail.com
+                                                    <a href="mailto:info@mesotheliomalawyernearby.com" className="text-primary hover:underline">
+                                                        info@mesotheliomalawyernearby.com
                                                     </a>
                                                     <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
                                                 </div>
@@ -110,9 +110,9 @@ export default function ContactPage() {
                                                     <MapPin className="h-6 w-6 text-yellow-600" />
                                                 </div>
                                                 <div>
-                                                    <h3 className="font-semibold text-lg mb-1">Service Area</h3>
-                                                    <p className="font-medium">Nationwide Coverage</p>
-                                                    <p className="text-sm text-muted-foreground mt-1">We connect you with attorneys across all 50 states</p>
+                                                    <h3 className="font-semibold text-lg mb-1">Our Office</h3>
+                                                    <p className="font-medium">316 Brandywine Ave, Streetman, TX 75859</p>
+                                                    <p className="text-sm text-muted-foreground mt-1">Serving clients nationwide across all 50 states</p>
                                                 </div>
                                             </div>
                                         </CardContent>

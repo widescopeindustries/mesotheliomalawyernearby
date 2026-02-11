@@ -28,10 +28,10 @@ export const metadata: Metadata = {
 }
 
 const regions = {
-  'Northeast': ['Connecticut', 'Delaware', 'Massachusetts', 'Maryland', 'New Hampshire', 'New Jersey', 'New York', 'Pennsylvania', 'Rhode Island'],
-  'Southeast': ['Alabama', 'Florida', 'Georgia', 'Louisiana', 'Mississippi', 'North Carolina', 'South Carolina', 'Tennessee', 'Virginia', 'West Virginia'],
-  'Midwest': ['Illinois', 'Indiana', 'Iowa', 'Kansas', 'Michigan', 'Minnesota', 'Missouri', 'Nebraska', 'Ohio', 'Oklahoma', 'Wisconsin'],
-  'West': ['Arizona', 'California', 'Colorado', 'Montana', 'Nevada', 'New Mexico', 'Oregon', 'Texas', 'Utah', 'Washington'],
+  'Northeast': ['Connecticut', 'Delaware', 'Maine', 'Massachusetts', 'Maryland', 'New Hampshire', 'New Jersey', 'New York', 'Pennsylvania', 'Rhode Island', 'Vermont'],
+  'Southeast': ['Alabama', 'Arkansas', 'Florida', 'Georgia', 'Kentucky', 'Louisiana', 'Mississippi', 'North Carolina', 'South Carolina', 'Tennessee', 'Virginia', 'West Virginia'],
+  'Midwest': ['Illinois', 'Indiana', 'Iowa', 'Kansas', 'Michigan', 'Minnesota', 'Missouri', 'Nebraska', 'North Dakota', 'Ohio', 'Oklahoma', 'South Dakota', 'Wisconsin'],
+  'West': ['Alaska', 'Arizona', 'California', 'Colorado', 'Hawaii', 'Idaho', 'Montana', 'Nevada', 'New Mexico', 'Oregon', 'Texas', 'Utah', 'Washington', 'Wyoming'],
 }
 
 export default function DirectoryPage() {

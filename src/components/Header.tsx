@@ -14,6 +14,7 @@ export function Header() {
         { name: 'About Us', href: '/about' },
         { name: 'Veteran Resources', href: '/veteran-resources' },
         { name: 'Find a Lawyer', href: '/directory' },
+        { name: 'Blog', href: '/blog' },
         { name: 'Contact', href: '/contact' },
     ]
 

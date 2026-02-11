@@ -42,10 +42,12 @@ export default function VeteranResourcesPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Button size="lg" className="text-lg px-8 py-6 h-auto bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-200 hover:shadow-xl">
-                <Phone className="h-5 w-5 mr-2" />
-                (682) 999-0953
-                <span className="ml-2 text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">24/7 Veteran Line</span>
+              <Button size="lg" className="text-lg px-8 py-6 h-auto bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-200 hover:shadow-xl" asChild>
+                <a href="tel:214-699-4543">
+                  <Phone className="h-5 w-5 mr-2" />
+                  (214) 699-4543
+                  <span className="ml-2 text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">24/7 Veteran Line</span>
+                </a>
               </Button>
 
               <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all duration-200 hover:shadow-lg">
@@ -255,9 +257,9 @@ export default function VeteranResourcesPage() {
                 className="text-lg px-8 py-6 h-auto bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-200 hover:shadow-2xl"
                 asChild
               >
-                <a href="tel:682-999-0953">
+                <a href="tel:214-699-4543">
                   <Phone className="h-5 w-5 mr-2" />
-                  (682) 999-0953
+                  (214) 699-4543
                   <span className="ml-2 text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">Veteran Line</span>
                 </a>
               </Button>

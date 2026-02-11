@@ -79,6 +79,11 @@ export function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/blog" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Blog
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/types/pleural-mesothelioma" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
                                     Pleural Mesothelioma
                                 </Link>
@@ -122,17 +127,17 @@ export function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="mailto:mesolawyernearme@gmail.com"
+                                    href="mailto:info@mesotheliomalawyernearby.com"
                                     className="flex items-center gap-3 text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors min-h-touch break-all"
                                     aria-label="Email us"
                                 >
                                     <Mail className="h-5 w-5 flex-shrink-0" aria-hidden="true" role="img" />
-                                    mesolawyernearme@gmail.com
+                                    info@mesotheliomalawyernearby.com
                                 </a>
                             </li>
                             <li className="flex items-center gap-3 text-base opacity-90 min-h-touch">
                                 <MapPin className="h-5 w-5 flex-shrink-0" aria-hidden="true" role="img" />
-                                <span>Serving clients nationwide</span>
+                                <span>316 Brandywine Ave, Streetman, TX 75859</span>
                             </li>
                         </ul>
 

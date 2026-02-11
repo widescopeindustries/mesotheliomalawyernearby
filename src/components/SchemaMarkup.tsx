@@ -16,6 +16,15 @@ export const SchemaMarkup = () => {
         "@type": "Person",
         "name": "Service-Disabled Veteran Owner"
       }],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "316 Brandywine Ave",
+        "addressLocality": "Streetman",
+        "addressRegion": "TX",
+        "postalCode": "75859",
+        "addressCountry": "US"
+      },
+      "email": "info@mesotheliomalawyernearby.com",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-214-699-4543",
@@ -40,6 +49,15 @@ export const SchemaMarkup = () => {
       "description": "Find the best mesothelioma lawyers near you. Free case evaluation. Veteran-owned referral service connecting asbestos exposure victims with top-rated attorneys.",
       "url": "https://mesotheliomalawyernearby.com",
       "telephone": "+1-214-699-4543",
+      "email": "info@mesotheliomalawyernearby.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "316 Brandywine Ave",
+        "addressLocality": "Streetman",
+        "addressRegion": "TX",
+        "postalCode": "75859",
+        "addressCountry": "US"
+      },
       "priceRange": "Free Consultation",
       "areaServed": {
         "@type": "Country",

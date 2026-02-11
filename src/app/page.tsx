@@ -7,6 +7,8 @@ import { TCPAConsentForm } from '@/components/TCPAConsentForm'
 import { FAQSection } from '@/components/FAQSection'
 import { MesotheliomaInfo } from '@/components/MesotheliomaInfo'
 import { SchemaMarkup } from '@/components/SchemaMarkup'
+import { AttorneyNetwork } from '@/components/AttorneyNetwork'
+import { Testimonials } from '@/components/Testimonials'
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <HeroSection />
       <TrustSignals />
       <MesotheliomaInfo />
+      <AttorneyNetwork />
+      <Testimonials />
       <HowItWorks />
       <FeaturedLocations />
       <FAQSection />
