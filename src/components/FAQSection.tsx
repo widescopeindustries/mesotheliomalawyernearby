@@ -15,7 +15,7 @@ export const FAQSection = () => {
           {/* Section Header */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
-              <HelpCircle className="h-5 w-5 text-primary" />
+              <HelpCircle className="h-5 w-5 text-primary" aria-hidden="true" role="img" />
               <span className="text-sm font-semibold text-primary">Common Questions</span>
             </div>
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -29,11 +29,10 @@ export const FAQSection = () => {
           {/* FAQ Accordion */}
           <div className="space-y-4">
             {COMMON_FAQS.map((faq, index) => (
-              <Card 
+              <Card
                 key={index}
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'border-primary shadow-lg' : 'hover:border-primary/50'
-                }`}
+                className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'border-primary shadow-lg' : 'hover:border-primary/50'
+                  }`}
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -43,16 +42,16 @@ export const FAQSection = () => {
                   <h3 className="font-serif font-semibold text-lg text-foreground pr-4">
                     {faq.question}
                   </h3>
-                  <ChevronDown 
-                    className={`h-5 w-5 text-primary flex-shrink-0 transition-transform duration-300 ${
-                      openIndex === index ? 'rotate-180' : ''
-                    }`}
+                  <ChevronDown
+                    className={`h-5 w-5 text-primary flex-shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''
+                      }`}
+                    aria-hidden="true"
+                    role="img"
                   />
                 </button>
-                <div 
-                  className={`overflow-hidden transition-all duration-300 ${
-                    openIndex === index ? 'max-h-96' : 'max-h-0'
-                  }`}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-96' : 'max-h-0'
+                    }`}
                 >
                   <CardContent className="pt-0 pb-6 px-6">
                     <p className="text-muted-foreground leading-relaxed">
@@ -69,7 +68,7 @@ export const FAQSection = () => {
             <p className="text-muted-foreground mb-4">
               Have more questions? Our team is ready to help 24/7.
             </p>
-            <a 
+            <a
               href="tel:214-699-4543"
               className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg"
             >

@@ -1,90 +1,74 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
-import { Phone, Shield, Clock } from "lucide-react"
+import { Phone, Shield, AlertTriangle } from "lucide-react"
+import { trackPhoneClick } from "@/components/Analytics"
 
 export const CallToAction = () => {
   return (
-    <section className="py-20 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4">
+    <section className="py-20 md:py-28 bg-primary text-primary-foreground">
+      <div className="container mx-auto px-6 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8 transition-all duration-200 hover:bg-accent/30">
-            <Shield className="h-5 w-5 text-accent" />
-            <span className="text-sm font-semibold text-accent-foreground">Veteran-Owned & Trusted</span>
-          </div>
 
-          {/* Main CTA */}
-          <h2 className="font-serif text-3xl md:text-5xl font-bold mb-8">
-            Get Immediate Legal Help Today
+          {/* Reassuring headline */}
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+            Ready to Talk? We&apos;re Here to Listen
           </h2>
 
-          <p className="text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-            Don&apos;t wait. Time is critical in mesothelioma cases. Call now for a
-            <span className="font-bold"> free, no-obligation consultation</span> with experienced attorneys who understand your situation.
+          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+            You don&apos;t have to figure this out alone. Our experienced team
+            is ready to answer your questions and explain your options.
           </p>
 
-          {/* Primary Action */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button
-              size="lg"
-              className="text-lg px-8 py-6 h-auto bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-200 hover:shadow-2xl"
-              asChild
+          {/* Urgency warning - gentle, not aggressive */}
+          <div className="bg-amber-500/20 border border-amber-400/40 rounded-2xl p-6 md:p-8 mb-10 max-w-2xl mx-auto">
+            <div className="flex items-start gap-4">
+              <AlertTriangle className="h-8 w-8 text-amber-300 flex-shrink-0 mt-1" aria-hidden="true" role="img" />
+              <div className="text-left">
+                <h3 className="font-bold text-lg md:text-xl text-amber-100 mb-2">
+                  Time Limits May Apply
+                </h3>
+                <p className="text-amber-100/90 text-base md:text-lg">
+                  Each state has deadlines (called &quot;statutes of limitations&quot;) for filing
+                  mesothelioma claims. It&apos;s worth calling to find out what applies to your situation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Primary phone CTA */}
+          <div className="flex flex-col items-center gap-6 mb-10">
+            <a
+              href="tel:214-699-4543"
+              aria-label="Call us now at 214-699-4543"
+              onClick={() => trackPhoneClick('214-699-4543', 'CTA Section')}
+              className="group inline-flex items-center gap-4 bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-7 md:px-14 md:py-8 rounded-2xl shadow-elevated hover:shadow-xl transition-all duration-200"
             >
-              <a href="tel:214-699-4543">
-                <Phone className="h-5 w-5 mr-2" />
+              <Phone className="h-9 w-9 md:h-11 md:w-11" aria-hidden="true" role="img" />
+              <span className="text-2xl md:text-4xl font-bold">
                 (214) 699-4543
-                <span className="ml-2 text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">24/7 Available</span>
-              </a>
-            </Button>
+              </span>
+            </a>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-lg px-8 py-6 h-auto border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all duration-200 hover:shadow-xl"
-            >
-              Start Online Chat
-            </Button>
+            <p className="text-primary-foreground/80 text-lg">
+              Available 24 hours a day, 7 days a week
+            </p>
           </div>
 
-          {/* Value Props */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="flex items-center gap-4 p-4 rounded-lg transition-all duration-200 hover:bg-primary-foreground/10">
-              <div className="transition-all duration-200 hover:scale-110">
-                <Clock className="h-6 w-6 flex-shrink-0 text-accent" />
-              </div>
-              <div className="text-left">
-                <h3 className="font-serif font-semibold text-base">Fast Response</h3>
-                <p className="text-sm opacity-90">We answer 24/7</p>
-              </div>
+          {/* Trust indicators */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+            <div className="flex items-center gap-3 text-primary-foreground/90">
+              <Shield className="h-6 w-6" aria-hidden="true" role="img" />
+              <span className="text-base md:text-lg font-medium">Veteran-Owned</span>
             </div>
-            <div className="flex items-center gap-4 p-4 rounded-lg transition-all duration-200 hover:bg-primary-foreground/10">
-              <div className="transition-all duration-200 hover:scale-110">
-                <Shield className="h-6 w-6 flex-shrink-0 text-accent" />
-              </div>
-              <div className="text-left">
-                <h3 className="font-serif font-semibold text-base">No Risk</h3>
-                <p className="text-sm opacity-90">Free consultation</p>
-              </div>
+            <div className="flex items-center gap-3 text-primary-foreground/90">
+              <Phone className="h-6 w-6" aria-hidden="true" role="img" />
+              <span className="text-base md:text-lg font-medium">Free Consultation</span>
             </div>
-            <div className="flex items-center gap-4 p-4 rounded-lg transition-all duration-200 hover:bg-primary-foreground/10">
-              <div className="transition-all duration-200 hover:scale-110">
-                <Phone className="h-6 w-6 flex-shrink-0 text-accent" />
-              </div>
-              <div className="text-left">
-                <h3 className="font-serif font-semibold text-base">Immediate Help</h3>
-                <p className="text-sm opacity-90">Call right now</p>
-              </div>
+            <div className="flex items-center gap-3 text-primary-foreground/90">
+              <Shield className="h-6 w-6" aria-hidden="true" role="img" />
+              <span className="text-base md:text-lg font-medium">No Upfront Fees</span>
             </div>
-          </div>
-
-          {/* Emergency Message */}
-          <div className="mt-16 p-8 bg-primary-foreground/10 border-2 border-accent/50 rounded-lg transition-all duration-200 hover:border-accent">
-            <p className="text-lg font-serif font-medium mb-2">
-              ⚠️ Time-Sensitive Information
-            </p>
-            <p className="text-base opacity-90">
-              Every state has time limits for filing mesothelioma claims. Don&apos;t risk losing your right to compensation.
-              Call now to understand your legal options before it&apos;s too late.
-            </p>
           </div>
         </div>
       </div>

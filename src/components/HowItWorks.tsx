@@ -23,7 +23,7 @@ export const HowItWorks = () => {
                   1
                 </div>
                 <div className="h-12 w-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-200 hover:bg-accent/30 hover:scale-110">
-                  <Phone className="h-6 w-6 text-accent" />
+                  <Phone className="h-6 w-6 text-accent" aria-hidden="true" role="img" />
                 </div>
                 <h3 className="font-serif font-semibold text-lg mb-2">Call or Click</h3>
                 <p className="text-sm text-muted-foreground">
@@ -39,7 +39,7 @@ export const HowItWorks = () => {
                   2
                 </div>
                 <div className="h-12 w-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-200 hover:bg-accent/30 hover:scale-110">
-                  <Users className="h-6 w-6 text-accent" />
+                  <Users className="h-6 w-6 text-accent" aria-hidden="true" role="img" />
                 </div>
                 <h3 className="font-serif font-semibold text-lg mb-2">Free Consultation</h3>
                 <p className="text-sm text-muted-foreground">
@@ -55,7 +55,7 @@ export const HowItWorks = () => {
                   3
                 </div>
                 <div className="h-12 w-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-200 hover:bg-accent/30 hover:scale-110">
-                  <MapPin className="h-6 w-6 text-accent" />
+                  <MapPin className="h-6 w-6 text-accent" aria-hidden="true" role="img" />
                 </div>
                 <h3 className="font-serif font-semibold text-lg mb-2">Match with Attorney</h3>
                 <p className="text-sm text-muted-foreground">
@@ -71,7 +71,7 @@ export const HowItWorks = () => {
                   4
                 </div>
                 <div className="h-12 w-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-200 hover:bg-accent/30 hover:scale-110">
-                  <CheckCircle className="h-6 w-6 text-accent" />
+                  <CheckCircle className="h-6 w-6 text-accent" aria-hidden="true" role="img" />
                 </div>
                 <h3 className="font-serif font-semibold text-lg mb-2">Get Legal Help</h3>
                 <p className="text-sm text-muted-foreground">
@@ -85,7 +85,7 @@ export const HowItWorks = () => {
           <div className="mt-16 p-8 bg-accent/10 border-2 border-accent/30 rounded-lg transition-all duration-200 hover:border-accent hover:shadow-lg">
             <div className="flex items-center gap-4">
               <div className="h-12 w-12 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-200 hover:bg-accent/30 hover:scale-110">
-                <Phone className="h-6 w-6 text-accent" />
+                <Phone className="h-6 w-6 text-accent" aria-hidden="true" role="img" />
               </div>
               <div>
                 <h3 className="font-serif font-semibold text-lg text-foreground mb-1">Need Immediate Help?</h3>

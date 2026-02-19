@@ -464,6 +464,95 @@ export const TARGET_KEYWORDS = [
     isStatePage: true,
     metaTitle: "South Carolina Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
   },
+  // ========== NEWLY ADDED STATES (Full 50-State Coverage) ==========
+  {
+    keyword: "alaska mesothelioma lawyer",
+    state: "Alaska",
+    city: "Statewide",
+    kd: 0,
+    cpc: 30,
+    volume: 50,
+    slug: "alaska",
+    isStatePage: true,
+    metaTitle: "Alaska Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "hawaii mesothelioma lawyer",
+    state: "Hawaii",
+    city: "Statewide",
+    kd: 0,
+    cpc: 25,
+    volume: 40,
+    slug: "hawaii",
+    isStatePage: true,
+    metaTitle: "Hawaii Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "idaho mesothelioma lawyer",
+    state: "Idaho",
+    city: "Statewide",
+    kd: 0,
+    cpc: 25,
+    volume: 50,
+    slug: "idaho",
+    isStatePage: true,
+    metaTitle: "Idaho Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "maine mesothelioma lawyer",
+    state: "Maine",
+    city: "Statewide",
+    kd: 0,
+    cpc: 30,
+    volume: 80,
+    slug: "maine",
+    isStatePage: true,
+    metaTitle: "Maine Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "north dakota mesothelioma lawyer",
+    state: "North Dakota",
+    city: "Statewide",
+    kd: 0,
+    cpc: 20,
+    volume: 30,
+    slug: "north-dakota",
+    isStatePage: true,
+    metaTitle: "North Dakota Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "south dakota mesothelioma lawyer",
+    state: "South Dakota",
+    city: "Statewide",
+    kd: 0,
+    cpc: 20,
+    volume: 30,
+    slug: "south-dakota",
+    isStatePage: true,
+    metaTitle: "South Dakota Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "vermont mesothelioma lawyer",
+    state: "Vermont",
+    city: "Statewide",
+    kd: 0,
+    cpc: 25,
+    volume: 40,
+    slug: "vermont",
+    isStatePage: true,
+    metaTitle: "Vermont Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
+  {
+    keyword: "wyoming mesothelioma lawyer",
+    state: "Wyoming",
+    city: "Statewide",
+    kd: 0,
+    cpc: 20,
+    volume: 30,
+    slug: "wyoming",
+    isStatePage: true,
+    metaTitle: "Wyoming Mesothelioma Lawyer | Free Consultation | Veteran-Owned"
+  },
   // ========== CITY-LEVEL PAGES ==========
   // UNICORN Keywords - KD 0-5, CPC $100+
   {
@@ -1075,6 +1164,14 @@ export const STATE_SOL = {
   "Rhode Island": { personal: "3 years", wrongfulDeath: "3 years", notes: "Discovery rule applies" },
   "Delaware": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
   "Oregon": { personal: "2 years", wrongfulDeath: "3 years", notes: "Discovery rule applies" },
+  "Alaska": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Hawaii": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Idaho": { personal: "2 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Maine": { personal: "6 years", wrongfulDeath: "2 years", notes: "One of the longest SOL in the country" },
+  "North Dakota": { personal: "6 years", wrongfulDeath: "2 years", notes: "One of the longest SOL in the country" },
+  "South Dakota": { personal: "3 years", wrongfulDeath: "3 years", notes: "Discovery rule applies" },
+  "Vermont": { personal: "3 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
+  "Wyoming": { personal: "4 years", wrongfulDeath: "2 years", notes: "Discovery rule applies" },
   "Nationwide": { personal: "Varies by state", wrongfulDeath: "Varies by state", notes: "Contact us to determine your state's deadline" }
 } as const
 
@@ -1315,6 +1412,52 @@ export const EXPOSURE_SITES = {
     { name: "AM General", city: "South Bend", type: "Automotive" },
     { name: "Alcoa", city: "Newburgh", type: "Aluminum" },
     { name: "Bethlehem Steel", city: "Burns Harbor", type: "Steel Mill" }
+  ],
+  "Alaska": [
+    { name: "Elmendorf Air Force Base", city: "Anchorage", type: "Military" },
+    { name: "Fort Wainwright", city: "Fairbanks", type: "Military" },
+    { name: "Trans-Alaska Pipeline", city: "Various", type: "Oil & Gas" },
+    { name: "Adak Naval Air Station", city: "Adak", type: "Military" }
+  ],
+  "Hawaii": [
+    { name: "Pearl Harbor Naval Shipyard", city: "Honolulu", type: "Shipyard" },
+    { name: "Hickam Air Force Base", city: "Honolulu", type: "Military" },
+    { name: "Schofield Barracks", city: "Wahiawa", type: "Military" },
+    { name: "Hawaiian Electric Company", city: "Honolulu", type: "Utility" }
+  ],
+  "Idaho": [
+    { name: "Idaho National Laboratory", city: "Idaho Falls", type: "Government Facility" },
+    { name: "Bunker Hill Mine", city: "Kellogg", type: "Mining" },
+    { name: "Mountain Home Air Force Base", city: "Mountain Home", type: "Military" },
+    { name: "J.R. Simplot Company", city: "Pocatello", type: "Manufacturing" }
+  ],
+  "Maine": [
+    { name: "Bath Iron Works", city: "Bath", type: "Shipyard" },
+    { name: "Portsmouth Naval Shipyard", city: "Kittery", type: "Shipyard" },
+    { name: "Loring Air Force Base", city: "Limestone", type: "Military" },
+    { name: "Great Northern Paper", city: "Millinocket", type: "Paper Mill" }
+  ],
+  "North Dakota": [
+    { name: "Minot Air Force Base", city: "Minot", type: "Military" },
+    { name: "Grand Forks Air Force Base", city: "Grand Forks", type: "Military" },
+    { name: "Basin Electric Power", city: "Beulah", type: "Power Plant" },
+    { name: "Great Plains Synfuels Plant", city: "Beulah", type: "Energy" }
+  ],
+  "South Dakota": [
+    { name: "Ellsworth Air Force Base", city: "Rapid City", type: "Military" },
+    { name: "Homestake Mine", city: "Lead", type: "Mining" },
+    { name: "John Morrell & Co.", city: "Sioux Falls", type: "Manufacturing" }
+  ],
+  "Vermont": [
+    { name: "Vermont Yankee Nuclear Power Plant", city: "Vernon", type: "Power Plant" },
+    { name: "General Electric Armament", city: "Burlington", type: "Manufacturing" },
+    { name: "Ethan Allen Air Force Base", city: "Colchester", type: "Military" }
+  ],
+  "Wyoming": [
+    { name: "F.E. Warren Air Force Base", city: "Cheyenne", type: "Military" },
+    { name: "Sinclair Oil Refinery", city: "Sinclair", type: "Oil Refinery" },
+    { name: "Dave Johnston Power Plant", city: "Glenrock", type: "Power Plant" },
+    { name: "Trona Mines", city: "Green River", type: "Mining" }
   ]
 } as const
 

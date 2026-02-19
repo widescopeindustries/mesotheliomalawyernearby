@@ -5,87 +5,159 @@ export function Footer() {
     const currentYear = new Date().getFullYear()
 
     return (
-        <footer className="bg-primary text-primary-foreground">
-            {/* Main Footer */}
-            <div className="container mx-auto px-4 py-16">
-                <div className="grid md:grid-cols-4 gap-12">
+        <footer className="bg-primary text-primary-foreground pb-24 lg:pb-0" role="contentinfo">
+            {/* Main Footer - generous padding for elderly readability */}
+            <div className="container mx-auto px-6 md:px-8 py-16 md:py-20">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
+
                     {/* Brand */}
-                    <div className="md:col-span-1">
-                        <Link href="/" className="flex items-center gap-2 mb-4 transition-opacity hover:opacity-80">
-                            <Shield className="h-8 w-8 text-accent" />
+                    <div className="md:col-span-2 lg:col-span-1">
+                        <Link
+                            href="/"
+                            className="flex items-center gap-3 mb-6 transition-opacity hover:opacity-80 min-h-touch"
+                            aria-label="Mesothelioma Lawyer Nearby - Go to homepage"
+                        >
+                            <Shield className="h-10 w-10 text-accent" aria-hidden="true" role="img" />
                             <div className="flex flex-col">
-                                <span className="font-serif font-bold text-lg leading-tight">Mesothelioma</span>
-                                <span className="text-xs opacity-80 leading-tight">Lawyer Nearby</span>
+                                <span className="font-serif font-bold text-xl leading-tight">
+                                    Mesothelioma
+                                </span>
+                                <span className="text-base opacity-90 leading-tight">
+                                    Lawyer Nearby
+                                </span>
                             </div>
                         </Link>
-                        <p className="text-sm opacity-90 mb-4">
-                            Veteran-owned legal referral service connecting mesothelioma victims with experienced attorneys.
+                        <p className="text-base opacity-90 mb-6 leading-relaxed">
+                            Veteran-owned legal referral service connecting mesothelioma
+                            victims with experienced attorneys who care.
                         </p>
-                        <div className="flex items-center gap-2 text-sm">
-                            <Shield className="h-4 w-4 text-accent" />
-                            <span className="text-accent font-semibold">SDVOSB Certified</span>
+                        <div className="inline-flex items-center gap-3 bg-accent/20 px-4 py-2 rounded-lg">
+                            <Shield className="h-5 w-5 text-accent" aria-hidden="true" role="img" />
+                            <span className="text-accent font-bold text-base">SDVOSB Certified</span>
                         </div>
                     </div>
 
-                    {/* Quick Links */}
+                    {/* Quick Links - larger text, more spacing */}
                     <div>
-                        <h3 className="font-serif font-semibold mb-4">Quick Links</h3>
-                        <ul className="space-y-2 text-sm opacity-90">
-                            <li><Link href="/" className="hover:text-accent transition-colors">Home</Link></li>
-                            <li><Link href="/directory" className="hover:text-accent transition-colors">Lawyer Directory</Link></li>
-                            <li><Link href="/mesothelioma-lawyer-near-me" className="hover:text-accent transition-colors">Find a Lawyer Near Me</Link></li>
-                            <li><Link href="/best-mesothelioma-lawyers" className="hover:text-accent transition-colors">Best Mesothelioma Lawyers</Link></li>
-                            <li><Link href="/mesothelioma-lawsuit" className="hover:text-accent transition-colors">Mesothelioma Lawsuit</Link></li>
-                            <li><Link href="/asbestos-lawyer" className="hover:text-accent transition-colors">Asbestos Lawyer</Link></li>
-                            <li><Link href="/about" className="hover:text-accent transition-colors">About Us</Link></li>
-                            <li><Link href="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
+                        <h3 className="font-serif font-bold text-lg mb-6">Quick Links</h3>
+                        <ul className="space-y-4">
+                            <li>
+                                <Link href="/" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/directory" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Lawyer Directory
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/mesothelioma-lawyer-near-me" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Find a Lawyer Near Me
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/about" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    About Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/contact" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Contact
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
                     {/* Resources */}
                     <div>
-                        <h3 className="font-serif font-semibold mb-4">Resources</h3>
-                        <ul className="space-y-2 text-sm opacity-90">
-                            <li><Link href="/types/pleural-mesothelioma" className="hover:text-accent transition-colors">Pleural Mesothelioma</Link></li>
-                            <li><Link href="/types/peritoneal-mesothelioma" className="hover:text-accent transition-colors">Peritoneal Mesothelioma</Link></li>
-                            <li><Link href="/types/pericardial-mesothelioma" className="hover:text-accent transition-colors">Pericardial Mesothelioma</Link></li>
-                            <li><Link href="/veteran-resources" className="hover:text-accent transition-colors">Veteran Resources</Link></li>
-                            <li><Link href="/statistics" className="hover:text-accent transition-colors">Mesothelioma Statistics</Link></li>
-                            <li><Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="/terms-of-service" className="hover:text-accent transition-colors">Terms of Service</Link></li>
-                            <li><Link href="/disclaimer" className="hover:text-accent transition-colors">Legal Disclaimer</Link></li>
+                        <h3 className="font-serif font-bold text-lg mb-6">Resources</h3>
+                        <ul className="space-y-4">
+                            <li>
+                                <Link href="/veteran-resources" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Veteran Resources
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/blog" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Blog
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/types/pleural-mesothelioma" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Pleural Mesothelioma
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/statistics" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Mesothelioma Statistics
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/exposure-sites" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Exposure Sites Directory
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/privacy-policy" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Privacy Policy
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/disclaimer" className="text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors inline-flex items-center min-h-touch">
+                                    Legal Disclaimer
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
-                    {/* Contact */}
+                    {/* Contact - large touch targets */}
                     <div>
-                        <h3 className="font-serif font-semibold mb-4">Contact Us</h3>
-                        <ul className="space-y-3 text-sm opacity-90">
+                        <h3 className="font-serif font-bold text-lg mb-6">Contact Us</h3>
+                        <ul className="space-y-4">
                             <li>
-                                <a href="tel:214-699-4543" className="flex items-center gap-2 hover:text-accent transition-colors" aria-label="Call us at (214) 699-4543">
-                                    <Phone className="h-4 w-4" aria-hidden="true" />
+                                <a
+                                    href="tel:214-699-4543"
+                                    className="flex items-center gap-3 text-lg font-bold hover:text-accent transition-colors min-h-touch"
+                                    aria-label="Call us at (214) 699-4543"
+                                >
+                                    <Phone className="h-5 w-5" aria-hidden="true" role="img" />
                                     (214) 699-4543
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:mesolawyernearme@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors break-all" aria-label="Email us at mesolawyernearme@gmail.com">
-                                    <Mail className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-                                    mesolawyernearme@gmail.com
+                                <a
+                                    href="mailto:info@mesotheliomalawyernearby.com"
+                                    className="flex items-center gap-3 text-base opacity-90 hover:opacity-100 hover:text-accent transition-colors min-h-touch break-all"
+                                    aria-label="Email us"
+                                >
+                                    <Mail className="h-5 w-5 flex-shrink-0" aria-hidden="true" role="img" />
+                                    info@mesotheliomalawyernearby.com
                                 </a>
                             </li>
-                            <li className="flex items-start gap-2">
-                                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                                <span>Serving clients nationwide</span>
+                            <li className="flex items-center gap-3 text-base opacity-90 min-h-touch">
+                                <MapPin className="h-5 w-5 flex-shrink-0" aria-hidden="true" role="img" />
+                                <span>316 Brandywine Ave, Streetman, TX 75859</span>
                             </li>
                         </ul>
+
+                        {/* Prominent phone CTA */}
+                        <a
+                            href="tel:214-699-4543"
+                            className="mt-6 inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-4 rounded-xl font-bold text-lg transition-all min-h-touch"
+                            aria-label="Call us now"
+                        >
+                            <Phone className="h-5 w-5" aria-hidden="true" role="img" />
+                            Call Now - Free
+                        </a>
                     </div>
                 </div>
             </div>
 
             {/* Bottom Bar */}
             <div className="border-t border-primary-foreground/20">
-                <div className="container mx-auto px-4 py-8">
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-80">
+                <div className="container mx-auto px-6 md:px-8 py-8">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-base opacity-80">
                         <p>© {currentYear} Widescope Industries LLC. All rights reserved.</p>
                         <p className="text-center">
                             Service-Disabled Veteran-Owned Small Business (SDVOSB)
@@ -94,10 +166,10 @@ export function Footer() {
                 </div>
             </div>
 
-            {/* Disclaimer */}
-            <div className="bg-primary/80 py-6">
-                <div className="container mx-auto px-4">
-                    <p className="text-xs opacity-70 text-center max-w-4xl mx-auto">
+            {/* Disclaimer - readable */}
+            <div className="bg-primary/80 py-8">
+                <div className="container mx-auto px-6 md:px-8">
+                    <p className="text-sm opacity-80 text-center max-w-4xl mx-auto leading-relaxed">
                         <strong>Legal Disclaimer:</strong> This website is a legal referral service and is not a law firm.
                         We do not provide legal advice. The information on this website is for general informational purposes only
                         and should not be construed as legal advice. Contacting us does not create an attorney-client relationship.

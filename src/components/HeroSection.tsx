@@ -1,77 +1,119 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
-import { Phone, Shield, Clock } from "lucide-react"
+import { Phone, Shield, Clock, Heart } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { trackPhoneClick } from "@/components/Analytics"
 
 export const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-primary/10 to-primary/5 py-20 lg:py-32">
-      <div className="container mx-auto px-4">
+    <section className="relative bg-gradient-to-b from-muted/50 to-background py-16 md:py-24 lg:py-32">
+      <div className="container mx-auto px-6 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Veteran Badge */}
-          <div className="inline-flex items-center gap-3 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8 transition-all duration-200 hover:bg-accent/30">
-            <Image 
-              src="/images/sba-sdvosb-logo.png" 
-              alt="SDVOSB Logo" 
-              width={24} 
-              height={24}
+
+          {/* Veteran Trust Badge - prominent and reassuring */}
+          <div className="inline-flex items-center gap-4 bg-secondary/10 backdrop-blur-sm px-6 py-3 rounded-full mb-10">
+            <Image
+              src="/images/sba-sdvosb-logo.png"
+              alt="Service-Disabled Veteran-Owned Small Business Certification"
+              width={32}
+              height={32}
               className="object-contain"
             />
-            <span className="text-sm font-semibold text-accent-foreground">Service-Disabled Veteran-Owned</span>
+            <span className="text-base font-bold text-secondary">
+              Service-Disabled Veteran-Owned Business
+            </span>
           </div>
 
-          <h1 className="font-serif text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-8">
-            Get Experienced Legal Help for
-            <span className="text-primary"> Mesothelioma</span>
+          {/* Main Headline - large, clear, reassuring */}
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-8 leading-tight">
+            Get Trusted Legal Help for{' '}
+            <span className="text-primary">Mesothelioma</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Connect with specialized mesothelioma lawyers who understand the urgency of your situation.
-            As a veteran-owned service, we&apos;re committed to helping you get the compensation you deserve.
+          {/* Subheadline - empathetic, not salesy */}
+          <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-3xl mx-auto leading-relaxed">
+            We understand this is a difficult time. Our veteran-owned service
+            connects you with experienced mesothelioma lawyers who care about
+            helping you and your family.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 h-auto transition-all duration-200 hover:shadow-xl" asChild>
-              <a href="tel:214-699-4543" aria-label="Call us 24/7 at (214) 699-4543">
-                <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
+          {/* Reassurance message - reduces anxiety */}
+          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+            <Heart className="inline h-5 w-5 text-secondary mr-2" aria-hidden="true" role="img" />
+            Take your time. We&apos;re here to answer questions, not pressure you.
+          </p>
+
+          {/* Primary CTA - large, accessible phone button */}
+          <div className="flex flex-col gap-6 items-center mb-16">
+            {/* Phone Number - Huge and Clickable */}
+            <a
+              href="tel:214-699-4543"
+              aria-label="Call us anytime at 214-699-4543"
+              onClick={() => trackPhoneClick('214-699-4543', 'Hero Section')}
+              className="group inline-flex items-center gap-4 bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 md:px-12 md:py-7 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200"
+            >
+              <Phone className="h-8 w-8 md:h-10 md:w-10" aria-hidden="true" role="img" />
+              <span className="text-2xl md:text-3xl font-bold">
                 (214) 699-4543
-                <span className="ml-2 text-xs bg-accent-foreground/20 text-accent-foreground px-2 py-1 rounded">24/7</span>
-              </a>
-            </Button>
-            <Link href="/about">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-2 transition-all duration-200 hover:bg-muted hover:shadow-lg">
-                Learn About Us
+              </span>
+              <span className="bg-accent-foreground/20 text-accent-foreground px-4 py-2 rounded-full text-base font-semibold">
+                24/7
+              </span>
+            </a>
+
+            {/* Secondary CTA */}
+            <Link href="/about" className="group">
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-lg md:text-xl px-8 py-5 h-auto border-2 hover:bg-muted rounded-xl min-h-[56px]"
+              >
+                Learn About Our Service
               </Button>
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="flex items-center gap-4 p-4 rounded-lg transition-all duration-200 hover:bg-muted/50">
-              <div className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 transition-all duration-200 hover:bg-accent/30 hover:scale-110">
-                <Phone className="h-6 w-6 text-accent" />
+          {/* Trust Indicators - Cards for visual clarity */}
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
+            {/* Card 1 */}
+            <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border">
+              <div className="h-14 w-14 rounded-full bg-secondary/15 flex items-center justify-center mb-5 mx-auto">
+                <Phone className="h-7 w-7 text-secondary" aria-hidden="true" role="img" />
               </div>
-              <div className="text-left">
-                <h2 className="font-serif font-semibold text-foreground text-base">Immediate Help</h2>
-                <p className="text-sm text-muted-foreground">Available 24/7</p>
-              </div>
+              <h2 className="font-bold text-xl text-foreground mb-2">
+                Immediate Help
+              </h2>
+              <p className="text-muted-foreground text-base">
+                Speak with someone right away. Available 24 hours a day, 7 days a week.
+              </p>
             </div>
-            <div className="flex items-center gap-4 p-4 rounded-lg transition-all duration-200 hover:bg-muted/50">
-              <div className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 transition-all duration-200 hover:bg-accent/30 hover:scale-110">
-                <Shield className="h-6 w-6 text-accent" />
+
+            {/* Card 2 */}
+            <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border">
+              <div className="h-14 w-14 rounded-full bg-secondary/15 flex items-center justify-center mb-5 mx-auto">
+                <Shield className="h-7 w-7 text-secondary" aria-hidden="true" role="img" />
               </div>
-              <div className="text-left">
-                <h2 className="font-serif font-semibold text-foreground text-base">Veteran Trusted</h2>
-                <p className="text-sm text-muted-foreground">SDVOSB Certified</p>
-              </div>
+              <h2 className="font-bold text-xl text-foreground mb-2">
+                Veteran-Owned
+              </h2>
+              <p className="text-muted-foreground text-base">
+                SDVOSB certified. We proudly serve our fellow veterans and their families.
+              </p>
             </div>
-            <div className="flex items-center gap-4 p-4 rounded-lg transition-all duration-200 hover:bg-muted/50">
-              <div className="h-12 w-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 transition-all duration-200 hover:bg-accent/30 hover:scale-110">
-                <Clock className="h-6 w-6 text-accent" />
+
+            {/* Card 3 */}
+            <div className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border">
+              <div className="h-14 w-14 rounded-full bg-secondary/15 flex items-center justify-center mb-5 mx-auto">
+                <Clock className="h-7 w-7 text-secondary" aria-hidden="true" role="img" />
               </div>
-              <div className="text-left">
-                <h2 className="font-serif font-semibold text-foreground text-base">Fast Response</h2>
-                <p className="text-sm text-muted-foreground">Quick Legal Action</p>
-              </div>
+              <h2 className="font-bold text-xl text-foreground mb-2">
+                No Upfront Costs
+              </h2>
+              <p className="text-muted-foreground text-base">
+                Free consultation. You only pay if we help you get compensation.
+              </p>
             </div>
           </div>
         </div>

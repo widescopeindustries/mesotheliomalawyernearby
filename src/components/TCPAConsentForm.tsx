@@ -2,9 +2,9 @@
 
 import { useForm, ValidationError } from '@formspree/react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Phone, CheckCircle, Loader2 } from 'lucide-react'
+import { Phone, CheckCircle, Loader2, Shield, Lock } from 'lucide-react'
 import { useEffect } from 'react'
+import { trackPhoneClick } from '@/components/Analytics'
 
 export function TCPAConsentForm() {
   const [state, handleSubmit] = useForm("xeeandap")
@@ -20,231 +20,220 @@ export function TCPAConsentForm() {
     }
   }, [state.succeeded]);
 
+  // Success State - reassuring, clear next steps
   if (state.succeeded) {
     return (
-      <Card className="w-full max-w-2xl mx-auto border-2 border-green-200 bg-green-50">
-        <CardContent className="p-8 text-center">
-          <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <CheckCircle className="h-8 w-8 text-green-600" />
-          </div>
-          <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
-          <p className="text-muted-foreground mb-4">
-            We&apos;ve received your information and will contact you within 24 hours.
-          </p>
-          <p className="text-sm text-muted-foreground mb-2">
-            Need immediate assistance? Call us now:
-          </p>
-          <a href="tel:214-699-4543" className="text-2xl font-bold text-primary hover:underline">
-            (214) 699-4543
-          </a>
-        </CardContent>
-      </Card>
+      <div className="w-full max-w-2xl mx-auto bg-secondary/10 border-2 border-secondary rounded-2xl p-8 md:p-12 text-center">
+        <div className="h-20 w-20 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+          <CheckCircle className="h-10 w-10 text-secondary" aria-hidden="true" role="img" />
+        </div>
+        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+          Thank You!
+        </h3>
+        <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+          We&apos;ve received your information. Someone will call you soon to
+          discuss your situation and answer any questions you have.
+        </p>
+        <p className="text-base text-muted-foreground mb-4">
+          Need to talk right now? Call us:
+        </p>
+        <a
+          href="tel:214-699-4543"
+          onClick={() => trackPhoneClick('214-699-4543', 'Form Success')}
+          className="inline-flex items-center gap-3 bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-5 rounded-xl font-bold text-xl transition-all"
+          aria-label="Call us at 214-699-4543"
+        >
+          <Phone className="h-6 w-6" aria-hidden="true" role="img" />
+          (214) 699-4543
+        </a>
+      </div>
     )
   }
 
   return (
-    <Card className="w-full max-w-2xl mx-auto border-2 border-primary/20">
-      <CardContent className="p-8">
-        <div className="text-center mb-6">
-          <h3 className="text-2xl font-bold mb-4">Free Case Evaluation</h3>
-          <p className="text-muted-foreground">
-            100% Confidential • No Obligation • FCC Compliant
-          </p>
-        </div>
+    <div className="w-full max-w-2xl mx-auto bg-card border-2 border-border rounded-2xl p-8 md:p-12 shadow-card">
+      {/* Header - clear purpose */}
+      <div className="text-center mb-10">
+        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+          Request a Free Consultation
+        </h3>
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          Fill out this form and we&apos;ll call you. No obligation, completely confidential.
+        </p>
+      </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Name */}
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label htmlFor="firstName" className="block text-sm font-medium mb-2">
-                First Name *
-              </label>
-              <input
-                id="firstName"
-                type="text"
-                name="firstName"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
-              />
-              <ValidationError prefix="First Name" field="firstName" errors={state.errors} className="text-red-600 text-sm mt-1" />
-            </div>
-            <div>
-              <label htmlFor="lastName" className="block text-sm font-medium mb-2">
-                Last Name *
-              </label>
-              <input
-                id="lastName"
-                type="text"
-                name="lastName"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
-              />
-              <ValidationError prefix="Last Name" field="lastName" errors={state.errors} className="text-red-600 text-sm mt-1" />
-            </div>
-          </div>
-
-          {/* Phone Number */}
+      <form onSubmit={handleSubmit} className="space-y-8">
+        {/* Name Fields - large inputs */}
+        <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium mb-2">
-              Phone Number *
-            </label>
-            <div className="relative">
-              <input
-                id="phone"
-                type="tel"
-                name="phone"
-                placeholder="(XXX) XXX-XXXX"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
-                required
-              />
-              <div className="absolute right-3 top-3">
-                <Phone className="h-5 w-5 text-gray-400" />
-              </div>
-            </div>
-            <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-600 text-sm mt-1" />
-          </div>
-
-          {/* Inquiring For Self or Loved One */}
-          <div>
-            <label htmlFor="inquiringFor" className="block text-sm font-medium mb-2">
-              Who is this case for? *
-            </label>
-            <select
-              id="inquiringFor"
-              name="inquiringFor"
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
-            >
-              <option value="">Select an option</option>
-              <option value="Myself - I have been diagnosed">Myself - I have been diagnosed</option>
-              <option value="My spouse or partner">My spouse or partner</option>
-              <option value="My parent">My parent</option>
-              <option value="Another family member">Another family member</option>
-              <option value="I am a caregiver">I am a caregiver</option>
-            </select>
-          </div>
-
-          {/* Email */}
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-2">
-              Email (Optional)
+            <label htmlFor="firstName" className="block text-base font-bold text-foreground mb-3">
+              First Name <span className="text-destructive">*</span>
             </label>
             <input
-              id="email"
-              type="email"
-              name="email"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+              id="firstName"
+              type="text"
+              name="firstName"
+              required
+              autoComplete="given-name"
+              className="w-full px-5 py-4 text-lg border-2 border-border rounded-xl bg-background focus:ring-4 focus:ring-accent/30 focus:border-accent transition-all"
             />
-            <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-600 text-sm mt-1" />
+            <ValidationError prefix="First Name" field="firstName" errors={state.errors} className="text-destructive text-base mt-2 block" />
           </div>
-
-          {/* FCC Consent Checkboxes */}
-          <div className="space-y-4 bg-gray-50 p-4 rounded-lg">
-            <h4 className="font-semibold mb-3">Required Consents</h4>
-
-            <label className="flex items-start gap-3 cursor-pointer">
-              <input
-                type="checkbox"
-                name="phoneConsent"
-                value="I agree to be contacted by phone"
-                className="mt-1 h-4 w-4 text-primary focus:ring-primary"
-                required
-              />
-              <span className="text-sm">
-                I agree to be contacted by phone about mesothelioma legal options.
-                <span className="text-red-600">*</span> Required
-              </span>
-            </label>
-
-            <label className="flex items-start gap-3 cursor-pointer">
-              <input
-                type="checkbox"
-                name="emailConsent"
-                value="I agree to receive email updates"
-                className="mt-1 h-4 w-4 text-primary focus:ring-primary"
-              />
-              <span className="text-sm">
-                I agree to receive email updates about mesothelioma resources (optional)
-              </span>
-            </label>
-          </div>
-
-          {/* Preferred Contact Method */}
           <div>
-            <label htmlFor="contactMethod" className="block text-sm font-medium mb-2">
-              Preferred Contact Method
+            <label htmlFor="lastName" className="block text-base font-bold text-foreground mb-3">
+              Last Name <span className="text-destructive">*</span>
             </label>
-            <select
-              id="contactMethod"
-              name="contactMethod"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
-            >
-              <option value="">Select your preference</option>
-              <option value="Immediate Phone Call">Immediate Phone Call</option>
-              <option value="Schedule Callback">Schedule Callback</option>
-              <option value="Email First">Email First</option>
-            </select>
+            <input
+              id="lastName"
+              type="text"
+              name="lastName"
+              required
+              autoComplete="family-name"
+              className="w-full px-5 py-4 text-lg border-2 border-border rounded-xl bg-background focus:ring-4 focus:ring-accent/30 focus:border-accent transition-all"
+            />
+            <ValidationError prefix="Last Name" field="lastName" errors={state.errors} className="text-destructive text-base mt-2 block" />
           </div>
+        </div>
 
-          {/* Disclaimer */}
-          <div>
-            <label className="flex items-start gap-3 cursor-pointer">
-              <input
-                type="checkbox"
-                name="disclaimer"
-                value="I understand this is a legal referral service"
-                className="mt-1 h-4 w-4 text-primary focus:ring-primary"
-                required
-              />
-              <span className="text-sm">
-                I understand that this is a legal referral service and not an attorney-client relationship.
-                <span className="text-red-600">*</span> Required
-              </span>
-            </label>
-          </div>
-
-          {/* Hidden field for form identification */}
-          <input type="hidden" name="_subject" value="New Lead from Homepage" />
-
-          {/* Submit Button */}
-          <Button
-            type="submit"
-            size="lg"
-            className="w-full text-lg py-4 h-auto"
-            disabled={state.submitting}
-          >
-            {state.submitting ? (
-              <>
-                <Loader2 className="h-5 w-5 mr-2 animate-spin" />
-                Submitting...
-              </>
-            ) : (
-              <>
-                <Phone className="h-5 w-5 mr-2" />
-                Get Free Legal Help Now
-              </>
-            )}
-          </Button>
-        </form>
-
-        {/* FCC Compliance Notice */}
-        <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-800">
-          <h4 className="font-semibold mb-2">📋 FCC Compliant Communication</h4>
-          <p>
-            By submitting this form, you provide prior express written consent for one-to-one communication
-            with participating mesothelioma attorneys. We will not share your information with multiple firms.
-            You can withdraw consent at any time.
+        {/* Phone Number - large, prominent */}
+        <div>
+          <label htmlFor="phone" className="block text-base font-bold text-foreground mb-3">
+            Phone Number <span className="text-destructive">*</span>
+          </label>
+          <p className="text-muted-foreground text-base mb-3">
+            We&apos;ll call you at this number to discuss your case.
           </p>
+          <div className="relative">
+            <input
+              id="phone"
+              type="tel"
+              name="phone"
+              required
+              autoComplete="tel"
+              placeholder="(555) 123-4567"
+              className="w-full px-5 py-4 text-lg border-2 border-border rounded-xl bg-background focus:ring-4 focus:ring-accent/30 focus:border-accent transition-all pr-14"
+            />
+            <div className="absolute right-4 top-1/2 -translate-y-1/2">
+              <Phone className="h-6 w-6 text-muted-foreground" aria-hidden="true" role="img" />
+            </div>
+          </div>
+          <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-destructive text-base mt-2 block" />
         </div>
 
-        {/* Trust Signals */}
-        <div className="mt-6 text-center text-xs text-muted-foreground">
-          <p>🔒 Encrypted &amp; Secure</p>
-          <p>✅ No Spam Guarantee</p>
-          <p>🛡️ Licensed Attorneys Only</p>
-          <p>🇺🇸 Veteran-Owned Service</p>
+        {/* Who is this for - large dropdown */}
+        <div>
+          <label htmlFor="inquiringFor" className="block text-base font-bold text-foreground mb-3">
+            Who is this case for? <span className="text-destructive">*</span>
+          </label>
+          <select
+            id="inquiringFor"
+            name="inquiringFor"
+            required
+            className="w-full px-5 py-4 text-lg border-2 border-border rounded-xl bg-background focus:ring-4 focus:ring-accent/30 focus:border-accent transition-all appearance-none cursor-pointer"
+          >
+            <option value="">Please select one</option>
+            <option value="Myself - I have been diagnosed">Myself - I have been diagnosed</option>
+            <option value="My spouse or partner">My spouse or partner</option>
+            <option value="My parent">My parent</option>
+            <option value="Another family member">Another family member</option>
+            <option value="I am a caregiver">I am a caregiver</option>
+          </select>
         </div>
-      </CardContent>
-    </Card>
+
+        {/* Email - optional, clearly marked */}
+        <div>
+          <label htmlFor="email" className="block text-base font-bold text-foreground mb-3">
+            Email <span className="text-muted-foreground font-normal">(Optional)</span>
+          </label>
+          <p className="text-muted-foreground text-base mb-3">
+            If you&apos;d like us to send you helpful information by email.
+          </p>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            autoComplete="email"
+            className="w-full px-5 py-4 text-lg border-2 border-border rounded-xl bg-background focus:ring-4 focus:ring-accent/30 focus:border-accent transition-all"
+          />
+          <ValidationError prefix="Email" field="email" errors={state.errors} className="text-destructive text-base mt-2 block" />
+        </div>
+
+        {/* Consent Checkboxes - clear, large touchable areas */}
+        <div className="bg-muted/50 p-6 md:p-8 rounded-2xl border border-border space-y-6">
+          <h4 className="font-bold text-lg text-foreground">Your Permission</h4>
+
+          <label htmlFor="phoneConsent" className="flex items-start gap-4 cursor-pointer p-3 rounded-xl hover:bg-muted/70 transition-colors text-left w-full">
+            <input
+              id="phoneConsent"
+              type="checkbox"
+              name="phoneConsent"
+              value="I agree to be contacted by phone"
+              className="mt-1 h-6 w-6 rounded border-2 border-border text-accent focus:ring-accent flex-shrink-0"
+              required
+            />
+            <span className="text-base text-foreground leading-relaxed">
+              Yes, please call me about my legal options for mesothelioma.
+              <span className="text-destructive ml-1">*</span>
+            </span>
+          </label>
+
+          <label htmlFor="disclaimer" className="flex items-start gap-4 cursor-pointer p-3 rounded-xl hover:bg-muted/70 transition-colors text-left w-full">
+            <input
+              id="disclaimer"
+              type="checkbox"
+              name="disclaimer"
+              value="I understand this is a legal referral service"
+              className="mt-1 h-6 w-6 rounded border-2 border-border text-accent focus:ring-accent flex-shrink-0"
+              required
+            />
+            <span className="text-base text-foreground leading-relaxed">
+              I understand this is a referral service that will connect me with an attorney.
+              <span className="text-destructive ml-1">*</span>
+            </span>
+          </label>
+        </div>
+
+        {/* Hidden field */}
+        <input type="hidden" name="_subject" value="New Lead from Homepage" />
+
+        {/* Submit Button - huge, friendly */}
+        <Button
+          type="submit"
+          size="lg"
+          className="w-full text-xl py-6 h-auto rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground font-bold shadow-lg hover:shadow-xl transition-all min-h-[64px]"
+          disabled={state.submitting}
+        >
+          {state.submitting ? (
+            <>
+              <Loader2 className="h-6 w-6 mr-3 animate-spin" aria-hidden="true" role="img" />
+              <span>Sending Your Request...</span>
+            </>
+          ) : (
+            <>
+              <Phone className="h-6 w-6 mr-3" aria-hidden="true" role="img" />
+              <span>Request My Free Consultation</span>
+            </>
+          )}
+        </Button>
+      </form>
+
+      {/* Trust & Privacy - reassuring footer */}
+      <div className="mt-8 pt-8 border-t border-border">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <Lock className="h-5 w-5" aria-hidden="true" role="img" />
+            <span className="text-base">100% Confidential</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Shield className="h-5 w-5" aria-hidden="true" role="img" />
+            <span className="text-base">Veteran-Owned</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="h-5 w-5" aria-hidden="true" role="img" />
+            <span className="text-base">No Obligation</span>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }

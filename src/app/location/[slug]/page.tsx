@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { TARGET_KEYWORDS, EXPOSURE_SITES, STATE_SOL, COMMON_FAQS } from '@/data/keywords'
 import { EXPOSURE_SITE_DETAILS } from '@/data/exposure-sites'
 import { SchemaMarkup } from '@/components/SchemaMarkup'
+import { CallButton } from '@/components/CallButton'
 
 interface LocationPageProps {
   params: {
@@ -33,13 +34,13 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   }
 
   // Use custom meta title for state pages, otherwise generate city-based title
-  const pageTitle = (keyword as any).metaTitle 
+  const pageTitle = (keyword as any).metaTitle
     ? (keyword as any).metaTitle
     : `${keyword.city}, ${keyword.state} Mesothelioma Lawyer - Free Consultation | Veteran-Owned`
-  
+
   const isStatePage = (keyword as any).isStatePage
-  const locationDesc = isStatePage 
-    ? keyword.state 
+  const locationDesc = isStatePage
+    ? keyword.state
     : `${keyword.city}, ${keyword.state}`
 
   return {
@@ -77,11 +78,11 @@ export default function LocationPage({ params }: LocationPageProps) {
   const stateSol = STATE_SOL[keyword.state as keyof typeof STATE_SOL]
   const localPhone = '(214) 699-4543'
   const selectedFaqs = COMMON_FAQS.slice(0, 5)
-  
+
   // Check if this is a state-level page
   const isStatePage = (keyword as any).isStatePage || keyword.city === 'Statewide'
   const displayLocation = isStatePage ? keyword.state : `${keyword.city}, ${keyword.state}`
-  const h1Title = isStatePage 
+  const h1Title = isStatePage
     ? `${keyword.state} Mesothelioma Lawyer`
     : `${keyword.city}, ${keyword.state} Mesothelioma Lawyer`
 
@@ -124,13 +125,12 @@ export default function LocationPage({ params }: LocationPageProps) {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="text-lg px-8 py-6 h-auto bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-200 hover:shadow-xl" asChild>
-                <a href={`tel:${localPhone.replace(/[^\d]/g, '')}`}>
-                  <Phone className="h-5 w-5 mr-2" />
-                  {localPhone}
-                  <span className="ml-2 text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded">Free Call</span>
-                </a>
-              </Button>
+              <CallButton
+                phoneNumber={localPhone}
+                location={`${displayLocation} Hero`}
+                className="bg-accent hover:bg-accent/90 text-accent-foreground hover:shadow-xl"
+                showBadge
+              />
               <Button variant="outline" size="lg" className="text-lg px-8 py-6 h-auto border-2 transition-all duration-200 hover:bg-muted hover:shadow-lg" asChild>
                 <Link href="/contact">Request Callback</Link>
               </Button>
@@ -389,16 +389,11 @@ export default function LocationPage({ params }: LocationPageProps) {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                className="text-lg px-8 py-6 h-auto bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-200 hover:shadow-2xl"
-                asChild
-              >
-                <a href={`tel:${localPhone.replace(/[^\d]/g, '')}`}>
-                  <Phone className="h-5 w-5 mr-2" />
-                  Call Now: {localPhone}
-                </a>
-              </Button>
+              <CallButton
+                phoneNumber={localPhone}
+                location={`${displayLocation} Footer`}
+                className="bg-accent text-accent-foreground hover:bg-accent/90 hover:shadow-2xl"
+              />
               <Button
                 variant="outline"
                 size="lg"

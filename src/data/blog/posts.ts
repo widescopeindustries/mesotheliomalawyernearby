@@ -16,7 +16,7 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    slug: "navy-veterans-mesothelioma-asbestos-ships",
+    slug: "veterans-asbestos-exposure",
     title: "Navy Veterans & Mesothelioma: The Complete Guide to Asbestos on Ships",
     description: "If you served on a US Navy ship between 1940 and 1990, you were likely exposed to asbestos. Learn about high-risk ships, VA benefits, and how to file a claim.",
     category: "veteran",
@@ -128,6 +128,92 @@ export const BLOG_POSTS: BlogPost[] = [
         </a>
         <p class="text-sm text-gray-500 mt-4">Free Consultation • No Upfront Costs • Veteran Owned</p>
       </div>
+    `
+  },
+  {
+    slug: "understanding-mesothelioma-diagnosis",
+    title: "Understanding Your Mesothelioma Diagnosis: Next Steps",
+    description: "Receiving a mesothelioma diagnosis is overwhelming. Learn about the types of mesothelioma, stages, and the immediate steps you should take for medical and legal support.",
+    category: "medical",
+    publishedAt: "2026-02-05",
+    author: "Mesothelioma Lawyer Nearby",
+    readTime: "12 min read",
+    keywords: ["mesothelioma diagnosis", "pleural mesothelioma", "peritoneal mesothelioma", "mesothelioma stages", "cancer second opinion"],
+    content: `
+      <p class="lead">A mesothelioma diagnosis can feel like the world is collapsing. However, understanding the specifics of your diagnosis is the first step toward effective treatment and securing your family's future.</p>
+      
+      <h2>Types of Mesothelioma</h2>
+      <p>Mesothelioma is classified by where the tumors first appear. The four primary types are:</p>
+      <ul>
+        <li><strong>Pleural Mesothelioma:</strong> The most common form, affecting the lining of the lungs (pleura). Symptoms include chest pain and shortness of breath.</li>
+        <li><strong>Peritoneal Mesothelioma:</strong> Affects the lining of the abdomen. It accounts for about 20% of cases and often presents with abdominal swelling and pain.</li>
+        <li><strong>Pericardial Mesothelioma:</strong> A rare form affecting the lining of the heart.</li>
+        <li><strong>Testicular Mesothelioma:</strong> The rarest form, appearing in the lining of the testes.</li>
+      </ul>
+
+      <h2>The Importance of a Second Opinion</h2>
+      <p>Because mesothelioma is rare, it is often misdiagnosed as more common conditions like lung cancer or pneumonia. We strongly recommend seeking a second opinion from a mesothelioma specialist at a major cancer center.</p>
+
+      <div class="bg-green-50 p-6 rounded-lg my-8 border-l-4 border-green-600">
+        <h3 class="text-green-900 font-bold mt-0">Medical Resource Alert</h3>
+        <p class="mb-4">Need help finding a specialist in your area? Contact us for a list of top mesothelioma treatment centers.</p>
+        <p class="font-bold mb-0">Call (214) 699-4543 for guidance.</p>
+      </div>
+    `
+  },
+  {
+    slug: "mesothelioma-treatment-options",
+    title: "Emerging Mesothelioma Treatment Options in 2026",
+    description: "Discover the latest advancements in mesothelioma treatment, from traditional surgery and chemo to innovative immunotherapy and clinical trials.",
+    category: "medical",
+    publishedAt: "2026-02-08",
+    author: "Mesothelioma Lawyer Nearby",
+    readTime: "10 min read",
+    keywords: ["mesothelioma treatment", "immunotherapy", "clinical trials", "chemotherapy for asbestos cancer"],
+    content: `
+      <h2>The Standard of Care: Multimodal Therapy</h2>
+      <p>Most mesothelioma patients receive a combination of treatments, known as multimodal therapy. This typically includes surgery, chemotherapy, and radiation.</p>
+      
+      <h2>Breakthroughs in Immunotherapy</h2>
+      <p>In recent years, immunotherapy drugs like Opdivo and Yervoy have been approved as first-line treatments for pleural mesothelioma, offering hope to patients who are not candidates for surgery.</p>
+    `
+  },
+  {
+    slug: "asbestos-trust-funds-explained",
+    title: "Asbestos Trust Funds: How to Claim Your Share of $30 Billion",
+    description: "Learn how asbestos trust funds work and how you can access compensation without ever stepping into a courtroom.",
+    category: "legal-process",
+    publishedAt: "2026-02-01",
+    author: "Mesothelioma Lawyer Nearby",
+    readTime: "8 min read",
+    keywords: ["asbestos trust funds", "mesothelioma compensation", "asbestos bankruptcy", "legal payout"],
+    content: `
+      <p class="lead">When asbestos companies filed for bankruptcy, the courts ordered them to set aside money in trust funds to pay future victims. Today, over $30 billion remains in these funds.</p>
+      
+      <h2>How Trust Fund Claims Work</h2>
+      <p>Unlike a traditional lawsuit, trust fund claims do not require a trial. If you can prove you worked with a company's asbestos products and have a diagnosis, you are eligible for a payout.</p>
+    `
+  },
+  {
+    slug: "filing-mesothelioma-lawsuit",
+    title: "Filing a Mesothelioma Lawsuit: A Step-by-Step Guide",
+    description: "Everything you need to know about the legal process of filing a mesothelioma claim, from hiring a lawyer to settlement.",
+    category: "legal-process",
+    publishedAt: "2026-01-25",
+    author: "Mesothelioma Lawyer Nearby",
+    readTime: "14 min read",
+    keywords: ["mesothelioma lawsuit", "asbestos lawyer", "legal claim process", "mesothelioma settlement"],
+    content: `
+      <p class="lead">Filing a lawsuit might seem daunting, but for most mesothelioma patients, the process is handled entirely by their legal team with minimal effort from the family.</p>
+      
+      <h2>The Legal Journey</h2>
+      <ol>
+        <li>Discovery of exposure and diagnosis</li>
+        <li>Hiring a specialized asbestos law firm</li>
+        <li>Gathering work history and medical records</li>
+        <li>Filing the complaint</li>
+        <li>Settlement negotiations or trial</li>
+      </ol>
     `
   }
 ];

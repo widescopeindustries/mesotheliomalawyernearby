@@ -138,8 +138,9 @@ export default function DisclaimerPage() {
                         <p>If you have questions about this Legal Disclaimer, please contact us:</p>
                         <ul className="list-none pl-0 mt-4">
                             <li><strong>Widescope Industries LLC</strong></li>
-                            <li>Email: mesolawyernearme@gmail.com</li>
-                            <li>Phone: (682) 999-0953</li>
+                            <li>316 Brandywine Ave, Streetman, TX 75859</li>
+                            <li>Email: info@mesotheliomalawyernearby.com</li>
+                            <li>Phone: (214) 699-4543</li>
                         </ul>
                     </section>
                 </div>
