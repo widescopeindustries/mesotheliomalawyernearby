@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'Tennessee Mesothelioma Lawyers | Asbestos Lawsuit & Claims Help',
     description: 'Find experienced Tennessee mesothelioma attorneys. We help asbestos victims in Nashville, Memphis, and Knoxville get maximum compensation. Free consultation.',
     keywords: 'Tennessee mesothelioma lawyer, Nashville asbestos attorney, Memphis mesothelioma lawsuit, Tennessee asbestos exposure, Knoxville mesothelioma claims',
+    alternates: {
+        canonical: 'https://mesotheliomalawyernearby.com/tennessee-mesothelioma-lawyer',
+    },
 }
 
 export default function TennesseeLawyerPage() {

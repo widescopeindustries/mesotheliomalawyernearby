@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     title: 'Asbestos Exposure Sites Directory | Military, Industrial & Manufacturing',
     description: 'Comprehensive database of known asbestos exposure sites across the United States. Find history and legal help for shipyards, power plants, and factories.',
     keywords: 'asbestos exposure sites, shipyard asbestos, power plant asbestos, industrial asbestos sites, mesothelioma risk locations',
+    alternates: {
+        canonical: 'https://mesotheliomalawyernearby.com/exposure-sites',
+    },
 }
 
 export default function ExposureSitesHub() {

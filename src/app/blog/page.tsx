@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Mesothelioma Resources & Guides | Expert Legal Information',
   description: 'Expert guides on mesothelioma lawsuits, asbestos exposure, state laws, and veterans benefits. Free resources from our veteran-owned legal referral service.',
   keywords: ['mesothelioma guide', 'asbestos lawsuit information', 'mesothelioma resources', 'veteran asbestos exposure'],
+  alternates: {
+    canonical: 'https://mesotheliomalawyernearby.com/blog',
+  },
 }
 
 const categoryLabels: Record<BlogPost['category'], string> = {

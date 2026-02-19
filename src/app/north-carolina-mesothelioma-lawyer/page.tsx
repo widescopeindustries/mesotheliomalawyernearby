@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'North Carolina Mesothelioma Lawyers | NC Asbestos Lawsuit & Claims',
     description: 'Find top North Carolina mesothelioma attorneys. Protecting asbestos victims in Charlotte, Raleigh, and Durham. Free case review. No fees unless we win.',
     keywords: 'North Carolina mesothelioma lawyer, NC asbestos attorney, Charlotte mesothelioma lawyer, Raleigh asbestos lawsuit, Winston-Salem asbestos exposure',
+    alternates: {
+        canonical: 'https://mesotheliomalawyernearby.com/north-carolina-mesothelioma-lawyer',
+    },
 }
 
 export default function NorthCarolinaLawyerPage() {

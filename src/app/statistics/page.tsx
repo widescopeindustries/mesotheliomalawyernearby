@@ -21,7 +21,10 @@ export const metadata: Metadata = {
     title: 'Mesothelioma Statistics 2026 | Comprehensive Data & Facts',
     description: 'The most comprehensive mesothelioma statistics resource. Incidence, survival, compensation, and veteran data.',
     type: 'article',
-  }
+  },
+  alternates: {
+    canonical: 'https://mesotheliomalawyernearby.com/statistics',
+  },
 }
 
 export default function StatisticsPage() {

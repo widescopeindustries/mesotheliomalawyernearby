@@ -7,7 +7,10 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Louisiana Mesothelioma Lawyers',
         description: 'Louisiana has one of the highest mesothelioma rates due to Avondale Shipyard and refinery exposure. Free case review.',
-    }
+    },
+    alternates: {
+        canonical: 'https://mesotheliomalawyernearby.com/louisiana-mesothelioma',
+    },
 }
 
 export default function LouisianaLayout({

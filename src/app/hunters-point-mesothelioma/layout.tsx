@@ -7,7 +7,10 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Hunters Point Naval Shipyard Mesothelioma Claims',
         description: 'Over 18,000 workers were exposed to asbestos at Hunters Point. Get your free case review today.',
-    }
+    },
+    alternates: {
+        canonical: 'https://mesotheliomalawyernearby.com/hunters-point-mesothelioma',
+    },
 }
 
 export default function HuntersPointLayout({

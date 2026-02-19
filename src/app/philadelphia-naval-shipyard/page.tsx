@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'Philadelphia Naval Shipyard Asbestos Exposure & Mesothelioma Claims | Free Review',
     description: 'If you worked at the Philadelphia Naval Shipyard, you may have been exposed to toxic asbestos. Learn about compensation options and legal rights.',
     keywords: 'Philadelphia Naval Shipyard asbestos, Philly shipyard mesothelioma, naval shipyard cancer, asbestos lawyer Philadelphia, shipyard compensation',
+    alternates: {
+        canonical: 'https://mesotheliomalawyernearby.com/philadelphia-naval-shipyard',
+    },
 }
 
 export default function PhiladelphiaShipyardPage() {

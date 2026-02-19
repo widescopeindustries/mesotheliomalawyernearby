@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: 'Long Beach Naval Shipyard Asbestos Exposure & Mesothelioma Claims | Free Review',
     description: 'If you worked at Long Beach Naval Shipyard (1943-1997), you were likely exposed to asbestos. Learn about compensation options and your legal rights today.',
     keywords: 'Long Beach Naval Shipyard asbestos, Long Beach mesothelioma lawyer, terminal island shipyard asbestos, naval shipyard lawsuit, Long Beach compensation',
+    alternates: {
+        canonical: 'https://mesotheliomalawyernearby.com/long-beach-mesothelioma',
+    },
 }
 
 export default function LongBeachShipyardPage() {
