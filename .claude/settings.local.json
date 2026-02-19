@@ -3,7 +3,9 @@
     "allow": [
       "Bash(git add:*)",
       "Bash(git push:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(python scripts/ga4_analytics.py:*)",
+      "Bash(python scripts/gsc_analytics.py:*)"
     ]
   }
 }

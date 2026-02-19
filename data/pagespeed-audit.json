@@ -1,0 +1,49 @@
+{
+  "generated": "2026-02-07T01:16:46.719611",
+  "results": [
+    {
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fmesotheliomalawyernearby.com%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo",
+      "url": "https://mesotheliomalawyernearby.com/"
+    },
+    {
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fmesotheliomalawyernearby.com%2Fcontact&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo",
+      "url": "https://mesotheliomalawyernearby.com/contact"
+    },
+    {
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fmesotheliomalawyernearby.com%2Fabout&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo",
+      "url": "https://mesotheliomalawyernearby.com/about"
+    },
+    {
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fmesotheliomalawyernearby.com%2Flocation%2Ftexas-houston&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo",
+      "url": "https://mesotheliomalawyernearby.com/location/texas-houston"
+    },
+    {
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fmesotheliomalawyernearby.com%2Flocation%2Flouisiana-baton-rouge&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo",
+      "url": "https://mesotheliomalawyernearby.com/location/louisiana-baton-rouge"
+    },
+    {
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fmesotheliomalawyernearby.com%2Flocation%2Fcalifornia-los-angeles&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo",
+      "url": "https://mesotheliomalawyernearby.com/location/california-los-angeles"
+    },
+    {
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fmesotheliomalawyernearby.com%2Flocation%2Fflorida-miami&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo",
+      "url": "https://mesotheliomalawyernearby.com/location/florida-miami"
+    },
+    {
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fmesotheliomalawyernearby.com%2Fexposure-sites%2Fhunters-point-naval-shipyard&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo",
+      "url": "https://mesotheliomalawyernearby.com/exposure-sites/hunters-point-naval-shipyard"
+    },
+    {
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fmesotheliomalawyernearby.com%2Fexposure-sites%2Flong-beach-naval-shipyard&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo",
+      "url": "https://mesotheliomalawyernearby.com/exposure-sites/long-beach-naval-shipyard"
+    },
+    {
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fmesotheliomalawyernearby.com%2Ftypes%2Fpleural-mesothelioma&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo",
+      "url": "https://mesotheliomalawyernearby.com/types/pleural-mesothelioma"
+    },
+    {
+      "error": "429 Client Error: Too Many Requests for url: https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fmesotheliomalawyernearby.com%2Ftypes%2Fperitoneal-mesothelioma&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo",
+      "url": "https://mesotheliomalawyernearby.com/types/peritoneal-mesothelioma"
+    }
+  ]
+}

@@ -36,7 +36,7 @@ This guide will help you set up programmatic indexing for your mesothelioma site
 ## Step 4: Add Service Account to Google Search Console
 
 1. Go to [Google Search Console](https://search.google.com/search-console)
-2. Select your property (mesotheliomalawyernearby.vercel.app)
+2. Select your property (https://mesotheliomalawyernearby.com)
 3. Click **Settings** (gear icon) in the left sidebar
 4. Click **Users and permissions**
 5. Click **Add user**
@@ -72,7 +72,7 @@ We've created two utility scripts:
 
 ### Request Indexing for a Single URL
 ```bash
-node scripts/request-indexing.js https://mesotheliomalawyernearby.vercel.app/location/texas-houston
+node scripts/request-indexing.js https://mesotheliomalawyernearby.com/location/texas-houston
 ```
 
 ### Batch Index All Location Pages
@@ -90,7 +90,7 @@ node scripts/batch-index-all.js
 
 Check the status of your indexing requests:
 ```bash
-node scripts/check-indexing-status.js https://mesotheliomalawyernearby.vercel.app/
+node scripts/check-indexing-status.js https://mesotheliomalawyernearby.com/
 ```
 
 ## Important Notes

@@ -2,7 +2,7 @@
  * Request indexing for a single URL via Google Indexing API
  * 
  * Usage: node scripts/request-indexing.js <url>
- * Example: node scripts/request-indexing.js https://mesotheliomalawyernearby.vercel.app/location/texas-houston
+ * Example: node scripts/request-indexing.js https://mesotheliomalawyernearby.com/location/texas-houston
  */
 
 const { google } = require('googleapis');
@@ -61,7 +61,7 @@ if (require.main === module) {
   
   if (!url) {
     console.log('Usage: node scripts/request-indexing.js <url>');
-    console.log('Example: node scripts/request-indexing.js https://mesotheliomalawyernearby.vercel.app/location/texas-houston');
+    console.log('Example: node scripts/request-indexing.js https://mesotheliomalawyernearby.com/location/texas-houston');
     process.exit(1);
   }
 
