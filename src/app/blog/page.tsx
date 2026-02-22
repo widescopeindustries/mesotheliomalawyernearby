@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Calendar, Clock, ArrowRight, BookOpen } from 'lucide-react'
 import { BLOG_POSTS, BlogPost } from '@/data/blog/posts'
+import { TARGET_KEYWORDS } from '@/data/keywords'
 
 export const metadata: Metadata = {
   title: 'Mesothelioma Resources & Guides | Expert Legal Information',
@@ -113,6 +114,68 @@ export default function BlogPage() {
                 ))}
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Find a Lawyer by State */}
+      <section className="py-12 bg-muted/40 border-t border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-xl font-bold mb-2 text-center">Find a Mesothelioma Lawyer by State</h2>
+            <p className="text-muted-foreground text-sm text-center mb-6">
+              Our veteran-owned referral service connects victims with experienced attorneys nationwide.
+            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {TARGET_KEYWORDS
+                .filter((k) => (k as any).isStatePage)
+                .sort((a, b) => ((b as any).volume || 0) - ((a as any).volume || 0))
+                .slice(0, 20)
+                .map((k) => (
+                  <Link
+                    key={k.slug}
+                    href={`/location/${k.slug}`}
+                    className="px-4 py-2 bg-background hover:bg-primary/10 border border-border rounded-full text-sm font-medium transition-colors"
+                  >
+                    {k.state}
+                  </Link>
+                ))}
+              <Link
+                href="/directory"
+                className="px-4 py-2 bg-accent/10 hover:bg-accent/20 text-accent border border-accent/30 rounded-full text-sm font-medium transition-colors"
+              >
+                All States →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Landing Pages */}
+      <section className="py-10 bg-background border-t border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-lg font-bold mb-4 text-center">Legal Resources</h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                { href: '/best-mesothelioma-lawyers', label: 'Top Mesothelioma Lawyers' },
+                { href: '/mesothelioma-lawyer-near-me', label: 'Find a Lawyer Near Me' },
+                { href: '/asbestos-lawyer', label: 'Asbestos Lawyer' },
+                { href: '/mesothelioma-lawsuit', label: 'Lawsuit Guide' },
+                { href: '/veteran-resources', label: 'Veterans Resources' },
+                { href: '/asbestos-trust-funds-explained', label: 'Trust Funds' },
+                { href: '/types/pleural-mesothelioma', label: 'Pleural Mesothelioma' },
+                { href: '/exposure-sites', label: 'Exposure Sites' },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="px-4 py-2 bg-muted hover:bg-primary/10 rounded-lg text-sm font-medium transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

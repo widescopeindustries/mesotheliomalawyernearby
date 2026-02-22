@@ -11,6 +11,8 @@ export interface BlogPost {
   author: string;
   readTime: string;
   keywords: string[];
+  relatedLandingPages: { href: string; label: string }[];
+  relatedLocationSlugs: string[];
   content: string;
 }
 
@@ -24,6 +26,13 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "Mesothelioma Lawyer Nearby",
     readTime: "15 min read",
     keywords: ["navy mesothelioma", "asbestos on navy ships", "USS America asbestos", "USS Kitty Hawk asbestos", "VA benefits for mesothelioma", "navy veteran compensation"],
+    relatedLandingPages: [
+      { href: '/veteran-resources', label: 'Veterans Mesothelioma Resources' },
+      { href: '/best-mesothelioma-lawyers', label: 'Top Mesothelioma Lawyers' },
+      { href: '/mesothelioma-lawsuit', label: 'Mesothelioma Lawsuit Guide' },
+      { href: '/asbestos-lawyer', label: 'Find an Asbestos Lawyer' },
+    ],
+    relatedLocationSlugs: ['california', 'texas', 'virginia', 'florida', 'pennsylvania'],
     content: `
       <p class="lead">Serving in the U.S. Navy was an honor, but for many veterans, it came with a hidden danger: asbestos. For decades, the Navy used asbestos in nearly every part of its ships for fireproofing and insulation. Today, Navy veterans make up the largest single group of mesothelioma patients in the United States.</p>
 
@@ -115,8 +124,8 @@ export const BLOG_POSTS: BlogPost[] = [
       <p>Navigating the VA system and the legal process simultaneously can be overwhelming, especially when dealing with a cancer diagnosis. We are a veteran-owned referral service dedicated to helping our shipmates.</p>
       <p>We can connect you with:</p>
       <ul>
-        <li>VA-accredited claims agents to help with your disability paperwork.</li>
-        <li>Top-rated mesothelioma attorneys who have secured millions for Navy families.</li>
+        <li><a href="/veteran-resources">VA-accredited claims agents</a> to help with your disability paperwork.</li>
+        <li><a href="/best-mesothelioma-lawyers">Top-rated mesothelioma attorneys</a> who have secured millions for Navy families.</li>
         <li>Medical specialists who understand veterans' unique health needs.</li>
       </ul>
 
@@ -139,6 +148,13 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "Mesothelioma Lawyer Nearby",
     readTime: "12 min read",
     keywords: ["mesothelioma diagnosis", "pleural mesothelioma", "peritoneal mesothelioma", "mesothelioma stages", "cancer second opinion"],
+    relatedLandingPages: [
+      { href: '/types/pleural-mesothelioma', label: 'Pleural Mesothelioma Guide' },
+      { href: '/types/peritoneal-mesothelioma', label: 'Peritoneal Mesothelioma Guide' },
+      { href: '/mesothelioma-lawyer-near-me', label: 'Find a Lawyer Near You' },
+      { href: '/best-mesothelioma-lawyers', label: 'Top Mesothelioma Lawyers' },
+    ],
+    relatedLocationSlugs: ['new-york', 'california', 'texas', 'ohio', 'illinois'],
     content: `
       <p class="lead">A mesothelioma diagnosis can feel like the world is collapsing. However, understanding the specifics of your diagnosis is the first step toward effective treatment and securing your family's future.</p>
       
@@ -170,6 +186,13 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "Mesothelioma Lawyer Nearby",
     readTime: "10 min read",
     keywords: ["mesothelioma treatment", "immunotherapy", "clinical trials", "chemotherapy for asbestos cancer"],
+    relatedLandingPages: [
+      { href: '/types/pleural-mesothelioma', label: 'Pleural Mesothelioma Guide' },
+      { href: '/mesothelioma-lawyer-near-me', label: 'Find a Lawyer Near You' },
+      { href: '/veteran-resources', label: 'Veterans Treatment Resources' },
+      { href: '/statistics', label: 'Mesothelioma Statistics' },
+    ],
+    relatedLocationSlugs: ['california', 'new-york', 'texas', 'minnesota', 'maryland'],
     content: `
       <h2>The Standard of Care: Multimodal Therapy</h2>
       <p>Most mesothelioma patients receive a combination of treatments, known as multimodal therapy. This typically includes surgery, chemotherapy, and radiation.</p>
@@ -187,11 +210,18 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "Mesothelioma Lawyer Nearby",
     readTime: "8 min read",
     keywords: ["asbestos trust funds", "mesothelioma compensation", "asbestos bankruptcy", "legal payout"],
+    relatedLandingPages: [
+      { href: '/asbestos-lawyer', label: 'Find an Asbestos Lawyer' },
+      { href: '/mesothelioma-lawsuit', label: 'Mesothelioma Lawsuit Guide' },
+      { href: '/best-mesothelioma-lawyers', label: 'Top Mesothelioma Lawyers' },
+      { href: '/directory', label: 'Lawyer Directory' },
+    ],
+    relatedLocationSlugs: ['pennsylvania', 'ohio', 'illinois', 'michigan', 'new-jersey'],
     content: `
       <p class="lead">When asbestos companies filed for bankruptcy, the courts ordered them to set aside money in trust funds to pay future victims. Today, over $30 billion remains in these funds.</p>
       
       <h2>How Trust Fund Claims Work</h2>
-      <p>Unlike a traditional lawsuit, trust fund claims do not require a trial. If you can prove you worked with a company's asbestos products and have a diagnosis, you are eligible for a payout.</p>
+      <p>Unlike a <a href="/mesothelioma-lawsuit">traditional lawsuit</a>, trust fund claims do not require a trial. If you can prove you worked with a company's asbestos products and have a diagnosis, you are eligible for a payout. An experienced <a href="/asbestos-lawyer">asbestos lawyer</a> can file on your behalf at no upfront cost.</p>
     `
   },
   {
@@ -203,6 +233,13 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "Mesothelioma Lawyer Nearby",
     readTime: "14 min read",
     keywords: ["mesothelioma lawsuit", "asbestos lawyer", "legal claim process", "mesothelioma settlement"],
+    relatedLandingPages: [
+      { href: '/mesothelioma-lawsuit', label: 'Mesothelioma Lawsuit Guide' },
+      { href: '/asbestos-lawyer', label: 'Find an Asbestos Lawyer' },
+      { href: '/best-mesothelioma-lawyers', label: 'Top Mesothelioma Lawyers' },
+      { href: '/directory', label: 'Lawyer Directory' },
+    ],
+    relatedLocationSlugs: ['texas', 'california', 'florida', 'georgia', 'north-carolina'],
     content: `
       <p class="lead">Filing a lawsuit might seem daunting, but for most mesothelioma patients, the process is handled entirely by their legal team with minimal effort from the family.</p>
       

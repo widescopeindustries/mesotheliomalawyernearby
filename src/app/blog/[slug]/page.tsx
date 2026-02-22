@@ -4,8 +4,9 @@ import { notFound } from 'next/navigation'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Calendar, Clock, ArrowLeft, Phone, Share2, Shield } from 'lucide-react'
+import { Calendar, Clock, ArrowLeft, ArrowRight, Phone, Share2, Shield } from 'lucide-react'
 import { BLOG_POSTS, getPostBySlug, getRecentPosts, BlogPost } from '@/data/blog/posts'
+import { TARGET_KEYWORDS } from '@/data/keywords'
 
 interface BlogPostPageProps {
   params: {
@@ -225,6 +226,53 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                           </Card>
                         </Link>
                       ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Helpful Resources */}
+                {post.relatedLandingPages?.length > 0 && (
+                  <div>
+                    <h3 className="font-serif font-semibold mb-4">Helpful Resources</h3>
+                    <div className="space-y-2">
+                      {post.relatedLandingPages.map((page) => (
+                        <Link
+                          key={page.href}
+                          href={page.href}
+                          className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 hover:underline py-1"
+                        >
+                          <ArrowRight className="h-3 w-3 flex-shrink-0" />
+                          {page.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Find a Lawyer in Your State */}
+                {post.relatedLocationSlugs?.length > 0 && (
+                  <div>
+                    <h3 className="font-serif font-semibold mb-3">Find a Lawyer By State</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {post.relatedLocationSlugs.map((slug) => {
+                        const location = TARGET_KEYWORDS.find((k) => k.slug === slug)
+                        if (!location) return null
+                        return (
+                          <Link
+                            key={slug}
+                            href={`/location/${slug}`}
+                            className="inline-block bg-muted hover:bg-primary/10 text-sm font-medium px-3 py-1.5 rounded-full transition-colors"
+                          >
+                            {location.state}
+                          </Link>
+                        )
+                      })}
+                      <Link
+                        href="/directory"
+                        className="inline-block bg-accent/10 hover:bg-accent/20 text-accent text-sm font-medium px-3 py-1.5 rounded-full transition-colors"
+                      >
+                        All States →
+                      </Link>
                     </div>
                   </div>
                 )}

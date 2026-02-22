@@ -8,6 +8,7 @@ import { TARGET_KEYWORDS, EXPOSURE_SITES, STATE_SOL, COMMON_FAQS } from '@/data/
 import { EXPOSURE_SITE_DETAILS } from '@/data/exposure-sites'
 import { SchemaMarkup } from '@/components/SchemaMarkup'
 import { CallButton } from '@/components/CallButton'
+import { BLOG_POSTS } from '@/data/blog/posts'
 
 interface LocationPageProps {
   params: {
@@ -435,6 +436,40 @@ export default function LocationPage({ params }: LocationPageProps) {
               </Link>
               <Link href="/directory" className="px-4 py-3 bg-muted hover:bg-primary/10 rounded-lg text-sm font-medium transition-colors text-center">
                 Lawyer Directory
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Blog Articles */}
+      <section className="py-12 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-center mb-6">Mesothelioma Resources & Guides</h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {BLOG_POSTS.slice(0, 3).map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="block p-4 bg-background rounded-lg border hover:border-primary/50 hover:shadow-sm transition-all group"
+                >
+                  <span className="text-xs font-semibold uppercase tracking-wide text-primary opacity-70">
+                    {post.category === 'legal-process' ? 'Legal Process' :
+                     post.category === 'veteran' ? 'Veterans' :
+                     post.category === 'medical' ? 'Medical Info' :
+                     post.category === 'state-guide' ? 'State Guide' : 'Exposure Site'}
+                  </span>
+                  <h3 className="font-semibold text-sm mt-2 leading-snug group-hover:text-primary transition-colors">
+                    {post.title}
+                  </h3>
+                  <span className="text-primary text-xs font-medium mt-2 inline-block">Read more →</span>
+                </Link>
+              ))}
+            </div>
+            <div className="text-center mt-4">
+              <Link href="/blog" className="text-primary hover:underline text-sm font-medium">
+                View all mesothelioma resources →
               </Link>
             </div>
           </div>
