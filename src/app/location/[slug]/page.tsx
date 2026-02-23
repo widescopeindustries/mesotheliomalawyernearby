@@ -216,6 +216,18 @@ export default function LocationPage({ params }: LocationPageProps) {
         </section>
       )}
 
+      {/* Quick Answer Box - GEO optimization (above main content) */}
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <QuickAnswer
+              question={`How do I find a mesothelioma lawyer in ${keyword.state}?`}
+              answer={`Mesothelioma victims in ${keyword.state} may be entitled to compensation through lawsuits, trust funds, or VA claims. The average mesothelioma settlement is $1–$1.4 million. Most attorneys work on contingency — no upfront cost.${stateSol ? ` In ${keyword.state}, you have ${stateSol.personal} from diagnosis to file a personal injury claim.` : ''}`}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -402,18 +414,6 @@ export default function LocationPage({ params }: LocationPageProps) {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Answer Box - GEO optimization */}
-      <section className="py-12 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <QuickAnswer
-              question={`How do I find a mesothelioma lawyer in ${keyword.state}?`}
-              answer={`Mesothelioma lawyers in ${keyword.state} typically work on contingency — no upfront cost. Most firms offer free consultations. Cases involving asbestos exposure at ${keyword.state} job sites or military bases are common. Settlements typically range from $1–$1.4M.`}
-            />
           </div>
         </div>
       </section>
