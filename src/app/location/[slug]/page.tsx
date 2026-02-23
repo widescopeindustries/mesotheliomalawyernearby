@@ -4,10 +4,11 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Phone, MapPin, Clock, Shield, AlertTriangle, CheckCircle, Scale, Building, HelpCircle, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { TARGET_KEYWORDS, EXPOSURE_SITES, STATE_SOL, COMMON_FAQS } from '@/data/keywords'
+import { TARGET_KEYWORDS, EXPOSURE_SITES, STATE_SOL } from '@/data/keywords'
 import { EXPOSURE_SITE_DETAILS } from '@/data/exposure-sites'
 import { SchemaMarkup } from '@/components/SchemaMarkup'
 import { CallButton } from '@/components/CallButton'
+import { QuickAnswer } from '@/components/QuickAnswer'
 import { BLOG_POSTS } from '@/data/blog/posts'
 
 interface LocationPageProps {
@@ -78,7 +79,6 @@ export default function LocationPage({ params }: LocationPageProps) {
   const exposureSites = EXPOSURE_SITES[keyword.state as keyof typeof EXPOSURE_SITES] || []
   const stateSol = STATE_SOL[keyword.state as keyof typeof STATE_SOL]
   const localPhone = '(214) 699-4543'
-  const selectedFaqs = COMMON_FAQS.slice(0, 5)
 
   // Check if this is a state-level page
   const isStatePage = (keyword as any).isStatePage || keyword.city === 'Statewide'
@@ -87,9 +87,56 @@ export default function LocationPage({ params }: LocationPageProps) {
     ? `${keyword.state} Mesothelioma Lawyer`
     : `${keyword.city}, ${keyword.state} Mesothelioma Lawyer`
 
+  // Location-specific FAQs for GEO optimization
+  const locationFaqs = [
+    {
+      question: `How do I find a mesothelioma lawyer in ${keyword.state}?`,
+      answer: `Mesothelioma lawyers in ${keyword.state} typically work on contingency — no upfront cost. Most firms offer free consultations. Cases involving asbestos exposure at ${keyword.state} job sites or military bases are common. Settlements typically range from $1–$1.4M.`
+    },
+    {
+      question: `How long does a mesothelioma lawsuit take in ${keyword.state}?`,
+      answer: `Most mesothelioma lawsuits in ${keyword.state} are resolved within 12 to 18 months. Some cases settle in as little as 90 days through asbestos trust fund claims. Your attorney will work to expedite the process given the urgency of mesothelioma cases.`
+    },
+    {
+      question: `What compensation can mesothelioma victims receive in ${keyword.state}?`,
+      answer: `Mesothelioma victims in ${keyword.state} may recover compensation for medical expenses, lost wages, pain and suffering, and loss of consortium. The average mesothelioma settlement is $1 million to $1.4 million, with trial verdicts averaging $2.4 million or more.`
+    },
+    {
+      question: `Is there a statute of limitations for mesothelioma claims in ${keyword.state}?`,
+      answer: `Yes, ${keyword.state} has a statute of limitations for mesothelioma claims.${stateSol ? ` You have ${stateSol.personal} from diagnosis to file a personal injury claim and ${stateSol.wrongfulDeath} for wrongful death claims.` : ' The deadline varies — contact an attorney immediately after diagnosis to protect your rights.'}`
+    },
+    {
+      question: `Do mesothelioma lawyers in ${keyword.state} work on contingency?`,
+      answer: `Yes, virtually all mesothelioma lawyers in ${keyword.state} work on a contingency fee basis. This means you pay nothing upfront and owe no legal fees unless your attorney wins compensation for you. Typical contingency fees range from 25% to 40% of the recovery.`
+    },
+    {
+      question: `What is the average mesothelioma settlement in ${keyword.state}?`,
+      answer: `The average mesothelioma settlement in ${keyword.state} ranges from $1 million to $1.4 million. However, amounts vary based on exposure history, responsible companies, medical costs, and other factors. Some ${keyword.state} cases have resulted in settlements exceeding $2 million.`
+    }
+  ]
+
+  // FAQPage JSON-LD schema for GEO optimization
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': locationFaqs.map(faq => ({
+      '@type': 'Question',
+      'name': faq.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': faq.answer
+      }
+    }))
+  }
+
   return (
     <div className="min-h-screen">
       <SchemaMarkup />
+      {/* FAQPage JSON-LD Schema for GEO optimization */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/10 to-primary/5 py-16">
         <div className="container mx-auto px-4">
@@ -103,10 +150,17 @@ export default function LocationPage({ params }: LocationPageProps) {
               {h1Title}
             </h1>
 
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-6 max-w-3xl mx-auto">
               If you or a loved one was diagnosed with mesothelioma in {displayLocation}, our veteran-owned
               service connects you with experienced attorneys who fight for maximum compensation.
             </p>
+
+            {/* Key Stats with Citations - GEO optimization */}
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8 max-w-3xl mx-auto text-sm text-muted-foreground">
+              <span>Mesothelioma affects approximately <strong className="text-foreground">3,000 Americans</strong> each year <cite className="not-italic text-xs">(American Cancer Society)</cite>.</span>
+              <span>The average mesothelioma settlement is <strong className="text-foreground">$1 million to $1.4 million</strong> <cite className="not-italic text-xs">(Mesothelioma Center, 2024)</cite>.</span>
+              <span>Over <strong className="text-foreground">70% of mesothelioma cases</strong> are linked to occupational asbestos exposure <cite className="not-italic text-xs">(National Cancer Institute)</cite>.</span>
+            </div>
 
             {/* Trust Signals */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -352,19 +406,31 @@ export default function LocationPage({ params }: LocationPageProps) {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Quick Answer Box - GEO optimization */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <QuickAnswer
+              question={`How do I find a mesothelioma lawyer in ${keyword.state}?`}
+              answer={`Mesothelioma lawyers in ${keyword.state} typically work on contingency — no upfront cost. Most firms offer free consultations. Cases involving asbestos exposure at ${keyword.state} job sites or military bases are common. Settlements typically range from $1–$1.4M.`}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section - Location-specific for GEO optimization */}
       <section className="py-16 bg-muted/40">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 justify-center mb-8">
               <HelpCircle className="h-8 w-8 text-primary" />
               <h2 className="text-3xl font-bold">
-                Frequently Asked Questions
+                {keyword.state} Mesothelioma FAQ
               </h2>
             </div>
 
             <div className="space-y-4">
-              {selectedFaqs.map((faq, index) => (
+              {locationFaqs.map((faq, index) => (
                 <Card key={index}>
                   <CardContent className="p-6">
                     <h3 className="font-bold text-lg mb-2">{faq.question}</h3>
