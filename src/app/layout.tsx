@@ -3,6 +3,7 @@ import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { StickyMobileCTA } from '@/components/StickyMobileCTA'
+import { ChatBot } from '@/components/ChatBot'
 import { GoogleAnalytics, CallRail } from '@/lib/analytics'
 
 export const viewport: Viewport = {
@@ -72,6 +73,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <StickyMobileCTA />
+        <ChatBot />
       </body>
     </html>
   )
