@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -16,6 +17,8 @@ interface LocationPageProps {
     slug: string
   }
 }
+
+export const dynamicParams = false
 
 // Generate static params for all target locations
 export async function generateStaticParams() {
@@ -73,7 +76,7 @@ export default function LocationPage({ params }: LocationPageProps) {
   const keyword = TARGET_KEYWORDS.find(k => k.slug === params.slug)
 
   if (!keyword) {
-    return <div>Location not found</div>
+    notFound()
   }
 
   const exposureSites = EXPOSURE_SITES[keyword.state as keyof typeof EXPOSURE_SITES] || []

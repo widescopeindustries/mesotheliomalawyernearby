@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -12,6 +13,8 @@ interface ExposureSitePageProps {
         id: string
     }
 }
+
+export const dynamicParams = false
 
 // Generate static params for all exposure sites
 export async function generateStaticParams() {
@@ -57,7 +60,7 @@ export default function ExposureSitePage({ params }: ExposureSitePageProps) {
     const site = getExposureSiteById(params.id)
 
     if (!site) {
-        return <div>Exposure site not found</div>
+        notFound()
     }
 
     return (
